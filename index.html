@@ -769,7 +769,7 @@
       const ProjectPage = () => (
         <div className="reveal">
           <PageIntro number="03 / Selected Work" title="Projects" description="Selected work in data analysis, visualization, business intelligence, and machine learning." />
-          <section className="border-t border-brand-line pt-10 pb-12">
+          <section className="border-t border-brand-line">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {PORTFOLIO_DATA.projects.map((project,index)=><ProjectCard key={project.id} project={project} index={index} />)}
             </div>
