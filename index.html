@@ -8,10 +8,10 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts (Playfair Display for serif luxury, Plus Jakarta Sans for body) -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -29,22 +29,23 @@
         extend: {
           colors: {
             brand: {
-              bg: '#FAFAF7',           // Warm soft cream background
-              card: '#FFFFFF',         // Pure white cards
-              text: '#222020',         // Soft Charcoal
-              muted: '#6E6A67',        // Muted gray-brown
-              border: '#E8E5E0',       // Subtle border
+              bg: '#FBFBf8',           // Warm editorial cream
+              card: '#FFFFFF',         
+              text: '#1E1D1B',         // Deep charcoal
+              muted: '#6B6864',        
+              border: '#EAE7E1',       
               
               // Soft Pink Palette
-              pinkLight: '#FDF0F3',
-              pinkMain: '#E8B4BC',
-              pinkDark: '#C88B97',
+              pinkLight: '#FCEEF1',
+              pinkSoft: '#F6D5DC',
+              pinkMain: '#E09FAD',
+              pinkDark: '#B86F7F',
               
               // Soft Sage Green Palette
-              sageLight: '#F0F4F1',
-              sageMain: '#A3B899',
-              sageDark: '#6B8260',
-              sageAccent: '#E2E9E1'
+              sageLight: '#EEF4EF',
+              sageSoft: '#D4E2D2',
+              sageMain: '#96B08D',
+              sageDark: '#5B7552',
             }
           },
           fontFamily: {
@@ -58,15 +59,17 @@
   
   <style>
     body {
-      background-color: #FAFAF7;
-      color: #222020;
+      background-color: #FBFBf8;
+      color: #1E1D1B;
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
     }
-    
-    /* Smooth transition for accordion height */
-    .accordion-content {
-      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+
+    /* Soft Glassmorphism */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(234, 231, 225, 0.9);
     }
   </style>
 </head>
@@ -77,20 +80,19 @@
   <script type="text/babel">
     const { useState, useEffect } = React;
 
-    // Sample Data
     const PORTFOLIO_DATA = {
       name: "Lee Sangwon",
-      role: "Fresh Graduate Data Analyst & Scientist",
+      role: "Fresh Graduate Data Analyst",
       email: "leesangwon.data@gmail.com",
       linkedin: "https://linkedin.com",
       resume: "https://drive.google.com",
-      about: "A passionate Fresh Graduate in Information Systems / Data Science dedicated to transforming complex data into meaningful insights and business strategies. Skilled in exploratory data analysis, predictive modeling, data visualization, and database management.",
+      about: "A driven Fresh Graduate specializing in turning noisy datasets into clear, actionable business strategies. Experienced in exploratory data analysis, predictive statistical modeling, data visualization dashboards, and pipeline automation.",
       
       education: {
         degree: "Bachelor of Science in Information Systems / Data Science",
         university: "State University of Technology",
         period: "2020 — 2024",
-        gpa: "3.85 / 4.00 (Cum Laude)",
+        gpa: "3.85 / 4.00",
         thesisTitle: "Predictive Analytics and Customer Churn Prevention Model in E-Commerce Using Machine Learning Algorithms"
       },
 
@@ -101,11 +103,11 @@
           company: "Nexus Tech Solutions",
           period: "Jan 2024 — Jun 2024",
           location: "Jakarta, Indonesia",
-          summary: "Analyzed high-volume e-commerce transaction datasets and built interactive dashboards.",
+          summary: "Analyzed high-volume e-commerce transaction datasets and built interactive executive dashboards.",
           highlights: [
-            "Cleaned and processed over 500,000 transaction records using Python (Pandas) and SQL.",
-            "Designed and deployed 4 executive Tableau dashboards tracking daily Active Users (DAU) and Retention Rates.",
-            "Collaborated with marketing teams to optimize ad spend through cohort analysis, boosting ROI by 14%."
+            "Cleaned and processed over 500,000 transaction records using Python (Pandas) and SQL queries.",
+            "Designed and deployed 4 executive Tableau dashboards tracking Daily Active Users (DAU) and Retention Rates.",
+            "Collaborated with marketing teams to optimize ad spend through cohort analysis, boosting campaign ROI by 14%."
           ],
           photos: [
             { caption: "Presenting Q2 Data Insights to Stakeholders", url: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" },
@@ -120,8 +122,8 @@
           location: "Remote",
           summary: "Created automated ETL pipelines and weekly client performance reporting dashboards.",
           highlights: [
-            "Automated weekly client reporting pipelines using Google BigQuery and Looker Studio, saving 10+ manual hours/week.",
-            "Performed exploratory data analysis to detect seasonal purchasing patterns across 12 digital retail stores."
+            "Automated weekly client reporting pipelines using Google BigQuery and Looker Studio, saving 10+ manual hours per week.",
+            "Performed exploratory data analysis to detect seasonal purchasing patterns across 12 digital retail accounts."
           ],
           photos: [
             { caption: "Remote Team Strategy & Data Alignment Workshop", url: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" }
@@ -138,8 +140,8 @@
           location: "Campus",
           summary: "Led a team of 15 student analysts in managing national data analytics workshops and research projects.",
           highlights: [
-            "Organized a national hackathon event with 300+ active university participants.",
-            "Mentored junior members in SQL fundamentals, Python data wrangling, and Git workflow."
+            "Organized a national hackathon event with 300+ active university participants across the country.",
+            "Mentored junior members in SQL fundamentals, Python data wrangling, and Git workflow best practices."
           ],
           photos: [
             { caption: "Hosting Campus Data Hackathon Grand Finale", url: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80" },
@@ -153,15 +155,17 @@
           id: "proj-1",
           title: "Customer Segmentation & Churn Analysis",
           category: "Machine Learning & Clustering",
-          tools: ["Python", "Scikit-Learn", "RFM Analysis", "PowerBI"],
-          shortDesc: "Built an end-to-end RFM model and K-Means clustering algorithm to identify key customer segments.",
+          tools: ["Python", "Scikit-Learn", "RFM Model", "PowerBI"],
+          coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+          shortDesc: "Built an end-to-end RFM model and K-Means clustering algorithm to identify key customer segments and lower churn rates.",
           fullDesc: "This project aimed to reduce churn rate for an online retailer. By applying RFM (Recency, Frequency, Monetary) segmentation combined with K-Means Clustering, we identified 4 unique customer profiles and suggested targeted retention campaigns.",
           outcomes: "Identified high-value customer group generating 62% revenue; developed automated churn alert rule with 88% precision.",
+          driveDocUrl: "https://drive.google.com",
           githubUrl: "https://github.com",
           dashboardUrl: "https://public.tableau.com",
-          images: [
+          proofImages: [
             { caption: "RFM Clusters & Customer Segment Distribution", url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" },
-            { caption: "PowerBI Interactive Executive Dashboard", url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" }
+            { caption: "PowerBI Interactive Executive Dashboard Proof", url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" }
           ]
         },
         {
@@ -169,26 +173,27 @@
           title: "Supply Chain & Logistics Dashboard",
           category: "Data Visualization & BI",
           tools: ["SQL (BigQuery)", "Looker Studio", "Excel"],
-          shortDesc: "Interactive BI dashboard monitoring warehouse inventory, delivery latency, and supplier bottlenecks.",
-          fullDesc: "Designed for a regional distributor, this dashboard connects directly to BigQuery tables to visualize delivery pipelines, regional delay rates, and stock turnover speed.",
+          coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+          shortDesc: "Interactive BI dashboard monitoring warehouse inventory, regional delivery latency, and supplier performance metrics.",
+          fullDesc: "Designed for a regional distributor, this dashboard connects directly to BigQuery tables to visualize delivery pipelines, regional delay rates, and stock turnover speed in real time.",
           outcomes: "Uncovered delivery bottleneck in North Region, enabling operational adjustments that reduced average delay by 18%.",
+          driveDocUrl: "https://drive.google.com",
           githubUrl: "https://github.com",
-          images: [
-            { caption: "Looker Studio Delivery KPI Monitoring", url: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80" }
+          proofImages: [
+            { caption: "Looker Studio Regional Bottleneck Monitoring", url: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80" }
           ]
         }
       ]
     };
 
     function App() {
-      // Hash-based routing state: '/', '/home', '/exp', '/project'
       const [currentRoute, setCurrentRoute] = useState(() => {
         const hash = window.location.hash.replace('#', '');
         return hash || '/';
       });
 
       const [copiedEmail, setCopiedEmail] = useState(false);
-      const [expandedId, setExpandedId] = useState(null); // Accordion state for Exp & Projects
+      const [expandedId, setExpandedId] = useState(null);
       const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
       useEffect(() => {
@@ -224,31 +229,30 @@
         setExpandedId(prev => prev === id ? null : id);
       };
 
-      // --- RENDER ROUTE 1: LANDING PAGE ---
+      // --- ROUTE 1: LANDING PAGE ---
       if (currentRoute === '/' || currentRoute === '') {
         return (
-          <div className="min-h-screen flex flex-col justify-between items-center px-6 py-12 md:py-20 relative bg-gradient-to-b from-brand-pinkLight/40 via-brand-bg to-brand-sageLight/30 overflow-hidden">
-            {/* Soft decorative background blurred elements */}
-            <div className="absolute -top-32 -left-32 w-80 h-80 md:w-96 md:h-96 bg-brand-pinkMain/20 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute -bottom-32 -right-32 w-80 h-80 md:w-96 md:h-96 bg-brand-sageMain/20 rounded-full blur-3xl pointer-events-none"></div>
+          <div className="min-h-screen flex flex-col justify-between items-center px-6 py-12 md:py-20 relative bg-gradient-to-b from-brand-pinkLight/50 via-brand-bg to-brand-sageLight/40 overflow-hidden">
+            <div className="absolute top-10 left-10 w-72 h-72 bg-brand-pinkMain/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute bottom-10 right-10 w-96 h-96 bg-brand-sageMain/20 rounded-full blur-3xl pointer-events-none"></div>
 
             <div className="text-center my-auto z-10 w-full max-w-5xl">
-              <span className="text-xs md:text-sm font-semibold tracking-[0.3em] uppercase text-brand-sageDark bg-brand-sageAccent/80 px-4 py-2 rounded-full inline-block mb-6 md:mb-8 shadow-sm">
+              <span className="text-xs md:text-sm font-semibold tracking-[0.3em] uppercase text-brand-sageDark bg-brand-sageLight/90 px-5 py-2 rounded-full inline-block mb-8 shadow-sm">
                 Data Analyst Portfolio
               </span>
               
-              <h1 className="font-serif text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight text-brand-text mb-3 md:mb-4 leading-none">
+              <h1 className="font-serif text-5xl sm:text-7xl md:text-9xl font-bold tracking-tight text-brand-text mb-2 leading-none">
                 LEE SANGWON
               </h1>
               
-              <p className="font-serif italic text-2xl sm:text-3xl md:text-5xl font-normal tracking-widest text-brand-muted mb-10 md:mb-14">
+              <p className="font-serif italic text-2xl sm:text-4xl md:text-6xl text-brand-pinkDark/90 mb-12 tracking-widest">
                 PORTFOLIO
               </p>
 
               <div>
                 <button
                   onClick={() => navigateTo('/home')}
-                  className="group inline-flex items-center gap-3 bg-brand-text text-white px-8 py-4 rounded-full font-medium text-sm md:text-base tracking-wider hover:bg-brand-sageDark transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                  className="group inline-flex items-center gap-3 bg-brand-text text-white px-8 py-4 rounded-full font-medium text-xs md:text-sm tracking-[0.15em] hover:bg-brand-sageDark transition-all duration-300 shadow-xl hover:-translate-y-1"
                 >
                   <span>ENTER PORTFOLIO</span>
                   <i data-lucide="arrow-right" className="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
@@ -256,16 +260,16 @@
               </div>
             </div>
 
-            <div className="text-xs text-brand-muted uppercase tracking-widest text-center z-10">
+            <div className="text-[11px] text-brand-muted uppercase tracking-widest text-center z-10 font-semibold">
               © {new Date().getFullYear()} Lee Sangwon • All Rights Reserved
             </div>
           </div>
         );
       }
 
-      // --- MAIN NAVBAR (USED IN /home, /exp, /project) ---
+      // --- NAVBAR ---
       const Navbar = () => (
-        <header className="sticky top-0 z-50 backdrop-blur-md bg-brand-bg/90 border-b border-brand-border">
+        <header className="sticky top-0 z-50 backdrop-blur-md bg-brand-bg/85 border-b border-brand-border">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <button 
               onClick={() => navigateTo('/')} 
@@ -274,11 +278,10 @@
               LEE SANGWON<span className="text-brand-pinkDark">.</span>
             </button>
 
-            {/* Desktop Navigation Links */}
-            <nav className="hidden md:flex items-center gap-2 bg-white/80 p-1.5 rounded-full border border-brand-border shadow-sm">
+            <nav className="hidden md:flex items-center gap-2 bg-white/90 p-1.5 rounded-full border border-brand-border shadow-sm">
               <button
                 onClick={() => navigateTo('/home')}
-                className={`px-5 py-2 rounded-full text-xs font-semibold tracking-wider transition-all ${
+                className={`px-6 py-2 rounded-full text-xs font-semibold tracking-wider transition-all ${
                   currentRoute === '/home' 
                     ? 'bg-brand-sageDark text-white shadow-sm' 
                     : 'text-brand-text hover:bg-brand-pinkLight'
@@ -288,7 +291,7 @@
               </button>
               <button
                 onClick={() => navigateTo('/exp')}
-                className={`px-5 py-2 rounded-full text-xs font-semibold tracking-wider transition-all ${
+                className={`px-6 py-2 rounded-full text-xs font-semibold tracking-wider transition-all ${
                   currentRoute === '/exp' 
                     ? 'bg-brand-sageDark text-white shadow-sm' 
                     : 'text-brand-text hover:bg-brand-pinkLight'
@@ -298,7 +301,7 @@
               </button>
               <button
                 onClick={() => navigateTo('/project')}
-                className={`px-5 py-2 rounded-full text-xs font-semibold tracking-wider transition-all ${
+                className={`px-6 py-2 rounded-full text-xs font-semibold tracking-wider transition-all ${
                   currentRoute === '/project' 
                     ? 'bg-brand-sageDark text-white shadow-sm' 
                     : 'text-brand-text hover:bg-brand-pinkLight'
@@ -308,22 +311,19 @@
               </button>
             </nav>
 
-            {/* Mobile Hamburger Button */}
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 rounded-lg text-brand-text hover:bg-brand-pinkLight transition-colors"
-              aria-label="Toggle Navigation"
             >
               <i data-lucide={mobileMenuOpen ? "x" : "menu"} className="w-6 h-6"></i>
             </button>
           </div>
 
-          {/* Mobile Navigation Drawer */}
           {mobileMenuOpen && (
-            <div className="md:hidden bg-white border-b border-brand-border px-6 py-4 space-y-2 shadow-lg animate-fadeIn">
+            <div className="md:hidden bg-white border-b border-brand-border px-6 py-4 space-y-2 shadow-lg">
               <button
                 onClick={() => navigateTo('/home')}
-                className={`block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold tracking-wider ${
+                className={`block w-full text-left px-4 py-3 rounded-xl text-sm font-semibold tracking-wider ${
                   currentRoute === '/home' ? 'bg-brand-sageDark text-white' : 'text-brand-text hover:bg-brand-pinkLight'
                 }`}
               >
@@ -331,7 +331,7 @@
               </button>
               <button
                 onClick={() => navigateTo('/exp')}
-                className={`block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold tracking-wider ${
+                className={`block w-full text-left px-4 py-3 rounded-xl text-sm font-semibold tracking-wider ${
                   currentRoute === '/exp' ? 'bg-brand-sageDark text-white' : 'text-brand-text hover:bg-brand-pinkLight'
                 }`}
               >
@@ -339,7 +339,7 @@
               </button>
               <button
                 onClick={() => navigateTo('/project')}
-                className={`block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold tracking-wider ${
+                className={`block w-full text-left px-4 py-3 rounded-xl text-sm font-semibold tracking-wider ${
                   currentRoute === '/project' ? 'bg-brand-sageDark text-white' : 'text-brand-text hover:bg-brand-pinkLight'
                 }`}
               >
@@ -350,7 +350,6 @@
         </header>
       );
 
-      // --- PAGE FOOTER ---
       const Footer = () => (
         <footer className="border-t border-brand-border bg-white mt-20 py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
@@ -383,26 +382,73 @@
             {/* ========================================== */}
             {currentRoute === '/home' && (
               <div className="space-y-16 md:space-y-24">
-                {/* Introduction Section */}
-                <section className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 border border-brand-border shadow-sm">
-                  <div className="max-w-3xl">
-                    <span className="text-xs font-bold uppercase tracking-widest text-brand-sageDark bg-brand-sageLight px-3 py-1.5 rounded-full inline-block mb-4">
-                      Fresh Graduate Data Analyst
-                    </span>
-                    <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-text leading-tight mb-6">
-                      Hello, I'm Lee Sangwon. Turning complex data into clear strategic decisions.
-                    </h2>
-                    <p className="text-brand-muted text-base sm:text-lg leading-relaxed mb-8">
-                      {PORTFOLIO_DATA.about}
-                    </p>
+                
+                {/* REVISED: Modern Asymmetric Hero / Profile Section */}
+                <section className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                  
+                  {/* Left Column: Visual Card Profile & Quick Specs */}
+                  <div className="lg:col-span-5 bg-gradient-to-br from-brand-pinkLight via-white to-brand-sageLight p-6 sm:p-8 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-brand-pinkSoft/40 rounded-full blur-2xl"></div>
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="w-16 h-16 rounded-2xl bg-brand-sageDark text-white font-serif text-2xl font-bold flex items-center justify-center shadow-md">
+                          LS
+                        </div>
+                        <div>
+                          <span className="text-[10px] font-extrabold uppercase tracking-widest text-brand-pinkDark bg-white px-2.5 py-1 rounded-full border border-brand-pinkMain/30">
+                            Available for Hire
+                          </span>
+                          <h3 className="text-xl font-bold text-brand-text mt-1">{PORTFOLIO_DATA.name}</h3>
+                          <p className="text-xs text-brand-muted font-medium">{PORTFOLIO_DATA.role}</p>
+                        </div>
+                      </div>
 
-                    {/* Action Buttons */}
-                    <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                      <div className="space-y-3 pt-4 border-t border-brand-border/60">
+                        <div className="flex items-center justify-between text-xs bg-white/80 p-3 rounded-xl border border-brand-border/50">
+                          <span className="text-brand-muted font-medium">Status</span>
+                          <span className="font-semibold text-brand-sageDark">Fresh Graduate 2024</span>
+                        </div>
+                        <div className="flex items-center justify-between text-xs bg-white/80 p-3 rounded-xl border border-brand-border/50">
+                          <span className="text-brand-muted font-medium">Academic GPA</span>
+                          <span className="font-semibold text-brand-text">{PORTFOLIO_DATA.education.gpa}</span>
+                        </div>
+                        <div className="flex items-center justify-between text-xs bg-white/80 p-3 rounded-xl border border-brand-border/50">
+                          <span className="text-brand-muted font-medium">Core Stack</span>
+                          <span className="font-semibold text-brand-text">Python, SQL, Tableau, PowerBI</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-8 pt-4 border-t border-brand-border/60 flex items-center gap-2">
+                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                      <span className="text-[11px] font-semibold text-brand-muted">Open to Data Analyst & BI Roles</span>
+                    </div>
+                  </div>
+
+                  {/* Right Column: Narrative Profile & Action Buttons */}
+                  <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                      <div className="inline-flex items-center gap-2 bg-brand-sageLight text-brand-sageDark text-xs font-bold px-3 py-1.5 rounded-full mb-6">
+                        <i data-lucide="sparkles" className="w-3.5 h-3.5"></i>
+                        <span>PASSIONATE DATA ANALYST</span>
+                      </div>
+
+                      <h2 className="font-serif text-3xl sm:text-4xl font-bold text-brand-text leading-tight mb-6">
+                        Bridging complex raw datasets with intuitive visual storytelling.
+                      </h2>
+
+                      <p className="text-brand-muted text-base sm:text-lg leading-relaxed mb-8">
+                        {PORTFOLIO_DATA.about}
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-3 pt-6 border-t border-brand-border/60">
                       <a
                         href={PORTFOLIO_DATA.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-brand-sageDark text-white px-5 py-3 rounded-full text-xs font-semibold tracking-wider hover:bg-brand-text transition-colors shadow-sm"
+                        className="inline-flex items-center gap-2 bg-brand-sageDark text-white px-5 py-3 rounded-full text-xs font-semibold tracking-wider hover:bg-brand-text transition-all shadow-sm"
                       >
                         <i data-lucide="linkedin" className="w-4 h-4"></i>
                         <span>LINKEDIN</span>
@@ -412,7 +458,7 @@
                         href={PORTFOLIO_DATA.resume}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-brand-pinkLight text-brand-pinkDark border border-brand-pinkMain/30 px-5 py-3 rounded-full text-xs font-semibold tracking-wider hover:bg-brand-pinkMain hover:text-white transition-colors shadow-sm"
+                        className="inline-flex items-center gap-2 bg-brand-pinkLight text-brand-pinkDark border border-brand-pinkMain/30 px-5 py-3 rounded-full text-xs font-semibold tracking-wider hover:bg-brand-pinkMain hover:text-white transition-all shadow-sm"
                       >
                         <i data-lucide="file-text" className="w-4 h-4"></i>
                         <span>RESUME (DRIVE)</span>
@@ -420,13 +466,14 @@
 
                       <button
                         onClick={handleCopyEmail}
-                        className="relative inline-flex items-center gap-2 bg-white text-brand-text border border-brand-border px-5 py-3 rounded-full text-xs font-semibold tracking-wider hover:border-brand-text transition-colors shadow-sm"
+                        className="inline-flex items-center gap-2 bg-brand-bg text-brand-text border border-brand-border px-5 py-3 rounded-full text-xs font-semibold tracking-wider hover:border-brand-text transition-all shadow-sm"
                       >
                         <i data-lucide={copiedEmail ? "check" : "copy"} className="w-4 h-4 text-brand-sageDark"></i>
-                        <span>{copiedEmail ? "EMAIL COPIED!" : "COPY EMAIL"}</span>
+                        <span>{copiedEmail ? "COPIED!" : "COPY EMAIL"}</span>
                       </button>
                     </div>
                   </div>
+
                 </section>
 
                 {/* Education Section */}
@@ -451,8 +498,8 @@
                     </div>
 
                     <div className="mt-6 pt-6 border-t border-brand-border/60">
-                      <span className="text-xs font-bold tracking-wider text-brand-muted uppercase block mb-2">Undergraduate Thesis</span>
-                      <p className="text-brand-text font-serif italic text-base md:text-lg bg-brand-pinkLight/40 p-4 rounded-xl border border-brand-pinkMain/20">
+                      <span className="text-[10px] font-bold tracking-wider text-brand-muted uppercase block mb-2">Undergraduate Thesis</span>
+                      <p className="text-brand-text font-serif italic text-base md:text-lg bg-brand-pinkLight/40 p-4 rounded-2xl border border-brand-pinkMain/20">
                         "{PORTFOLIO_DATA.education.thesisTitle}"
                       </p>
                     </div>
@@ -477,11 +524,14 @@
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {PORTFOLIO_DATA.workExperience.slice(0, 2).map((exp) => (
-                      <div key={exp.id} className="bg-white rounded-3xl p-6 border border-brand-border shadow-sm flex flex-col justify-between">
+                      <div key={exp.id} className="bg-white rounded-3xl p-6 border border-brand-border shadow-sm flex flex-col justify-between hover:border-brand-sageMain transition-all">
                         <div>
                           <span className="text-[10px] font-bold tracking-widest uppercase bg-brand-pinkLight text-brand-pinkDark px-2.5 py-1 rounded-full">Work</span>
-                          <h4 className="text-lg font-bold text-brand-text mt-3">{exp.role}</h4>
-                          <p className="text-xs font-semibold text-brand-sageDark">{exp.company} • {exp.period}</p>
+                          
+                          {/* REVISED: Jabatan dulu, Perusahaan di bawahnya */}
+                          <h4 className="text-lg font-bold text-brand-text mt-4">{exp.role}</h4>
+                          <p className="text-xs font-semibold text-brand-sageDark mt-0.5">{exp.company} • {exp.period}</p>
+                          
                           <p className="text-xs text-brand-muted mt-3 line-clamp-2">{exp.summary}</p>
                         </div>
                         <div className="mt-6 pt-4 border-t border-brand-border/50 flex justify-end">
@@ -516,27 +566,24 @@
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {PORTFOLIO_DATA.projects.map((proj) => (
-                      <div key={proj.id} className="bg-white rounded-3xl p-6 border border-brand-border shadow-sm flex flex-col justify-between">
+                      <div key={proj.id} className="bg-white rounded-3xl border border-brand-border overflow-hidden shadow-sm flex flex-col justify-between hover:border-brand-pinkMain transition-all">
                         <div>
-                          <span className="text-[10px] font-bold tracking-widest uppercase bg-brand-sageLight text-brand-sageDark px-2.5 py-1 rounded-full">{proj.category}</span>
-                          <h4 className="text-xl font-bold text-brand-text mt-3">{proj.title}</h4>
-                          <p className="text-xs text-brand-muted mt-2">{proj.shortDesc}</p>
-                          
-                          <div className="flex flex-wrap gap-1.5 mt-4">
-                            {proj.tools.map((t, i) => (
-                              <span key={i} className="text-[10px] font-medium bg-brand-bg px-2.5 py-1 rounded-md text-brand-muted border border-brand-border">
-                                {t}
-                              </span>
-                            ))}
+                          <img src={proj.coverImage} alt={proj.title} className="w-full h-44 object-cover" />
+                          <div className="p-6">
+                            <span className="text-[10px] font-bold tracking-widest uppercase bg-brand-sageLight text-brand-sageDark px-2.5 py-1 rounded-full">
+                              {proj.category}
+                            </span>
+                            <h4 className="text-xl font-bold text-brand-text mt-3">{proj.title}</h4>
+                            <p className="text-xs text-brand-muted mt-2 line-clamp-2">{proj.shortDesc}</p>
                           </div>
                         </div>
 
-                        <div className="mt-6 pt-4 border-t border-brand-border/50 flex justify-end">
+                        <div className="p-6 pt-0 flex justify-end">
                           <button
                             onClick={() => navigateTo('/project')}
                             className="text-xs font-bold text-brand-text hover:text-brand-sageDark flex items-center gap-1"
                           >
-                            <span>View Documentation</span>
+                            <span>Open Project</span>
                             <i data-lucide="chevron-right" className="w-4 h-4"></i>
                           </button>
                         </div>
@@ -558,7 +605,7 @@
                   </span>
                   <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-text">Experience & Documentation</h2>
                   <p className="text-brand-muted text-sm sm:text-base mt-2 max-w-2xl">
-                    Click on any experience card to expand and view detailed responsibilities along with event/activity documentation photos.
+                    Click on any card to expand and view detailed responsibilities along with event/activity documentation photos.
                   </p>
                 </div>
 
@@ -579,13 +626,10 @@
                             className="w-full p-6 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-brand-pinkLight/20 transition-colors"
                           >
                             <div>
-                              <div className="flex items-center gap-2">
-                                <h4 className="text-lg font-bold text-brand-text">{exp.role}</h4>
-                                <span className="text-xs font-semibold text-brand-pinkDark bg-brand-pinkLight px-2.5 py-0.5 rounded-full">
-                                  {exp.company}
-                                </span>
-                              </div>
-                              <p className="text-xs text-brand-muted mt-1">{exp.location} • {exp.summary}</p>
+                              {/* REVISED: Position/Jabatan Dulu, Nama Perusahaan di bawahnya */}
+                              <h4 className="text-lg font-bold text-brand-text">{exp.role}</h4>
+                              <p className="text-xs font-semibold text-brand-pinkDark mt-0.5">{exp.company}</p>
+                              <p className="text-xs text-brand-muted mt-2">{exp.location} • {exp.summary}</p>
                             </div>
 
                             <div className="flex items-center gap-3 shrink-0">
@@ -598,7 +642,6 @@
                             </div>
                           </button>
 
-                          {/* Accordion Expandable Section */}
                           {isExpanded && (
                             <div className="px-6 pb-6 pt-2 border-t border-brand-border/60 bg-brand-bg/30 space-y-6 animate-fadeIn">
                               <div>
@@ -660,13 +703,10 @@
                             className="w-full p-6 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-brand-pinkLight/20 transition-colors"
                           >
                             <div>
-                              <div className="flex items-center gap-2">
-                                <h4 className="text-lg font-bold text-brand-text">{exp.role}</h4>
-                                <span className="text-xs font-semibold text-brand-sageDark bg-brand-sageLight px-2.5 py-0.5 rounded-full">
-                                  {exp.company}
-                                </span>
-                              </div>
-                              <p className="text-xs text-brand-muted mt-1">{exp.location} • {exp.summary}</p>
+                              {/* REVISED: Posisi Dulu, Perusahaan/Organisasi di Bawahnya */}
+                              <h4 className="text-lg font-bold text-brand-text">{exp.role}</h4>
+                              <p className="text-xs font-semibold text-brand-sageDark mt-0.5">{exp.company}</p>
+                              <p className="text-xs text-brand-muted mt-2">{exp.location} • {exp.summary}</p>
                             </div>
 
                             <div className="flex items-center gap-3 shrink-0">
@@ -679,7 +719,6 @@
                             </div>
                           </button>
 
-                          {/* Accordion Expandable Section */}
                           {isExpanded && (
                             <div className="px-6 pb-6 pt-2 border-t border-brand-border/60 bg-brand-bg/30 space-y-6 animate-fadeIn">
                               <div>
@@ -727,85 +766,104 @@
             )}
 
             {/* ========================================== */}
-            {/* ROUTE 4: /project PAGE                     */}
+            {/* ROUTE 4: /project PAGE (VISUAL CARD GRID)  */}
             {/* ========================================== */}
             {currentRoute === '/project' && (
               <div className="space-y-12">
                 <div>
                   <span className="text-xs font-bold uppercase tracking-widest text-brand-pinkDark bg-brand-pinkLight px-3 py-1.5 rounded-full inline-block mb-3">
-                    Data Portfolio
+                    Visual Showcase
                   </span>
                   <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-text">Projects & Proof of Work</h2>
                   <p className="text-brand-muted text-sm sm:text-base mt-2 max-w-2xl">
-                    Explore comprehensive data science and analytics projects with UI proofs, chart results, and methodology explanations.
+                    Visual-first project archive. Click on any project card to expand methodology and view direct Drive documentation links.
                   </p>
                 </div>
 
-                <div className="space-y-6">
+                {/* REVISED: Grid Cards with Initial Image Cover */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   {PORTFOLIO_DATA.projects.map((proj) => {
                     const isExpanded = expandedId === proj.id;
                     return (
-                      <div key={proj.id} className="bg-white rounded-3xl border border-brand-border overflow-hidden shadow-sm transition-all">
-                        <div className="p-6 sm:p-8">
-                          <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                            <div>
-                              <span className="text-[10px] font-bold tracking-widest uppercase bg-brand-sageLight text-brand-sageDark px-2.5 py-1 rounded-full">
+                      <div key={proj.id} className="bg-white rounded-3xl border border-brand-border overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                        
+                        {/* Cover Image Always Shown at the Start */}
+                        <div>
+                          <div className="relative h-60 w-full overflow-hidden bg-brand-bg">
+                            <img 
+                              src={proj.coverImage} 
+                              alt={proj.title} 
+                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                            />
+                            <div className="absolute top-4 left-4">
+                              <span className="text-[10px] font-bold tracking-widest uppercase bg-white/90 backdrop-blur-md text-brand-sageDark px-3 py-1.5 rounded-full shadow-sm border border-brand-border">
                                 {proj.category}
                               </span>
-                              <h3 className="font-serif text-2xl font-bold text-brand-text mt-3">{proj.title}</h3>
-                              <p className="text-sm text-brand-muted mt-2 max-w-3xl">{proj.shortDesc}</p>
-
-                              <div className="flex flex-wrap gap-1.5 mt-4">
-                                {proj.tools.map((t, i) => (
-                                  <span key={i} className="text-xs font-medium bg-brand-bg px-3 py-1 rounded-lg text-brand-muted border border-brand-border">
-                                    {t}
-                                  </span>
-                                ))}
-                              </div>
                             </div>
+                          </div>
+
+                          <div className="p-6 sm:p-8">
+                            <h3 className="font-serif text-2xl font-bold text-brand-text">{proj.title}</h3>
+                            <p className="text-xs sm:text-sm text-brand-muted mt-2 leading-relaxed">{proj.shortDesc}</p>
+
+                            <div className="flex flex-wrap gap-1.5 mt-4">
+                              {proj.tools.map((t, i) => (
+                                <span key={i} className="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-md text-brand-muted border border-brand-border">
+                                  {t}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Card Footer & Accordion Toggle */}
+                        <div className="px-6 pb-6 sm:px-8 sm:pb-8 pt-0">
+                          <div className="flex items-center justify-between border-t border-brand-border/60 pt-4">
+                            <a
+                              href={proj.driveDocUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-pinkDark hover:text-brand-text transition-colors"
+                            >
+                              <i data-lucide="file-text" className="w-4 h-4"></i>
+                              <span>DRIVE DOCS</span>
+                            </a>
 
                             <button
                               onClick={() => toggleAccordion(proj.id)}
-                              className="inline-flex items-center justify-center gap-2 bg-brand-bg border border-brand-border hover:border-brand-text px-5 py-2.5 rounded-full text-xs font-bold tracking-wider transition-colors shrink-0"
+                              className="inline-flex items-center gap-1.5 bg-brand-sageDark text-white px-4 py-2 rounded-full text-xs font-bold tracking-wider hover:bg-brand-text transition-all"
                             >
-                              <span>{isExpanded ? "HIDE PROOF" : "VIEW UI PROOF"}</span>
-                              <i data-lucide={isExpanded ? "chevron-up" : "chevron-down"} className="w-4 h-4 text-brand-sageDark"></i>
+                              <span>{isExpanded ? "CLOSE" : "PROJECT DETAILS"}</span>
+                              <i data-lucide={isExpanded ? "chevron-up" : "chevron-down"} className="w-3.5 h-3.5"></i>
                             </button>
                           </div>
 
-                          {/* Expanded Documentation Drawer */}
+                          {/* Expanded Content Drawer */}
                           {isExpanded && (
-                            <div className="mt-8 pt-8 border-t border-brand-border/80 space-y-8 animate-fadeIn">
+                            <div className="mt-6 pt-6 border-t border-brand-border/80 space-y-6 animate-fadeIn">
                               <div>
-                                <h4 className="text-xs font-bold uppercase tracking-wider text-brand-muted mb-2">Project Overview & Methodology</h4>
-                                <p className="text-sm text-brand-text leading-relaxed bg-brand-bg/50 p-4 rounded-xl border border-brand-border">
+                                <h4 className="text-[10px] font-bold uppercase tracking-wider text-brand-muted mb-2">Overview & Methodology</h4>
+                                <p className="text-xs sm:text-sm text-brand-text leading-relaxed bg-brand-bg p-4 rounded-xl border border-brand-border">
                                   {proj.fullDesc}
                                 </p>
                               </div>
 
                               <div>
-                                <h4 className="text-xs font-bold uppercase tracking-wider text-brand-muted mb-2">Key Business Impact & Outcomes</h4>
-                                <div className="p-4 rounded-xl bg-brand-sageLight/50 border border-brand-sageMain/30 text-sm font-medium text-brand-sageDark">
+                                <h4 className="text-[10px] font-bold uppercase tracking-wider text-brand-muted mb-2">Impact & Outcomes</h4>
+                                <div className="p-3.5 rounded-xl bg-brand-sageLight/60 border border-brand-sageMain/30 text-xs font-semibold text-brand-sageDark">
                                   {proj.outcomes}
                                 </div>
                               </div>
 
-                              {/* UI & Dashboard Proof Images */}
-                              {proj.images && proj.images.length > 0 && (
+                              {/* Proof Images inside drawer */}
+                              {proj.proofImages && (
                                 <div>
-                                  <h4 className="text-xs font-bold uppercase tracking-wider text-brand-muted mb-4 flex items-center gap-2">
-                                    <i data-lucide="layout" className="w-4 h-4 text-brand-pinkDark"></i>
-                                    <span>UI Proof & Result Visualizations</span>
-                                  </h4>
-                                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    {proj.images.map((img, idx) => (
-                                      <div key={idx} className="rounded-2xl overflow-hidden border border-brand-border bg-brand-bg">
-                                        <img 
-                                          src={img.url} 
-                                          alt={img.caption} 
-                                          className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500"
-                                        />
-                                        <div className="p-3 bg-white text-xs font-semibold text-brand-text border-t border-brand-border">
+                                  <h4 className="text-[10px] font-bold uppercase tracking-wider text-brand-muted mb-3">UI & Dashboard Proofs</h4>
+                                  <div className="grid grid-cols-1 gap-3">
+                                    {proj.proofImages.map((img, idx) => (
+                                      <div key={idx} className="rounded-xl overflow-hidden border border-brand-border">
+                                        <img src={img.url} alt={img.caption} className="w-full h-40 object-cover" />
+                                        <div className="p-2.5 bg-brand-bg text-[11px] font-medium text-brand-text border-t border-brand-border">
                                           {img.caption}
                                         </div>
                                       </div>
@@ -813,35 +871,10 @@
                                   </div>
                                 </div>
                               )}
-
-                              {/* Project External Links */}
-                              <div className="flex flex-wrap items-center gap-4 pt-2">
-                                {proj.githubUrl && (
-                                  <a
-                                    href={proj.githubUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-xs font-bold tracking-wider text-brand-text hover:text-brand-sageDark"
-                                  >
-                                    <i data-lucide="github" className="w-4 h-4"></i>
-                                    <span>VIEW GITHUB REPO</span>
-                                  </a>
-                                )}
-                                {proj.dashboardUrl && (
-                                  <a
-                                    href={proj.dashboardUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-xs font-bold tracking-wider text-brand-pinkDark hover:text-brand-text"
-                                  >
-                                    <i data-lucide="external-link" className="w-4 h-4"></i>
-                                    <span>LIVE DASHBOARD</span>
-                                  </a>
-                                )}
-                              </div>
                             </div>
                           )}
                         </div>
+
                       </div>
                     );
                   })}
