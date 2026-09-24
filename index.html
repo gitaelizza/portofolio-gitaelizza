@@ -75,6 +75,10 @@
     .nav-pill:not(.active) { background:#FFF0F3; }
     .nav-pill:not(.active):hover { background:#D7E7D1; color:#5F795A; }
     .nav-pill.active { background:#E5A0B2; color:white; box-shadow:0 5px 16px rgba(184,95,120,.16); }
+    .experience-card { background:#FFF; border:1px solid #E8D8DC; transition:background .25s ease, border-color .25s ease, transform .25s ease, box-shadow .25s ease; }
+    .experience-card:hover { background:#FCECEF; border-color:#E5A0B2; transform:translateY(-3px); box-shadow:0 14px 30px rgba(184,95,120,.10); }
+    .org-card { background:#FFF; border:1px solid #E8D8DC; transition:background .25s ease, border-color .25s ease, transform .25s ease, box-shadow .25s ease; }
+    .org-card:hover { background:#F3F8F1; border-color:#D4E4D0; transform:translateY(-2px); box-shadow:0 10px 25px rgba(100,123,96,.08); }
     .project-card { transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
     .project-card:hover { transform:translateY(-3px); border-color:#DFA0AF; box-shadow:0 12px 35px rgba(184,111,130,.08); }
   </style>
@@ -496,11 +500,7 @@
               </div>
             </div>
           </main>
-          <footer className="px-6 sm:px-10 lg:px-16 pb-8 relative z-10">
-            <div className="max-w-8xl mx-auto flex justify-between items-center text-[10px] uppercase tracking-[.2em] text-brand-muted">
-              <span>Information Systems / Data</span><span>Scroll to explore</span>
-            </div>
-          </footer>
+
         </div>
       );
 
@@ -509,12 +509,12 @@
       ];
 
       const Navbar = () => (
-        <header className="sticky top-0 z-40 bg-brand-bg/90 backdrop-blur-xl">
+        <header className="sticky top-0 z-40 bg-brand-pinkLight/95 backdrop-blur-xl border-b border-brand-pinkSoft/60">
           <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 h-20 flex items-center justify-between">
             <button onClick={() => navigateTo("/")} className="font-serif text-xl font-bold tracking-tight">
               Lee<span className="italic text-brand-pinkDark">.</span>
             </button>
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-2">
               {navItems.map(([path,label]) => (
                 <button key={path} onClick={() => navigateTo(path)} className={`nav-pill rounded-full px-4 py-2.5 text-[10px] uppercase tracking-[.18em] font-semibold ${currentRoute===path ? "active" : ""}`}>
                   {label}
@@ -526,7 +526,7 @@
             </button>
           </div>
           {mobileMenuOpen && (
-            <div className="md:hidden border-t border-brand-line bg-brand-bg px-6 py-5">
+            <div className="md:hidden border-t border-brand-pinkSoft bg-brand-pinkLight px-6 py-5">
               <div className="flex flex-col gap-5">
                 {navItems.map(([path,label]) => (
                   <button key={path} onClick={() => navigateTo(path)} className="text-left text-sm uppercase tracking-widest">{label}</button>
@@ -537,36 +537,27 @@
         </header>
       );
 
-      const Footer = () => (
-        <footer className="mt-20 border-t border-brand-line">
-          <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 py-9">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-              <div>
-                <p className="text-[10px] uppercase tracking-[.25em] text-brand-muted mb-2">Let's connect</p>
-                <button onClick={handleCopyEmail} className="font-serif text-2xl hover:text-brand-pinkDark transition">
-                  {copiedEmail ? "Email copied!" : PORTFOLIO_DATA.email}
-                </button>
+      const PageIntro = ({number,title,description}) => (
+        <section className="mb-12">
+          {/* Full-width page title banner */}
+          <div className="-mx-6 sm:-mx-10 lg:-mx-16 bg-brand-pinkLight rounded-b-[2rem] border-b border-brand-pinkSoft/70">
+            <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 py-12 md:py-16">
+              <div className="flex flex-col gap-4">
+                <span className="text-xs uppercase tracking-[.25em] text-brand-pinkDark font-semibold">
+                  {number}
+                </span>
+                <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl leading-[.9] tracking-[-.04em]">
+                  {title}
+                </h1>
               </div>
-              <div className="flex gap-6 text-xs uppercase tracking-widest">
-                <a href={PORTFOLIO_DATA.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pinkDark">LinkedIn</a>
-                <a href={PORTFOLIO_DATA.resume} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pinkDark">Resume</a>
-              </div>
-            </div>
-            <div className="mt-8 pt-4 border-t border-brand-line flex justify-between text-[10px] uppercase tracking-[.2em] text-brand-muted">
-              <span>{PORTFOLIO_DATA.name}</span><span>© {new Date().getFullYear()}</span>
             </div>
           </div>
-        </footer>
-      );
 
-      const PageIntro = ({number,title,description}) => (
-        <section className="pb-12">
-          <div className="grid lg:grid-cols-[.3fr_1fr] gap-8">
-            <span className="text-xs uppercase tracking-[.25em] text-brand-muted">{number}</span>
-            <div>
-              <h1 className="font-serif text-5xl sm:text-7xl leading-[.9]">{title}</h1>
-              <p className="text-sm text-brand-muted leading-7 max-w-2xl mt-5">{description}</p>
-            </div>
+          {/* Description stays on the normal page background */}
+          <div className="pt-7">
+            <p className="text-sm text-brand-muted leading-7 max-w-2xl">
+              {description}
+            </p>
           </div>
         </section>
       );
@@ -695,13 +686,13 @@
           <PageIntro number="02 / Career" title="Experience" description="Professional experience and selected organizational involvement." />
 
           <section className="border-t border-brand-line py-12">
-            <div className="grid lg:grid-cols-[.3fr_1fr] gap-8">
-              <span className="text-xs uppercase tracking-[.25em] text-brand-muted">Work</span>
-              <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <span className="inline-block text-xs uppercase tracking-[.25em] text-brand-muted mb-6">Work</span>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {PORTFOLIO_DATA.workExperience.map((exp,index) => (
-                  <article key={exp.id} className="pastel-card rounded-2xl overflow-hidden">
+                  <article key={exp.id} className="experience-card rounded-2xl overflow-hidden">
                     {exp.photos?.length > 0 && (
-                      <div className={`grid ${exp.photos.length > 1 ? "grid-cols-2" : "grid-cols-1"} gap-1.5 p-1.5 bg-brand-pinkLight`}>
+                      <div className={`grid ${exp.photos.length > 1 ? "grid-cols-2" : "grid-cols-1"} gap-1 p-1 bg-brand-pinkLight`}>
                         {exp.photos.slice(0,2).map((photo,i) => (
                           <div key={i} className="experience-photo overflow-hidden rounded-xl">
                             <img src={photo.url} alt={photo.caption || exp.role} className="w-full h-full object-cover" />
@@ -710,13 +701,13 @@
                       </div>
                     )}
                     <div className="p-5">
-                      <div className="flex justify-between gap-4">
+                      <div className="flex justify-between gap-3">
                         <span className="text-[10px] uppercase tracking-[.2em] text-brand-pinkDark">0{index+1}</span>
                         <span className="text-[10px] text-brand-muted text-right">{exp.period}</span>
                       </div>
-                      <h2 className="font-serif text-2xl mt-4">{exp.role}</h2>
+                      <h2 className="font-serif text-xl leading-tight mt-4">{exp.role}</h2>
                       <p className="text-sm text-brand-sageDark mt-1">{exp.company}</p>
-                      <p className="text-xs text-brand-muted mt-1">{exp.location}</p>
+                      <p className="text-[11px] text-brand-muted mt-1">{exp.location}</p>
                       <p className="mt-3 text-sm leading-6 text-brand-muted">{exp.summary}</p>
                       <div className="mt-3 space-y-1.5">
                         {exp.highlights.map((h,i)=><p key={i} className="text-xs leading-5 flex gap-2"><span className="text-brand-pinkDark">·</span>{h}</p>)}
@@ -729,28 +720,19 @@
           </section>
 
           <section className="border-t border-brand-line py-12">
-            <div className="grid lg:grid-cols-[.3fr_1fr] gap-8">
-              <span className="text-xs uppercase tracking-[.25em] text-brand-muted">Organization</span>
-              <div>
+            <div>
+              <span className="inline-block text-xs uppercase tracking-[.25em] text-brand-muted mb-6">Organizational Experience</span>
+              <div className="space-y-3">
                 {PORTFOLIO_DATA.orgExperience.map((org,index) => (
-                  <article key={org.id} className="border-t border-brand-line py-5 first:pt-0">
-                    <div className="grid md:grid-cols-[1fr_150px_auto] gap-5 items-start">
+                  <article key={org.id} className="org-card rounded-2xl p-5 md:p-6">
+                    <div className="grid md:grid-cols-[auto_1fr_auto] gap-4 md:gap-7 items-start">
+                      <span className="text-[10px] uppercase tracking-[.2em] text-brand-pinkDark">0{index+1}</span>
                       <div>
-                        <p className="text-[10px] uppercase tracking-[.2em] text-brand-pinkDark">0{index+1}</p>
-                        <h3 className="text-lg font-semibold mt-1">{org.organization}</h3>
-                        <p className="text-sm text-brand-sageDark mt-0.5">{org.role}</p>
-                        <p className="text-sm text-brand-muted leading-6 mt-2 max-w-2xl">{org.description}</p>
+                        <h3 className="text-lg font-semibold leading-tight">{org.role}</h3>
+                        <p className="text-sm text-brand-sageDark mt-1">{org.organization}</p>
+                        <p className="text-sm text-brand-muted leading-6 mt-2 max-w-3xl">{org.description}</p>
                       </div>
-                      {org.photos?.length > 0 && (
-                        <div className="grid grid-cols-2 md:grid-cols-1 gap-1.5">
-                          {org.photos.slice(0,2).map((photo,i) => (
-                            <div key={i} className="org-photo overflow-hidden rounded-xl bg-brand-pinkLight">
-                              <img src={photo.url} alt={photo.caption || org.organization} className="w-full h-full object-cover" />
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                      <span className="text-xs text-brand-muted md:text-right">{org.period}</span>
+                      <span className="text-xs text-brand-muted md:text-right whitespace-nowrap">{org.period}</span>
                     </div>
                   </article>
                 ))}
@@ -806,7 +788,6 @@
         <div className="min-h-screen bg-brand-bg text-brand-text">
           <Navbar />
           <main className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 pt-10 md:pt-12">{pageContent}</main>
-          <Footer />
         </div>
       );
     }
