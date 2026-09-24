@@ -11,7 +11,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -29,23 +29,24 @@
         extend: {
           colors: {
             brand: {
-              bg: '#FBFBf8',           // Warm editorial cream
-              card: '#FFFFFF',         
-              text: '#1E1D1B',         // Deep charcoal
-              muted: '#6B6864',        
-              border: '#EAE7E1',       
+              bg: '#F8F8F5',           // Cream background
+              darkCard: '#181E24',     // Dark slate inspired by reference image
+              darkText: '#F2EFEA',
+              text: '#1C1B1A',         // Soft Charcoal
+              muted: '#6B6865',        
+              border: '#E5E2DC',       
               
               // Soft Pink Palette
-              pinkLight: '#FCEEF1',
-              pinkSoft: '#F6D5DC',
-              pinkMain: '#E09FAD',
-              pinkDark: '#B86F7F',
+              pinkLight: '#FAF0F2',
+              pinkSoft: '#F3D2D9',
+              pinkMain: '#DF9EA9',
+              pinkDark: '#B36877',
               
               // Soft Sage Green Palette
-              sageLight: '#EEF4EF',
-              sageSoft: '#D4E2D2',
-              sageMain: '#96B08D',
-              sageDark: '#5B7552',
+              sageLight: '#F0F4F1',
+              sageSoft: '#D2E0D0',
+              sageMain: '#94AF8D',
+              sageDark: '#587250',
             }
           },
           fontFamily: {
@@ -59,17 +60,16 @@
   
   <style>
     body {
-      background-color: #FBFBf8;
-      color: #1E1D1B;
+      background-color: #F8F8F5;
+      color: #1C1B1A;
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
     }
 
-    /* Soft Glassmorphism */
-    .glass-card {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(234, 231, 225, 0.9);
+    /* Modal Backdrop Blur */
+    .modal-backdrop {
+      background: rgba(18, 22, 28, 0.65);
+      backdrop-filter: blur(8px);
     }
   </style>
 </head>
@@ -86,7 +86,8 @@
       email: "leesangwon.data@gmail.com",
       linkedin: "https://linkedin.com",
       resume: "https://drive.google.com",
-      about: "A driven Fresh Graduate specializing in turning noisy datasets into clear, actionable business strategies. Experienced in exploratory data analysis, predictive statistical modeling, data visualization dashboards, and pipeline automation.",
+      shortAbout: "A Fresh Graduate Data Analyst translating noisy raw datasets into clear, high-impact business decisions and visual metrics.",
+      fullAbout: "I specialize in exploratory data analysis, predictive modeling, and building intuitive dashboard experiences. Passionate about leveraging data to solve complex problems and uncover growth opportunities.",
       
       education: {
         degree: "Bachelor of Science in Information Systems / Data Science",
@@ -105,9 +106,9 @@
           location: "Jakarta, Indonesia",
           summary: "Analyzed high-volume e-commerce transaction datasets and built interactive executive dashboards.",
           highlights: [
-            "Cleaned and processed over 500,000 transaction records using Python (Pandas) and SQL queries.",
+            "Processed over 500,000 transaction records using Python (Pandas) and SQL queries.",
             "Designed and deployed 4 executive Tableau dashboards tracking Daily Active Users (DAU) and Retention Rates.",
-            "Collaborated with marketing teams to optimize ad spend through cohort analysis, boosting campaign ROI by 14%."
+            "Collaborated with marketing teams to optimize ad spend through cohort analysis, boosting ROI by 14%."
           ],
           photos: [
             { caption: "Presenting Q2 Data Insights to Stakeholders", url: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" },
@@ -116,13 +117,13 @@
         },
         {
           id: "exp-w2",
-          role: "Junior Business Intelligence Assistant",
+          role: "Junior BI Assistant",
           company: "Aura Digital Agency",
           period: "Aug 2023 — Dec 2023",
           location: "Remote",
           summary: "Created automated ETL pipelines and weekly client performance reporting dashboards.",
           highlights: [
-            "Automated weekly client reporting pipelines using Google BigQuery and Looker Studio, saving 10+ manual hours per week.",
+            "Automated weekly client reporting pipelines using BigQuery and Looker Studio, saving 10+ manual hours/week.",
             "Performed exploratory data analysis to detect seasonal purchasing patterns across 12 digital retail accounts."
           ],
           photos: [
@@ -154,33 +155,47 @@
         {
           id: "proj-1",
           title: "Customer Segmentation & Churn Analysis",
-          category: "Machine Learning & Clustering",
-          tools: ["Python", "Scikit-Learn", "RFM Model", "PowerBI"],
+          category: "Machine Learning",
+          tools: ["Python", "Scikit-Learn", "RFM", "PowerBI"],
           coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-          shortDesc: "Built an end-to-end RFM model and K-Means clustering algorithm to identify key customer segments and lower churn rates.",
-          fullDesc: "This project aimed to reduce churn rate for an online retailer. By applying RFM (Recency, Frequency, Monetary) segmentation combined with K-Means Clustering, we identified 4 unique customer profiles and suggested targeted retention campaigns.",
-          outcomes: "Identified high-value customer group generating 62% revenue; developed automated churn alert rule with 88% precision.",
+          shortDesc: "RFM clustering model predicting e-commerce churn patterns.",
+          fullDesc: "Applied RFM (Recency, Frequency, Monetary) segmentation combined with K-Means Clustering to classify customer profiles and trigger targeted retention campaigns.",
+          outcomes: "Uncovered key segment generating 62% revenue; created churn alert rule with 88% precision.",
           driveDocUrl: "https://drive.google.com",
           githubUrl: "https://github.com",
-          dashboardUrl: "https://public.tableau.com",
           proofImages: [
-            { caption: "RFM Clusters & Customer Segment Distribution", url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" },
-            { caption: "PowerBI Interactive Executive Dashboard Proof", url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" }
+            { caption: "RFM Clusters & Segment Distribution Chart", url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" },
+            { caption: "PowerBI Interactive Dashboard Overview", url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" }
           ]
         },
         {
           id: "proj-2",
-          title: "Supply Chain & Logistics Dashboard",
-          category: "Data Visualization & BI",
-          tools: ["SQL (BigQuery)", "Looker Studio", "Excel"],
+          title: "Supply Chain Latency Dashboard",
+          category: "Data Visualization",
+          tools: ["SQL", "Looker Studio", "BigQuery"],
           coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-          shortDesc: "Interactive BI dashboard monitoring warehouse inventory, regional delivery latency, and supplier performance metrics.",
-          fullDesc: "Designed for a regional distributor, this dashboard connects directly to BigQuery tables to visualize delivery pipelines, regional delay rates, and stock turnover speed in real time.",
-          outcomes: "Uncovered delivery bottleneck in North Region, enabling operational adjustments that reduced average delay by 18%.",
+          shortDesc: "Real-time BI monitoring warehouse turnover & delivery delay.",
+          fullDesc: "Connected BigQuery to Looker Studio to visualize regional delivery latency, inventory stockouts, and supplier performance metrics.",
+          outcomes: "Identified North Region bottleneck, enabling routing changes that reduced delays by 18%.",
           driveDocUrl: "https://drive.google.com",
           githubUrl: "https://github.com",
           proofImages: [
-            { caption: "Looker Studio Regional Bottleneck Monitoring", url: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80" }
+            { caption: "Looker Studio Delivery Delay Heatmap", url: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80" }
+          ]
+        },
+        {
+          id: "proj-3",
+          title: "E-Commerce Sales Performance EDA",
+          category: "Exploratory Data Analysis",
+          tools: ["Python", "Pandas", "Seaborn"],
+          coverImage: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80",
+          shortDesc: "Statistical EDA analyzing seasonal purchasing patterns.",
+          fullDesc: "Analyzed 2-year retail transaction datasets to identify peak purchasing trends, product correlations, and revenue optimization windows.",
+          outcomes: "Provided actionable pricing recommendations resulting in 8% uplift during holiday promo season.",
+          driveDocUrl: "https://drive.google.com",
+          githubUrl: "https://github.com",
+          proofImages: [
+            { caption: "Correlation Matrix & Seasonal Demand Plot", url: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80" }
           ]
         }
       ]
@@ -193,14 +208,14 @@
       });
 
       const [copiedEmail, setCopiedEmail] = useState(false);
-      const [expandedId, setExpandedId] = useState(null);
+      const [activeModalProject, setActiveModalProject] = useState(null); // Modal state for Projects
       const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
       useEffect(() => {
         const handleHashChange = () => {
           const hash = window.location.hash.replace('#', '') || '/';
           setCurrentRoute(hash);
-          setExpandedId(null);
+          setActiveModalProject(null);
           setMobileMenuOpen(false);
           window.scrollTo(0, 0);
         };
@@ -213,7 +228,7 @@
         if (window.lucide) {
           window.lucide.createIcons();
         }
-      }, [currentRoute, expandedId, mobileMenuOpen]);
+      }, [currentRoute, activeModalProject, mobileMenuOpen]);
 
       const navigateTo = (path) => {
         window.location.hash = path;
@@ -223,10 +238,6 @@
         navigator.clipboard.writeText(PORTFOLIO_DATA.email);
         setCopiedEmail(true);
         setTimeout(() => setCopiedEmail(false), 2500);
-      };
-
-      const toggleAccordion = (id) => {
-        setExpandedId(prev => prev === id ? null : id);
       };
 
       // --- ROUTE 1: LANDING PAGE ---
@@ -269,7 +280,7 @@
 
       // --- NAVBAR ---
       const Navbar = () => (
-        <header className="sticky top-0 z-50 backdrop-blur-md bg-brand-bg/85 border-b border-brand-border">
+        <header className="sticky top-0 z-40 backdrop-blur-md bg-brand-bg/85 border-b border-brand-border">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <button 
               onClick={() => navigateTo('/')} 
@@ -381,99 +392,56 @@
             {/* ROUTE 2: /home PAGE                        */}
             {/* ========================================== */}
             {currentRoute === '/home' && (
-              <div className="space-y-16 md:space-y-24">
+              <div className="space-y-16 md:space-y-20">
                 
-                {/* REVISED: Modern Asymmetric Hero / Profile Section */}
-                <section className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                {/* REVISED 1: Profile Banner Inspired by Reference Image */}
+                <section className="bg-brand-darkCard text-brand-darkText rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+                  <div className="absolute -right-16 -bottom-16 w-80 h-80 bg-brand-pinkDark/20 rounded-full blur-3xl pointer-events-none"></div>
                   
-                  {/* Left Column: Visual Card Profile & Quick Specs */}
-                  <div className="lg:col-span-5 bg-gradient-to-br from-brand-pinkLight via-white to-brand-sageLight p-6 sm:p-8 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-brand-pinkSoft/40 rounded-full blur-2xl"></div>
-                    
-                    <div className="relative z-10">
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className="w-16 h-16 rounded-2xl bg-brand-sageDark text-white font-serif text-2xl font-bold flex items-center justify-center shadow-md">
-                          LS
-                        </div>
-                        <div>
-                          <span className="text-[10px] font-extrabold uppercase tracking-widest text-brand-pinkDark bg-white px-2.5 py-1 rounded-full border border-brand-pinkMain/30">
-                            Available for Hire
-                          </span>
-                          <h3 className="text-xl font-bold text-brand-text mt-1">{PORTFOLIO_DATA.name}</h3>
-                          <p className="text-xs text-brand-muted font-medium">{PORTFOLIO_DATA.role}</p>
-                        </div>
-                      </div>
-
-                      <div className="space-y-3 pt-4 border-t border-brand-border/60">
-                        <div className="flex items-center justify-between text-xs bg-white/80 p-3 rounded-xl border border-brand-border/50">
-                          <span className="text-brand-muted font-medium">Status</span>
-                          <span className="font-semibold text-brand-sageDark">Fresh Graduate 2024</span>
-                        </div>
-                        <div className="flex items-center justify-between text-xs bg-white/80 p-3 rounded-xl border border-brand-border/50">
-                          <span className="text-brand-muted font-medium">Academic GPA</span>
-                          <span className="font-semibold text-brand-text">{PORTFOLIO_DATA.education.gpa}</span>
-                        </div>
-                        <div className="flex items-center justify-between text-xs bg-white/80 p-3 rounded-xl border border-brand-border/50">
-                          <span className="text-brand-muted font-medium">Core Stack</span>
-                          <span className="font-semibold text-brand-text">Python, SQL, Tableau, PowerBI</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="mt-8 pt-4 border-t border-brand-border/60 flex items-center gap-2">
-                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
-                      <span className="text-[11px] font-semibold text-brand-muted">Open to Data Analyst & BI Roles</span>
-                    </div>
+                  {/* Big Bold Typography */}
+                  <div className="z-10">
+                    <span className="text-[10px] font-extrabold uppercase tracking-[0.3em] text-brand-sageSoft bg-white/10 px-3.5 py-1.5 rounded-full inline-block mb-4">
+                      {PORTFOLIO_DATA.role}
+                    </span>
+                    <h2 className="font-serif text-6xl sm:text-8xl md:text-9xl font-extrabold tracking-tight text-brand-darkText leading-none">
+                      ABOUT<br/>ME
+                    </h2>
                   </div>
 
-                  {/* Right Column: Narrative Profile & Action Buttons */}
-                  <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
-                    <div>
-                      <div className="inline-flex items-center gap-2 bg-brand-sageLight text-brand-sageDark text-xs font-bold px-3 py-1.5 rounded-full mb-6">
-                        <i data-lucide="sparkles" className="w-3.5 h-3.5"></i>
-                        <span>PASSIONATE DATA ANALYST</span>
-                      </div>
+                  {/* Concise Description & Pill Read More Button */}
+                  <div className="z-10 max-w-md space-y-6 md:text-right flex flex-col md:items-end">
+                    <p className="text-brand-darkText/80 text-sm sm:text-base leading-relaxed font-light">
+                      {PORTFOLIO_DATA.shortAbout}
+                    </p>
 
-                      <h2 className="font-serif text-3xl sm:text-4xl font-bold text-brand-text leading-tight mb-6">
-                        Bridging complex raw datasets with intuitive visual storytelling.
-                      </h2>
-
-                      <p className="text-brand-muted text-base sm:text-lg leading-relaxed mb-8">
-                        {PORTFOLIO_DATA.about}
-                      </p>
-                    </div>
-
-                    <div className="flex flex-wrap items-center gap-3 pt-6 border-t border-brand-border/60">
+                    <div className="flex flex-wrap items-center gap-3 pt-2">
                       <a
                         href={PORTFOLIO_DATA.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-brand-sageDark text-white px-5 py-3 rounded-full text-xs font-semibold tracking-wider hover:bg-brand-text transition-all shadow-sm"
+                        className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+                        title="LinkedIn"
                       >
                         <i data-lucide="linkedin" className="w-4 h-4"></i>
-                        <span>LINKEDIN</span>
                       </a>
-
+                      <button
+                        onClick={handleCopyEmail}
+                        className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+                        title="Copy Email"
+                      >
+                        <i data-lucide={copiedEmail ? "check" : "copy"} className="w-4 h-4"></i>
+                      </button>
                       <a
                         href={PORTFOLIO_DATA.resume}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-brand-pinkLight text-brand-pinkDark border border-brand-pinkMain/30 px-5 py-3 rounded-full text-xs font-semibold tracking-wider hover:bg-brand-pinkMain hover:text-white transition-all shadow-sm"
+                        className="inline-flex items-center gap-3 border border-white/40 hover:border-white px-7 py-3 rounded-full text-xs font-semibold tracking-widest uppercase transition-all duration-300 hover:bg-white hover:text-brand-darkCard"
                       >
-                        <i data-lucide="file-text" className="w-4 h-4"></i>
-                        <span>RESUME (DRIVE)</span>
+                        <span>READ RESUME</span>
+                        <i data-lucide="arrow-right" className="w-4 h-4"></i>
                       </a>
-
-                      <button
-                        onClick={handleCopyEmail}
-                        className="inline-flex items-center gap-2 bg-brand-bg text-brand-text border border-brand-border px-5 py-3 rounded-full text-xs font-semibold tracking-wider hover:border-brand-text transition-all shadow-sm"
-                      >
-                        <i data-lucide={copiedEmail ? "check" : "copy"} className="w-4 h-4 text-brand-sageDark"></i>
-                        <span>{copiedEmail ? "COPIED!" : "COPY EMAIL"}</span>
-                      </button>
                     </div>
                   </div>
-
                 </section>
 
                 {/* Education Section */}
@@ -506,7 +474,7 @@
                   </div>
                 </section>
 
-                {/* Experience Preview */}
+                {/* REVISED 4: Sleek Experience Preview */}
                 <section className="space-y-6">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
@@ -517,21 +485,23 @@
                       onClick={() => navigateTo('/exp')}
                       className="inline-flex items-center gap-1.5 text-xs font-bold tracking-wider text-brand-sageDark hover:text-brand-text transition-colors"
                     >
-                      <span>VIEW ALL EXPERIENCE</span>
+                      <span>VIEW ALL TIMELINE</span>
                       <i data-lucide="arrow-right" className="w-4 h-4"></i>
                     </button>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {PORTFOLIO_DATA.workExperience.slice(0, 2).map((exp) => (
-                      <div key={exp.id} className="bg-white rounded-3xl p-6 border border-brand-border shadow-sm flex flex-col justify-between hover:border-brand-sageMain transition-all">
+                      <div key={exp.id} className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-sm flex flex-col justify-between hover:border-brand-sageMain transition-all">
                         <div>
-                          <span className="text-[10px] font-bold tracking-widest uppercase bg-brand-pinkLight text-brand-pinkDark px-2.5 py-1 rounded-full">Work</span>
-                          
-                          {/* REVISED: Jabatan dulu, Perusahaan di bawahnya */}
-                          <h4 className="text-lg font-bold text-brand-text mt-4">{exp.role}</h4>
-                          <p className="text-xs font-semibold text-brand-sageDark mt-0.5">{exp.company} • {exp.period}</p>
-                          
+                          <div className="flex items-center justify-between mb-3">
+                            <span className="text-[10px] font-bold tracking-widest uppercase bg-brand-pinkLight text-brand-pinkDark px-3 py-1 rounded-full">
+                              Work Experience
+                            </span>
+                            <span className="text-xs font-medium text-brand-muted">{exp.period}</span>
+                          </div>
+                          <h4 className="text-xl font-bold text-brand-text">{exp.role}</h4>
+                          <p className="text-xs font-semibold text-brand-sageDark mt-1">{exp.company}</p>
                           <p className="text-xs text-brand-muted mt-3 line-clamp-2">{exp.summary}</p>
                         </div>
                         <div className="mt-6 pt-4 border-t border-brand-border/50 flex justify-end">
@@ -539,7 +509,7 @@
                             onClick={() => navigateTo('/exp')}
                             className="text-xs font-bold text-brand-text hover:text-brand-sageDark flex items-center gap-1"
                           >
-                            <span>Read Details</span>
+                            <span>Explore Timeline</span>
                             <i data-lucide="chevron-right" className="w-4 h-4"></i>
                           </button>
                         </div>
@@ -548,7 +518,7 @@
                   </div>
                 </section>
 
-                {/* Projects Preview */}
+                {/* REVISED 4: Refined Project Preview */}
                 <section className="space-y-6">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
@@ -559,31 +529,31 @@
                       onClick={() => navigateTo('/project')}
                       className="inline-flex items-center gap-1.5 text-xs font-bold tracking-wider text-brand-sageDark hover:text-brand-text transition-colors"
                     >
-                      <span>VIEW ALL PROJECTS</span>
+                      <span>ALL 3-COLUMN PROJECTS</span>
                       <i data-lucide="arrow-right" className="w-4 h-4"></i>
                     </button>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {PORTFOLIO_DATA.projects.map((proj) => (
                       <div key={proj.id} className="bg-white rounded-3xl border border-brand-border overflow-hidden shadow-sm flex flex-col justify-between hover:border-brand-pinkMain transition-all">
                         <div>
-                          <img src={proj.coverImage} alt={proj.title} className="w-full h-44 object-cover" />
-                          <div className="p-6">
+                          <img src={proj.coverImage} alt={proj.title} className="w-full h-40 object-cover" />
+                          <div className="p-5">
                             <span className="text-[10px] font-bold tracking-widest uppercase bg-brand-sageLight text-brand-sageDark px-2.5 py-1 rounded-full">
                               {proj.category}
                             </span>
-                            <h4 className="text-xl font-bold text-brand-text mt-3">{proj.title}</h4>
+                            <h4 className="text-base font-bold text-brand-text mt-3">{proj.title}</h4>
                             <p className="text-xs text-brand-muted mt-2 line-clamp-2">{proj.shortDesc}</p>
                           </div>
                         </div>
 
-                        <div className="p-6 pt-0 flex justify-end">
+                        <div className="p-5 pt-0 flex justify-end">
                           <button
                             onClick={() => navigateTo('/project')}
                             className="text-xs font-bold text-brand-text hover:text-brand-sageDark flex items-center gap-1"
                           >
-                            <span>Open Project</span>
+                            <span>View Project</span>
                             <i data-lucide="chevron-right" className="w-4 h-4"></i>
                           </button>
                         </div>
@@ -591,294 +561,244 @@
                     ))}
                   </div>
                 </section>
+
               </div>
             )}
 
             {/* ========================================== */}
-            {/* ROUTE 3: /exp PAGE                         */}
+            {/* ROUTE 3: /exp PAGE (REVISED TIMELINE)       */}
             {/* ========================================== */}
             {currentRoute === '/exp' && (
               <div className="space-y-12">
                 <div>
                   <span className="text-xs font-bold uppercase tracking-widest text-brand-sageDark bg-brand-sageLight px-3 py-1.5 rounded-full inline-block mb-3">
-                    Detailed Timeline
+                    Career Roadmap
                   </span>
-                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-text">Experience & Documentation</h2>
+                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-text">Experience Timeline</h2>
                   <p className="text-brand-muted text-sm sm:text-base mt-2 max-w-2xl">
-                    Click on any card to expand and view detailed responsibilities along with event/activity documentation photos.
+                    An interactive vertical timeline showcasing professional milestones, key responsibilities, and event photos.
                   </p>
                 </div>
 
-                {/* Section A: Work Experience */}
-                <div className="space-y-6">
-                  <h3 className="text-xl font-serif font-bold text-brand-text border-b border-brand-border pb-3 flex items-center gap-2">
-                    <i data-lucide="briefcase" className="w-5 h-5 text-brand-sageDark"></i>
-                    <span>Work Experience</span>
-                  </h3>
+                {/* Timeline Layout */}
+                <div className="relative border-l-2 border-brand-sageSoft/60 ml-4 md:ml-8 pl-6 md:pl-10 space-y-12">
+                  
+                  {/* Combined Work & Org Timeline Items */}
+                  {[...PORTFOLIO_DATA.workExperience, ...PORTFOLIO_DATA.orgExperience].map((exp, idx) => (
+                    <div key={exp.id} className="relative group">
+                      
+                      {/* Glowing Node Dot */}
+                      <div className="absolute -left-[31px] md:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-brand-bg border-4 border-brand-sageDark group-hover:scale-125 transition-transform"></div>
 
-                  <div className="space-y-4">
-                    {PORTFOLIO_DATA.workExperience.map((exp) => {
-                      const isExpanded = expandedId === exp.id;
-                      return (
-                        <div key={exp.id} className="bg-white rounded-2xl border border-brand-border overflow-hidden transition-all shadow-sm">
-                          <button
-                            onClick={() => toggleAccordion(exp.id)}
-                            className="w-full p-6 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-brand-pinkLight/20 transition-colors"
-                          >
-                            <div>
-                              {/* REVISED: Position/Jabatan Dulu, Nama Perusahaan di bawahnya */}
-                              <h4 className="text-lg font-bold text-brand-text">{exp.role}</h4>
-                              <p className="text-xs font-semibold text-brand-pinkDark mt-0.5">{exp.company}</p>
-                              <p className="text-xs text-brand-muted mt-2">{exp.location} • {exp.summary}</p>
+                      <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-sm hover:shadow-md transition-all">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                          <div>
+                            {/* Position/Jabatan Dulu, Nama Perusahaan di bawahnya */}
+                            <h3 className="text-xl font-bold text-brand-text">{exp.role}</h3>
+                            <p className="text-xs font-semibold text-brand-pinkDark mt-0.5">{exp.company}</p>
+                          </div>
+                          <span className="text-xs font-medium text-brand-sageDark bg-brand-sageLight px-3 py-1.5 rounded-full self-start sm:self-auto">
+                            {exp.period}
+                          </span>
+                        </div>
+
+                        <p className="text-xs sm:text-sm text-brand-muted mb-6 leading-relaxed">{exp.summary}</p>
+
+                        {/* Bullet points */}
+                        <div className="space-y-2 mb-6 bg-brand-bg/50 p-4 rounded-2xl border border-brand-border/60">
+                          <h4 className="text-[10px] font-bold uppercase tracking-wider text-brand-muted mb-2">Key Highlights</h4>
+                          {exp.highlights.map((h, i) => (
+                            <div key={i} className="text-xs text-brand-text flex items-start gap-2">
+                              <span className="text-brand-sageDark font-bold mt-0.5">•</span>
+                              <span>{h}</span>
                             </div>
+                          ))}
+                        </div>
 
-                            <div className="flex items-center gap-3 shrink-0">
-                              <span className="text-xs font-medium text-brand-sageDark bg-brand-sageLight px-3 py-1 rounded-full">
-                                {exp.period}
-                              </span>
-                              <div className={`p-1.5 rounded-full bg-brand-bg transition-transform duration-300 ${isExpanded ? 'rotate-180 bg-brand-sageDark text-white' : ''}`}>
-                                <i data-lucide="chevron-down" className="w-4 h-4"></i>
-                              </div>
-                            </div>
-                          </button>
-
-                          {isExpanded && (
-                            <div className="px-6 pb-6 pt-2 border-t border-brand-border/60 bg-brand-bg/30 space-y-6 animate-fadeIn">
-                              <div>
-                                <h5 className="text-xs font-bold uppercase tracking-wider text-brand-muted mb-3">Key Responsibilities & Achievements</h5>
-                                <ul className="space-y-2">
-                                  {exp.highlights.map((h, i) => (
-                                    <li key={i} className="text-xs sm:text-sm text-brand-text flex items-start gap-2">
-                                      <span className="text-brand-sageDark font-bold mt-0.5">•</span>
-                                      <span>{h}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-
-                              {exp.photos && exp.photos.length > 0 && (
-                                <div>
-                                  <h5 className="text-xs font-bold uppercase tracking-wider text-brand-muted mb-3 flex items-center gap-1.5">
-                                    <i data-lucide="camera" className="w-3.5 h-3.5 text-brand-pinkDark"></i>
-                                    <span>Activity & Event Documentation</span>
-                                  </h5>
-                                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    {exp.photos.map((photo, idx) => (
-                                      <div key={idx} className="group relative rounded-xl overflow-hidden border border-brand-border bg-white">
-                                        <img 
-                                          src={photo.url} 
-                                          alt={photo.caption} 
-                                          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-                                        />
-                                        <div className="p-3 bg-white/90 backdrop-blur-sm border-t border-brand-border text-[11px] font-medium text-brand-text">
-                                          {photo.caption}
-                                        </div>
-                                      </div>
-                                    ))}
+                        {/* Photo Documentation */}
+                        {exp.photos && (
+                          <div>
+                            <h4 className="text-[10px] font-bold uppercase tracking-wider text-brand-muted mb-3 flex items-center gap-1.5">
+                              <i data-lucide="camera" className="w-3.5 h-3.5 text-brand-pinkDark"></i>
+                              <span>Activity Documentation</span>
+                            </h4>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                              {exp.photos.map((photo, pIdx) => (
+                                <div key={pIdx} className="rounded-2xl overflow-hidden border border-brand-border bg-brand-bg">
+                                  <img src={photo.url} alt={photo.caption} className="w-full h-40 object-cover" />
+                                  <div className="p-2.5 text-[11px] font-medium text-brand-text bg-white border-t border-brand-border">
+                                    {photo.caption}
                                   </div>
                                 </div>
-                              )}
+                              ))}
                             </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
+                          </div>
+                        )}
+                      </div>
 
-                {/* Section B: Organizational Experience */}
-                <div className="space-y-6 pt-6">
-                  <h3 className="text-xl font-serif font-bold text-brand-text border-b border-brand-border pb-3 flex items-center gap-2">
-                    <i data-lucide="users" className="w-5 h-5 text-brand-pinkDark"></i>
-                    <span>Organizational Experience</span>
-                  </h3>
+                    </div>
+                  ))}
 
-                  <div className="space-y-4">
-                    {PORTFOLIO_DATA.orgExperience.map((exp) => {
-                      const isExpanded = expandedId === exp.id;
-                      return (
-                        <div key={exp.id} className="bg-white rounded-2xl border border-brand-border overflow-hidden transition-all shadow-sm">
-                          <button
-                            onClick={() => toggleAccordion(exp.id)}
-                            className="w-full p-6 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-brand-pinkLight/20 transition-colors"
-                          >
-                            <div>
-                              {/* REVISED: Posisi Dulu, Perusahaan/Organisasi di Bawahnya */}
-                              <h4 className="text-lg font-bold text-brand-text">{exp.role}</h4>
-                              <p className="text-xs font-semibold text-brand-sageDark mt-0.5">{exp.company}</p>
-                              <p className="text-xs text-brand-muted mt-2">{exp.location} • {exp.summary}</p>
-                            </div>
-
-                            <div className="flex items-center gap-3 shrink-0">
-                              <span className="text-xs font-medium text-brand-pinkDark bg-brand-pinkLight px-3 py-1 rounded-full">
-                                {exp.period}
-                              </span>
-                              <div className={`p-1.5 rounded-full bg-brand-bg transition-transform duration-300 ${isExpanded ? 'rotate-180 bg-brand-sageDark text-white' : ''}`}>
-                                <i data-lucide="chevron-down" className="w-4 h-4"></i>
-                              </div>
-                            </div>
-                          </button>
-
-                          {isExpanded && (
-                            <div className="px-6 pb-6 pt-2 border-t border-brand-border/60 bg-brand-bg/30 space-y-6 animate-fadeIn">
-                              <div>
-                                <h5 className="text-xs font-bold uppercase tracking-wider text-brand-muted mb-3">Key Highlights</h5>
-                                <ul className="space-y-2">
-                                  {exp.highlights.map((h, i) => (
-                                    <li key={i} className="text-xs sm:text-sm text-brand-text flex items-start gap-2">
-                                      <span className="text-brand-pinkDark font-bold mt-0.5">•</span>
-                                      <span>{h}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-
-                              {exp.photos && exp.photos.length > 0 && (
-                                <div>
-                                  <h5 className="text-xs font-bold uppercase tracking-wider text-brand-muted mb-3 flex items-center gap-1.5">
-                                    <i data-lucide="camera" className="w-3.5 h-3.5 text-brand-sageDark"></i>
-                                    <span>Event & Activity Documentation</span>
-                                  </h5>
-                                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    {exp.photos.map((photo, idx) => (
-                                      <div key={idx} className="group relative rounded-xl overflow-hidden border border-brand-border bg-white">
-                                        <img 
-                                          src={photo.url} 
-                                          alt={photo.caption} 
-                                          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-                                        />
-                                        <div className="p-3 bg-white/90 backdrop-blur-sm border-t border-brand-border text-[11px] font-medium text-brand-text">
-                                          {photo.caption}
-                                        </div>
-                                      </div>
-                                    ))}
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
                 </div>
               </div>
             )}
 
             {/* ========================================== */}
-            {/* ROUTE 4: /project PAGE (VISUAL CARD GRID)  */}
+            {/* ROUTE 4: /project PAGE (3-COLUMN & MODAL)  */}
             {/* ========================================== */}
             {currentRoute === '/project' && (
               <div className="space-y-12">
                 <div>
                   <span className="text-xs font-bold uppercase tracking-widest text-brand-pinkDark bg-brand-pinkLight px-3 py-1.5 rounded-full inline-block mb-3">
-                    Visual Showcase
+                    Portfolio Archive
                   </span>
                   <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-text">Projects & Proof of Work</h2>
                   <p className="text-brand-muted text-sm sm:text-base mt-2 max-w-2xl">
-                    Visual-first project archive. Click on any project card to expand methodology and view direct Drive documentation links.
+                    Structured 3-column grid layout. Click on any project card to view full documentation in a clean modal window.
                   </p>
                 </div>
 
-                {/* REVISED: Grid Cards with Initial Image Cover */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {PORTFOLIO_DATA.projects.map((proj) => {
-                    const isExpanded = expandedId === proj.id;
-                    return (
-                      <div key={proj.id} className="bg-white rounded-3xl border border-brand-border overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-                        
-                        {/* Cover Image Always Shown at the Start */}
-                        <div>
-                          <div className="relative h-60 w-full overflow-hidden bg-brand-bg">
-                            <img 
-                              src={proj.coverImage} 
-                              alt={proj.title} 
-                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                            />
-                            <div className="absolute top-4 left-4">
-                              <span className="text-[10px] font-bold tracking-widest uppercase bg-white/90 backdrop-blur-md text-brand-sageDark px-3 py-1.5 rounded-full shadow-sm border border-brand-border">
-                                {proj.category}
-                              </span>
-                            </div>
+                {/* REVISED 2: 3-Column Grid Layout */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {PORTFOLIO_DATA.projects.map((proj) => (
+                    <div key={proj.id} className="bg-white rounded-3xl border border-brand-border overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                      
+                      {/* Initial Image Display */}
+                      <div>
+                        <div className="relative h-48 w-full overflow-hidden bg-brand-bg">
+                          <img 
+                            src={proj.coverImage} 
+                            alt={proj.title} 
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute top-3 left-3">
+                            <span className="text-[10px] font-bold tracking-widest uppercase bg-white/90 backdrop-blur-md text-brand-sageDark px-2.5 py-1 rounded-full border border-brand-border">
+                              {proj.category}
+                            </span>
                           </div>
+                        </div>
 
-                          <div className="p-6 sm:p-8">
-                            <h3 className="font-serif text-2xl font-bold text-brand-text">{proj.title}</h3>
-                            <p className="text-xs sm:text-sm text-brand-muted mt-2 leading-relaxed">{proj.shortDesc}</p>
+                        <div className="p-5">
+                          <h3 className="font-serif text-lg font-bold text-brand-text leading-snug">{proj.title}</h3>
+                          <p className="text-xs text-brand-muted mt-2 line-clamp-2">{proj.shortDesc}</p>
 
-                            <div className="flex flex-wrap gap-1.5 mt-4">
-                              {proj.tools.map((t, i) => (
-                                <span key={i} className="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-md text-brand-muted border border-brand-border">
-                                  {t}
-                                </span>
+                          <div className="flex flex-wrap gap-1 mt-4">
+                            {proj.tools.map((t, i) => (
+                              <span key={i} className="text-[10px] font-medium bg-brand-bg px-2 py-0.5 rounded text-brand-muted border border-brand-border">
+                                {t}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Card Actions */}
+                      <div className="p-5 pt-0">
+                        <div className="flex items-center justify-between border-t border-brand-border/60 pt-4">
+                          <a
+                            href={proj.driveDocUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-[11px] font-bold text-brand-pinkDark hover:text-brand-text transition-colors"
+                          >
+                            <i data-lucide="file-text" className="w-3.5 h-3.5"></i>
+                            <span>DRIVE</span>
+                          </a>
+
+                          <button
+                            onClick={() => setActiveModalProject(proj)}
+                            className="inline-flex items-center gap-1 bg-brand-sageDark text-white px-3.5 py-2 rounded-full text-[11px] font-bold tracking-wider hover:bg-brand-text transition-all"
+                          >
+                            <span>DETAILS</span>
+                            <i data-lucide="arrow-up-right" className="w-3.5 h-3.5"></i>
+                          </button>
+                        </div>
+                      </div>
+
+                    </div>
+                  ))}
+                </div>
+
+                {/* REVISED 2: Popup Modal for Project Details (Prevents dragging other projects) */}
+                {activeModalProject && (
+                  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop animate-fadeIn">
+                    <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-brand-border shadow-2xl p-6 sm:p-8 space-y-6 relative">
+                      
+                      {/* Close Button */}
+                      <button
+                        onClick={() => setActiveModalProject(null)}
+                        className="absolute top-6 right-6 p-2 rounded-full bg-brand-bg hover:bg-brand-pinkLight text-brand-text transition-colors"
+                      >
+                        <i data-lucide="x" className="w-5 h-5"></i>
+                      </button>
+
+                      <div>
+                        <span className="text-[10px] font-bold tracking-widest uppercase bg-brand-sageLight text-brand-sageDark px-3 py-1 rounded-full">
+                          {activeModalProject.category}
+                        </span>
+                        <h3 className="font-serif text-2xl font-bold text-brand-text mt-3">{activeModalProject.title}</h3>
+                      </div>
+
+                      <div className="space-y-4">
+                        <div>
+                          <h4 className="text-[10px] font-bold uppercase tracking-wider text-brand-muted mb-2">Project Overview</h4>
+                          <p className="text-xs sm:text-sm text-brand-text leading-relaxed bg-brand-bg p-4 rounded-2xl border border-brand-border">
+                            {activeModalProject.fullDesc}
+                          </p>
+                        </div>
+
+                        <div>
+                          <h4 className="text-[10px] font-bold uppercase tracking-wider text-brand-muted mb-2">Business Outcomes</h4>
+                          <div className="p-3.5 rounded-2xl bg-brand-sageLight/60 border border-brand-sageMain/30 text-xs font-semibold text-brand-sageDark">
+                            {activeModalProject.outcomes}
+                          </div>
+                        </div>
+
+                        {/* Proof Visuals */}
+                        {activeModalProject.proofImages && (
+                          <div>
+                            <h4 className="text-[10px] font-bold uppercase tracking-wider text-brand-muted mb-3">UI & Data Proofs</h4>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                              {activeModalProject.proofImages.map((img, idx) => (
+                                <div key={idx} className="rounded-2xl overflow-hidden border border-brand-border">
+                                  <img src={img.url} alt={img.caption} className="w-full h-36 object-cover" />
+                                  <div className="p-2 bg-brand-bg text-[10px] font-medium text-brand-text border-t border-brand-border">
+                                    {img.caption}
+                                  </div>
+                                </div>
                               ))}
                             </div>
                           </div>
-                        </div>
-
-                        {/* Card Footer & Accordion Toggle */}
-                        <div className="px-6 pb-6 sm:px-8 sm:pb-8 pt-0">
-                          <div className="flex items-center justify-between border-t border-brand-border/60 pt-4">
-                            <a
-                              href={proj.driveDocUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-pinkDark hover:text-brand-text transition-colors"
-                            >
-                              <i data-lucide="file-text" className="w-4 h-4"></i>
-                              <span>DRIVE DOCS</span>
-                            </a>
-
-                            <button
-                              onClick={() => toggleAccordion(proj.id)}
-                              className="inline-flex items-center gap-1.5 bg-brand-sageDark text-white px-4 py-2 rounded-full text-xs font-bold tracking-wider hover:bg-brand-text transition-all"
-                            >
-                              <span>{isExpanded ? "CLOSE" : "PROJECT DETAILS"}</span>
-                              <i data-lucide={isExpanded ? "chevron-up" : "chevron-down"} className="w-3.5 h-3.5"></i>
-                            </button>
-                          </div>
-
-                          {/* Expanded Content Drawer */}
-                          {isExpanded && (
-                            <div className="mt-6 pt-6 border-t border-brand-border/80 space-y-6 animate-fadeIn">
-                              <div>
-                                <h4 className="text-[10px] font-bold uppercase tracking-wider text-brand-muted mb-2">Overview & Methodology</h4>
-                                <p className="text-xs sm:text-sm text-brand-text leading-relaxed bg-brand-bg p-4 rounded-xl border border-brand-border">
-                                  {proj.fullDesc}
-                                </p>
-                              </div>
-
-                              <div>
-                                <h4 className="text-[10px] font-bold uppercase tracking-wider text-brand-muted mb-2">Impact & Outcomes</h4>
-                                <div className="p-3.5 rounded-xl bg-brand-sageLight/60 border border-brand-sageMain/30 text-xs font-semibold text-brand-sageDark">
-                                  {proj.outcomes}
-                                </div>
-                              </div>
-
-                              {/* Proof Images inside drawer */}
-                              {proj.proofImages && (
-                                <div>
-                                  <h4 className="text-[10px] font-bold uppercase tracking-wider text-brand-muted mb-3">UI & Dashboard Proofs</h4>
-                                  <div className="grid grid-cols-1 gap-3">
-                                    {proj.proofImages.map((img, idx) => (
-                                      <div key={idx} className="rounded-xl overflow-hidden border border-brand-border">
-                                        <img src={img.url} alt={img.caption} className="w-full h-40 object-cover" />
-                                        <div className="p-2.5 bg-brand-bg text-[11px] font-medium text-brand-text border-t border-brand-border">
-                                          {img.caption}
-                                        </div>
-                                      </div>
-                                    ))}
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                          )}
-                        </div>
-
+                        )}
                       </div>
-                    );
-                  })}
-                </div>
+
+                      <div className="pt-4 border-t border-brand-border flex flex-wrap gap-3">
+                        <a
+                          href={activeModalProject.driveDocUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-brand-pinkLight text-brand-pinkDark px-5 py-2.5 rounded-full text-xs font-bold"
+                        >
+                          <i data-lucide="file-text" className="w-4 h-4"></i>
+                          <span>OPEN DRIVE DOCUMENTATION</span>
+                        </a>
+                        {activeModalProject.githubUrl && (
+                          <a
+                            href={activeModalProject.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-brand-bg text-brand-text border border-brand-border px-5 py-2.5 rounded-full text-xs font-bold"
+                          >
+                            <i data-lucide="github" className="w-4 h-4"></i>
+                            <span>GITHUB REPO</span>
+                          </a>
+                        )}
+                      </div>
+
+                    </div>
+                  </div>
+                )}
+
               </div>
             )}
 
