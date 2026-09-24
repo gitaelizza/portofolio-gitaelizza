@@ -1,34 +1,17 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Lee Sangwon — Data Analyst Portfolio</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap"
-    rel="stylesheet"
-  >
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
-
-  <script
-    src="https://unpkg.com/react@18/umd/react.production.min.js"
-    crossorigin
-  ></script>
-
-  <script
-    src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
-    crossorigin
-  ></script>
-
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <script>
@@ -37,137 +20,72 @@
         extend: {
           colors: {
             brand: {
-              bg: "#F7F6F2",
-              text: "#20211F",
-              muted: "#777773",
-              line: "#DDDCD6",
-
-              pinkLight: "#F7E9EC",
-              pinkSoft: "#EBC8CF",
-              pinkMain: "#D993A1",
-              pinkDark: "#A85F6E",
-
-              sageLight: "#EAF0E8",
-              sageSoft: "#CBDAC7",
-              sageMain: "#91A88A",
-              sageDark: "#536B4E"
+              bg: "#FFF9F8",
+              text: "#292827",
+              muted: "#77716F",
+              line: "#E8D8DC",
+              pinkLight: "#FFF0F3",
+              pinkSoft: "#F7D5DE",
+              pinkMain: "#E5A0B2",
+              pinkDark: "#B85F78",
+              sageLight: "#EEF5EC",
+              sageSoft: "#D7E7D1",
+              sageMain: "#A8C29F",
+              sageDark: "#5F795A"
             }
           },
-
           fontFamily: {
             sans: ["DM Sans", "sans-serif"],
             serif: ["Playfair Display", "serif"]
           },
-
-          maxWidth: {
-            "8xl": "1440px"
-          }
+          maxWidth: { "8xl": "1440px" }
         }
       }
     }
   </script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
+    html { scroll-behavior: smooth; }
     body {
-      background: #F7F6F2;
-      color: #20211F;
+      background: #FFF9F8;
+      color: #292827;
       font-family: "DM Sans", sans-serif;
       overflow-x: hidden;
     }
-
-    ::selection {
-      background: #D993A1;
-      color: white;
-    }
-
+    ::selection { background: #E5A0B2; color: white; }
     .grain {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.025;
-      z-index: 100;
+      position: fixed; inset: 0; pointer-events: none; opacity: .018; z-index: 100;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
     }
-
-    .soft-circle {
-      position: absolute;
-      border-radius: 999px;
-      filter: blur(80px);
-      pointer-events: none;
-    }
-
-    .reveal {
-      animation: reveal 0.7s ease both;
-    }
-
-    @keyframes reveal {
-      from {
-        opacity: 0;
-        transform: translateY(14px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .image-hover img {
-      transition:
-        transform 0.7s cubic-bezier(.2,.7,.2,1),
-        filter 0.7s ease;
-    }
-
-    .image-hover:hover img {
-      transform: scale(1.04);
-      filter: saturate(1.05);
-    }
-
-    .nav-link {
-      position: relative;
-    }
-
+    .soft-circle { position:absolute; border-radius:999px; filter:blur(80px); pointer-events:none; }
+    .reveal { animation: reveal .7s ease both; }
+    @keyframes reveal { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+    .image-hover img { transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s ease; }
+    .image-hover:hover img { transform:scale(1.035); filter:saturate(1.04); }
+    .nav-link { position:relative; }
     .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 100%;
-      height: 1px;
-      background: currentColor;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.3s ease;
+      content:""; position:absolute; left:0; bottom:-5px; width:100%; height:1px;
+      background:currentColor; transform:scaleX(0); transform-origin:right; transition:transform .3s ease;
     }
-
-    .nav-link:hover::after,
-    .nav-link.active::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
+    .nav-link:hover::after,.nav-link.active::after { transform:scaleX(1); transform-origin:left; }
+    .pastel-card { background:rgba(255,255,255,.78); border:1px solid #E8D8DC; }
+    .experience-photo { aspect-ratio: 16 / 9; }
+    .org-photo { aspect-ratio: 4 / 3; }
+    .nav-pill { transition:all .25s ease; }
+    .nav-pill:not(.active) { background:#FFF0F3; }
+    .nav-pill:not(.active):hover { background:#D7E7D1; color:#5F795A; }
+    .nav-pill.active { background:#E5A0B2; color:white; box-shadow:0 5px 16px rgba(184,95,120,.16); }
+    .project-card { transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
+    .project-card:hover { transform:translateY(-3px); border-color:#DFA0AF; box-shadow:0 12px 35px rgba(184,111,130,.08); }
   </style>
 </head>
 
-
 <body>
-
   <div class="grain"></div>
-
   <div id="root"></div>
 
-
   <script type="text/babel">
-
     const { useState, useEffect } = React;
-
-
-    /* =========================================================
-       DATA
-    ========================================================= */
 
     const PORTFOLIO_DATA = {
 
@@ -283,7 +201,13 @@
             "Project Manager / Head of Data & Workshop Division",
 
           description:
-            "Contributed to university-level data science programs, workshops, and national competitions."
+            "Contributed to university-level data science programs, workshops, and national competitions.",
+          photos: [
+            {
+              caption: "Workshop & team activity",
+              url: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=85"
+            }
+          ]
         },
 
         {
@@ -298,7 +222,17 @@
             "Project Manager / Ketua Pelaksana",
 
           description:
-            "Led the organizing team in delivering a national-level data competition."
+            "Led the organizing team in delivering a national-level data competition.",
+          photos: [
+            {
+              caption: "Event organizing activity",
+              url: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=85"
+            },
+            {
+              caption: "Team coordination",
+              url: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=900&q=85"
+            }
+          ]
         },
 
         {
@@ -313,7 +247,13 @@
             "Head of Data & Workshop Division",
 
           description:
-            "Designed learning materials and supported hands-on data analytics workshops."
+            "Designed learning materials and supported hands-on data analytics workshops.",
+          photos: [
+            {
+              caption: "Workshop session",
+              url: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=85"
+            }
+          ]
         }
 
       ],
@@ -489,1303 +429,389 @@
 
     };
 
-
-    /* =========================================================
-       APP
-    ========================================================= */
+    // Put your own photo at /profile.jpg (or change this path).
+    PORTFOLIO_DATA.profileImage = "./profile.jpg";
 
     function App() {
-
-      const [currentRoute, setCurrentRoute] = useState(() => {
-
-        return (
-          window.location.hash.replace("#", "")
-          || "/"
-        );
-
-      });
-
-
-      const [copiedEmail, setCopiedEmail] =
-        useState(false);
-
-
-      const [mobileMenuOpen, setMobileMenuOpen] =
-        useState(false);
-
+      const [currentRoute, setCurrentRoute] = useState(() => window.location.hash.replace("#","") || "/");
+      const [copiedEmail, setCopiedEmail] = useState(false);
+      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
       useEffect(() => {
-
         const handleHashChange = () => {
-
-          const hash =
-            window.location.hash.replace("#", "")
-            || "/";
-
-          setCurrentRoute(hash);
-
+          setCurrentRoute(window.location.hash.replace("#","") || "/");
           setMobileMenuOpen(false);
-
-          window.scrollTo({
-            top: 0,
-            behavior: "instant"
-          });
-
+          window.scrollTo({ top:0, behavior:"instant" });
         };
-
-
-        window.addEventListener(
-          "hashchange",
-          handleHashChange
-        );
-
-
-        return () =>
-          window.removeEventListener(
-            "hashchange",
-            handleHashChange
-          );
-
+        window.addEventListener("hashchange", handleHashChange);
+        return () => window.removeEventListener("hashchange", handleHashChange);
       }, []);
 
-
       useEffect(() => {
+        if (window.lucide) window.lucide.createIcons();
+      }, [currentRoute, mobileMenuOpen, copiedEmail]);
 
-        if (window.lucide) {
-          window.lucide.createIcons();
-        }
-
-      }, [
-        currentRoute,
-        mobileMenuOpen,
-        copiedEmail
-      ]);
-
-
-      const navigateTo = (path) => {
-
-        window.location.hash = path;
-
-      };
-
-
-      /* =========================================================
-         COPY EMAIL
-      ========================================================= */
+      const navigateTo = (path) => { window.location.hash = path; };
 
       const handleCopyEmail = async () => {
-
         try {
-
-          await navigator.clipboard.writeText(
-            PORTFOLIO_DATA.email
-          );
-
-          setCopiedEmail(true);
-
-          setTimeout(() => {
-            setCopiedEmail(false);
-          }, 2200);
-
-        } catch (error) {
-
-          const textarea =
-            document.createElement("textarea");
-
-          textarea.value =
-            PORTFOLIO_DATA.email;
-
+          await navigator.clipboard.writeText(PORTFOLIO_DATA.email);
+        } catch {
+          const textarea=document.createElement("textarea");
+          textarea.value=PORTFOLIO_DATA.email;
           document.body.appendChild(textarea);
-
           textarea.select();
-
           document.execCommand("copy");
-
           textarea.remove();
-
-          setCopiedEmail(true);
-
-          setTimeout(() => {
-            setCopiedEmail(false);
-          }, 2200);
-
         }
-
+        setCopiedEmail(true);
+        setTimeout(() => setCopiedEmail(false), 2200);
       };
 
-
-      /* =========================================================
-         LANDING PAGE
-         TIDAK DIUBAH
-      ========================================================= */
-
-      if (
-        currentRoute === "/" ||
-        currentRoute === ""
-      ) {
-
-        return (
-
-          <div className="min-h-screen bg-brand-bg flex flex-col justify-between relative overflow-hidden">
-
-            <div className="soft-circle w-[500px] h-[500px] bg-brand-pinkSoft/30 -top-40 -right-40"></div>
-
-            <div className="soft-circle w-[500px] h-[500px] bg-brand-sageSoft/30 -bottom-60 -left-60"></div>
-
-
-            <header className="px-6 sm:px-10 lg:px-16 pt-8 flex justify-between items-center relative z-10">
-
-              <span className="font-semibold text-sm tracking-[0.15em]">
-                LS<span className="text-brand-pinkDark">.</span>
-              </span>
-
-              <span className="text-[10px] uppercase tracking-[0.25em] text-brand-muted">
-                Portfolio / 2026
-              </span>
-
-            </header>
-
-
-            <main className="relative z-10 px-6 sm:px-10 lg:px-16 py-20">
-
-              <div className="max-w-8xl mx-auto">
-
-                <p className="text-xs uppercase tracking-[0.3em] text-brand-muted mb-8">
-                  Data Analyst Portfolio
+      // LANDING — intentionally kept in the same visual direction as the original.
+      if (currentRoute === "/" || currentRoute === "") return (
+        <div className="min-h-screen bg-brand-bg flex flex-col justify-between relative overflow-hidden">
+          <div className="soft-circle w-[500px] h-[500px] bg-brand-pinkSoft/25 -top-40 -right-40"></div>
+          <div className="soft-circle w-[500px] h-[500px] bg-brand-sageSoft/30 -bottom-60 -left-60"></div>
+          <header className="px-6 sm:px-10 lg:px-16 pt-8 flex justify-between items-center relative z-10">
+            <span className="font-semibold text-sm tracking-[.15em]">LS<span className="text-brand-pinkDark">.</span></span>
+            <span className="text-[10px] uppercase tracking-[.25em] text-brand-muted">Portfolio / 2026</span>
+          </header>
+          <main className="relative z-10 px-6 sm:px-10 lg:px-16 py-20">
+            <div className="max-w-8xl mx-auto">
+              <p className="text-xs uppercase tracking-[.3em] text-brand-muted mb-8">Data Analyst Portfolio</p>
+              <h1 className="font-serif text-[15vw] md:text-[11vw] leading-[.78] tracking-[-.06em]">
+                Lee<br/><span className="italic text-brand-pinkDark">Sangwon</span>
+              </h1>
+              <div className="mt-12 flex flex-col sm:flex-row sm:items-end justify-between gap-8">
+                <p className="max-w-md text-sm sm:text-base leading-relaxed text-brand-muted">
+                  Turning raw data into meaningful insights, visual stories, and practical business decisions.
                 </p>
-
-
-                <h1 className="font-serif text-[15vw] md:text-[11vw] leading-[0.78] tracking-[-0.06em]">
-
-                  Lee
-
-                  <br />
-
-                  <span className="italic text-brand-pinkDark">
-                    Sangwon
+                <button onClick={() => navigateTo("/home")} className="group flex items-center gap-5 text-xs font-bold uppercase tracking-[.2em]">
+                  <span className="border-b border-brand-text pb-2">Enter Portfolio</span>
+                  <span className="w-11 h-11 rounded-full border border-brand-text flex items-center justify-center group-hover:bg-brand-text group-hover:text-white transition-all">
+                    <i data-lucide="arrow-up-right" className="w-4 h-4"></i>
                   </span>
-
-                </h1>
-
-
-                <div className="mt-12 flex flex-col sm:flex-row sm:items-end justify-between gap-8">
-
-                  <p className="max-w-md text-sm sm:text-base leading-relaxed text-brand-muted">
-                    Turning raw data into meaningful insights,
-                    visual stories, and practical business decisions.
-                  </p>
-
-
-                  <button
-                    onClick={() => navigateTo("/home")}
-                    className="group flex items-center gap-5 text-xs font-bold uppercase tracking-[0.2em]"
-                  >
-
-                    <span className="border-b border-brand-text pb-2">
-                      Enter Portfolio
-                    </span>
-
-                    <span className="w-11 h-11 rounded-full border border-brand-text flex items-center justify-center group-hover:bg-brand-text group-hover:text-white transition-all">
-
-                      <i
-                        data-lucide="arrow-up-right"
-                        className="w-4 h-4"
-                      ></i>
-
-                    </span>
-
-                  </button>
-
-                </div>
-
+                </button>
               </div>
+            </div>
+          </main>
+          <footer className="px-6 sm:px-10 lg:px-16 pb-8 relative z-10">
+            <div className="max-w-8xl mx-auto flex justify-between items-center text-[10px] uppercase tracking-[.2em] text-brand-muted">
+              <span>Information Systems / Data</span><span>Scroll to explore</span>
+            </div>
+          </footer>
+        </div>
+      );
 
-            </main>
-
-
-            <footer className="px-6 sm:px-10 lg:px-16 pb-8 relative z-10">
-
-              <div className="max-w-8xl mx-auto flex justify-between items-center text-[10px] uppercase tracking-[0.2em] text-brand-muted">
-
-                <span>
-                  Information Systems / Data
-                </span>
-
-                <span>
-                  Scroll to explore
-                </span>
-
-              </div>
-
-            </footer>
-
-          </div>
-
-        );
-
-      }
-
-
-      /* =========================================================
-         NAVBAR
-      ========================================================= */
+      const navItems = [
+        ["/home","Home"], ["/aboutme","About Me"], ["/exp","Experience"], ["/project","Projects"]
+      ];
 
       const Navbar = () => (
-
         <header className="sticky top-0 z-40 bg-brand-bg/90 backdrop-blur-xl">
-
           <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 h-20 flex items-center justify-between">
-
-            <button
-              onClick={() => navigateTo("/")}
-              className="font-serif text-xl font-bold tracking-tight"
-            >
-              Lee
-              <span className="italic text-brand-pinkDark">
-                .
-              </span>
+            <button onClick={() => navigateTo("/")} className="font-serif text-xl font-bold tracking-tight">
+              Lee<span className="italic text-brand-pinkDark">.</span>
             </button>
-
-
             <nav className="hidden md:flex items-center gap-8">
-
-              <button
-                onClick={() => navigateTo("/home")}
-                className={`nav-link text-xs uppercase tracking-[0.18em] ${
-                  currentRoute === "/home"
-                    ? "active"
-                    : ""
-                }`}
-              >
-                Home
-              </button>
-
-
-              <button
-                onClick={() => navigateTo("/exp")}
-                className={`nav-link text-xs uppercase tracking-[0.18em] ${
-                  currentRoute === "/exp"
-                    ? "active"
-                    : ""
-                }`}
-              >
-                Experience
-              </button>
-
-
-              <button
-                onClick={() => navigateTo("/project")}
-                className={`nav-link text-xs uppercase tracking-[0.18em] ${
-                  currentRoute === "/project"
-                    ? "active"
-                    : ""
-                }`}
-              >
-                Projects
-              </button>
-
+              {navItems.map(([path,label]) => (
+                <button key={path} onClick={() => navigateTo(path)} className={`nav-pill rounded-full px-4 py-2.5 text-[10px] uppercase tracking-[.18em] font-semibold ${currentRoute===path ? "active" : ""}`}>
+                  {label}
+                </button>
+              ))}
             </nav>
-
-
-            <button
-              onClick={() =>
-                setMobileMenuOpen(!mobileMenuOpen)
-              }
-              className="md:hidden"
-            >
-
-              <i
-                data-lucide={
-                  mobileMenuOpen
-                    ? "x"
-                    : "menu"
-                }
-                className="w-5 h-5"
-              ></i>
-
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden">
+              <i data-lucide={mobileMenuOpen ? "x":"menu"} className="w-5 h-5"></i>
             </button>
-
           </div>
-
-
           {mobileMenuOpen && (
-
             <div className="md:hidden border-t border-brand-line bg-brand-bg px-6 py-5">
-
               <div className="flex flex-col gap-5">
-
-                <button
-                  onClick={() => navigateTo("/home")}
-                  className="text-left text-sm uppercase tracking-widest"
-                >
-                  Home
-                </button>
-
-                <button
-                  onClick={() => navigateTo("/exp")}
-                  className="text-left text-sm uppercase tracking-widest"
-                >
-                  Experience
-                </button>
-
-                <button
-                  onClick={() => navigateTo("/project")}
-                  className="text-left text-sm uppercase tracking-widest"
-                >
-                  Projects
-                </button>
-
+                {navItems.map(([path,label]) => (
+                  <button key={path} onClick={() => navigateTo(path)} className="text-left text-sm uppercase tracking-widest">{label}</button>
+                ))}
               </div>
-
             </div>
-
           )}
-
         </header>
-
       );
-
-
-      /* =========================================================
-         FOOTER
-      ========================================================= */
 
       const Footer = () => (
-
-        <footer className="mt-24 border-t border-brand-line">
-
-          <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 py-10">
-
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-7">
-
+        <footer className="mt-20 border-t border-brand-line">
+          <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 py-9">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div>
-
-                <p className="text-[10px] uppercase tracking-[0.25em] text-brand-muted mb-2">
-                  Let's connect
-                </p>
-
-                <button
-                  onClick={handleCopyEmail}
-                  className="font-serif text-2xl hover:text-brand-pinkDark transition"
-                >
-                  {copiedEmail
-                    ? "Email copied!"
-                    : PORTFOLIO_DATA.email}
+                <p className="text-[10px] uppercase tracking-[.25em] text-brand-muted mb-2">Let's connect</p>
+                <button onClick={handleCopyEmail} className="font-serif text-2xl hover:text-brand-pinkDark transition">
+                  {copiedEmail ? "Email copied!" : PORTFOLIO_DATA.email}
                 </button>
-
               </div>
-
-
               <div className="flex gap-6 text-xs uppercase tracking-widest">
-
-                <a
-                  href={PORTFOLIO_DATA.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-brand-pinkDark transition"
-                >
-                  LinkedIn
-                </a>
-
-
-                <a
-                  href={PORTFOLIO_DATA.resume}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-brand-pinkDark transition"
-                >
-                  Resume
-                </a>
-
+                <a href={PORTFOLIO_DATA.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pinkDark">LinkedIn</a>
+                <a href={PORTFOLIO_DATA.resume} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pinkDark">Resume</a>
               </div>
-
             </div>
-
-
-            <div className="mt-9 pt-4 border-t border-brand-line flex justify-between text-[10px] uppercase tracking-[0.2em] text-brand-muted">
-
-              <span>
-                Lee Sangwon
-              </span>
-
-              <span>
-                © {new Date().getFullYear()}
-              </span>
-
+            <div className="mt-8 pt-4 border-t border-brand-line flex justify-between text-[10px] uppercase tracking-[.2em] text-brand-muted">
+              <span>{PORTFOLIO_DATA.name}</span><span>© {new Date().getFullYear()}</span>
             </div>
-
           </div>
-
         </footer>
-
       );
 
-
-      /* =========================================================
-         HOME
-      ========================================================= */
+      const PageIntro = ({number,title,description}) => (
+        <section className="pb-12">
+          <div className="grid lg:grid-cols-[.3fr_1fr] gap-8">
+            <span className="text-xs uppercase tracking-[.25em] text-brand-muted">{number}</span>
+            <div>
+              <h1 className="font-serif text-5xl sm:text-7xl leading-[.9]">{title}</h1>
+              <p className="text-sm text-brand-muted leading-7 max-w-2xl mt-5">{description}</p>
+            </div>
+          </div>
+        </section>
+      );
 
       const HomePage = () => (
-
         <div className="reveal">
-
-
-          {/* HERO */}
-
-          <section className="min-h-[60vh] flex flex-col justify-center">
-
+          <section className="min-h-[58vh] flex flex-col justify-center">
             <div className="grid lg:grid-cols-[1.3fr_.7fr] gap-10 lg:gap-20 items-end">
-
               <div>
-
-                <p className="text-xs uppercase tracking-[0.28em] text-brand-sageDark mb-5">
-                  {PORTFOLIO_DATA.role}
-                </p>
-
-
-                <h1 className="font-serif text-6xl sm:text-8xl lg:text-[8rem] leading-[0.82] tracking-[-0.06em]">
-
-                  Hi, I'm
-
-                  <br />
-
-                  <span className="italic text-brand-pinkDark">
-                    Sangwon.
-                  </span>
-
+                <p className="text-xs uppercase tracking-[.28em] text-brand-sageDark mb-5">{PORTFOLIO_DATA.role}</p>
+                <h1 className="font-serif text-6xl sm:text-8xl lg:text-[8rem] leading-[.82] tracking-[-.06em]">
+                  Hi, I'm<br/><span className="italic text-brand-pinkDark">Sangwon.</span>
                 </h1>
-
               </div>
-
-
               <div className="lg:pb-1">
-
-                <p className="text-base leading-7 text-brand-muted max-w-md">
-                  {PORTFOLIO_DATA.shortAbout}
-                </p>
-
-
+                <p className="text-base leading-7 text-brand-muted max-w-md">{PORTFOLIO_DATA.shortAbout}</p>
                 <div className="mt-6 flex flex-wrap items-center gap-5">
-
-                  <a
-                    href={PORTFOLIO_DATA.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark transition"
-                  >
-                    LinkedIn
-                  </a>
-
-
-                  <button
-                    onClick={handleCopyEmail}
-                    className="group text-xs uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark transition flex items-center gap-2"
-                    title="Copy email address"
-                  >
-
-                    {copiedEmail
-                      ? "Email copied"
-                      : "Copy email"}
-
-                    <i
-                      data-lucide={
-                        copiedEmail
-                          ? "check"
-                          : "copy"
-                      }
-                      className="w-3.5 h-3.5"
-                    ></i>
-
+                  <button onClick={() => navigateTo("/aboutme")} className="text-xs uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark">
+                    More about me
                   </button>
-
-
-                  <a
-                    href={PORTFOLIO_DATA.resume}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark transition"
-                  >
-                    Resume
-                  </a>
-
+                  <a href={PORTFOLIO_DATA.linkedin} target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark">LinkedIn</a>
+                  <button onClick={handleCopyEmail} className="text-xs uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark flex items-center gap-2">
+                    {copiedEmail ? "Email copied" : "Copy email"} <i data-lucide={copiedEmail ? "check":"copy"} className="w-3.5 h-3.5"></i>
+                  </button>
                 </div>
-
               </div>
-
             </div>
-
-
-            <div className="mt-14 border-t border-brand-line pt-4 flex justify-between items-center">
-
-              <span className="text-[10px] uppercase tracking-[0.25em] text-brand-muted">
-                Based in Indonesia
-              </span>
-
-              <span className="text-[10px] uppercase tracking-[0.25em] text-brand-muted">
-                Data · Business · Technology
-              </span>
-
+            <div className="mt-12 border-t border-brand-line pt-4 flex justify-between items-center">
+              <span className="text-[10px] uppercase tracking-[.25em] text-brand-muted">Based in Indonesia</span>
+              <span className="text-[10px] uppercase tracking-[.25em] text-brand-muted">Data · Business · Technology</span>
             </div>
-
           </section>
-
-
-          {/* ABOUT */}
-
-          <section className="py-20 border-t border-brand-line">
-
-            <div className="grid md:grid-cols-[0.3fr_1fr] gap-8">
-
-              <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                01 / About
-              </span>
-
-
-              <div>
-
-                <h2 className="font-serif text-4xl sm:text-5xl leading-tight max-w-4xl">
-                  Data is only useful when it
-                  helps people understand
-                  <span className="italic text-brand-pinkDark">
-                    {" "}what to do next.
-                  </span>
-                </h2>
-
-
-                <div className="mt-8 grid md:grid-cols-2 gap-8">
-
-                  <p className="text-sm leading-7 text-brand-muted">
-                    {PORTFOLIO_DATA.fullAbout}
-                  </p>
-
-
-                  <div>
-
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-brand-muted mb-3">
-                      Education
-                    </p>
-
-                    <h3 className="text-base font-semibold">
-                      {PORTFOLIO_DATA.education.degree}
-                    </h3>
-
-                    <p className="text-sm text-brand-sageDark mt-1">
-                      {PORTFOLIO_DATA.education.university}
-                    </p>
-
-                    <div className="mt-2 flex gap-5 text-xs text-brand-muted">
-
-                      <span>
-                        {PORTFOLIO_DATA.education.period}
-                      </span>
-
-                      <span>
-                        GPA {PORTFOLIO_DATA.education.gpa}
-                      </span>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </section>
-
-
-          {/* THESIS */}
 
           <section className="py-14 border-t border-brand-line">
-
-            <div className="grid md:grid-cols-[0.3fr_1fr] gap-8">
-
-              <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                Thesis
-              </span>
-
-
+            <div className="grid md:grid-cols-[.3fr_1fr] gap-8">
+              <span className="text-xs uppercase tracking-[.25em] text-brand-muted">01 / About</span>
               <div>
-
-                <p className="text-[10px] uppercase tracking-[0.25em] text-brand-pinkDark mb-3">
-                  Undergraduate Research
-                </p>
-
-                <h3 className="font-serif text-2xl sm:text-3xl leading-snug max-w-4xl">
-                  {PORTFOLIO_DATA.education.thesisTitle}
-                </h3>
-
+                <h2 className="font-serif text-4xl sm:text-5xl leading-tight max-w-4xl">
+                  Turning data into <span className="italic text-brand-pinkDark">clearer decisions.</span>
+                </h2>
+                <p className="mt-6 text-sm leading-7 text-brand-muted max-w-2xl">{PORTFOLIO_DATA.shortAbout}</p>
+                <button onClick={() => navigateTo("/aboutme")} className="mt-5 text-xs uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark">
+                  Read more about me →
+                </button>
               </div>
-
             </div>
-
           </section>
 
-
-          {/* EXPERIENCE PREVIEW */}
-
-          <section className="py-20 border-t border-brand-line">
-
-            <div className="flex justify-between items-end mb-8">
-
-              <div>
-
-                <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                  02 / Experience
-                </span>
-
-                <h2 className="font-serif text-4xl sm:text-5xl mt-2">
-                  Selected experience
-                </h2>
-
-              </div>
-
-
-              <button
-                onClick={() => navigateTo("/exp")}
-                className="hidden sm:flex items-center gap-2 text-xs uppercase tracking-widest hover:text-brand-pinkDark transition"
-              >
-                View all
-
-                <i
-                  data-lucide="arrow-right"
-                  className="w-4 h-4"
-                ></i>
-
-              </button>
-
+          <section className="py-14 border-t border-brand-line">
+            <div className="flex justify-between items-end mb-6">
+              <div><span className="text-xs uppercase tracking-[.25em] text-brand-muted">02 / Experience</span><h2 className="font-serif text-4xl sm:text-5xl mt-2">Selected experience</h2></div>
+              <button onClick={() => navigateTo("/exp")} className="hidden sm:flex items-center gap-2 text-xs uppercase tracking-widest hover:text-brand-pinkDark">View all <i data-lucide="arrow-right" className="w-4 h-4"></i></button>
             </div>
-
-
-            <div>
-
-              {PORTFOLIO_DATA.workExperience.map(
-                (exp, index) => (
-
-                  <div
-                    key={exp.id}
-                    className="group border-t border-brand-line py-6 grid md:grid-cols-[0.12fr_1fr_0.25fr] gap-4"
-                  >
-
-                    <span className="text-xs text-brand-muted">
-                      0{index + 1}
-                    </span>
-
-
-                    <div>
-
-                      <h3 className="text-lg font-semibold group-hover:text-brand-pinkDark transition">
-                        {exp.role}
-                      </h3>
-
-                      <p className="text-sm text-brand-sageDark mt-0.5">
-                        {exp.company}
-                      </p>
-
-                      <p className="text-sm text-brand-muted mt-2 leading-6 max-w-xl">
-                        {exp.summary}
-                      </p>
-
-                    </div>
-
-
-                    <div className="md:text-right text-xs text-brand-muted">
-                      {exp.period}
-                    </div>
-
+            <div className="grid md:grid-cols-2 gap-x-6 gap-y-4">
+              {PORTFOLIO_DATA.workExperience.slice(0,4).map((exp,index) => (
+                <article key={exp.id} className="pastel-card rounded-2xl p-5">
+                  <div className="flex justify-between gap-4">
+                    <span className="text-[10px] text-brand-pinkDark uppercase tracking-widest">0{index+1}</span>
+                    <span className="text-[10px] text-brand-muted">{exp.period}</span>
                   </div>
-
-                )
-              )}
-
+                  <h3 className="font-serif text-2xl mt-5">{exp.role}</h3>
+                  <p className="text-sm text-brand-sageDark mt-1">{exp.company}</p>
+                  <p className="text-sm text-brand-muted leading-6 mt-3">{exp.summary}</p>
+                </article>
+              ))}
             </div>
-
-
-            <button
-              onClick={() => navigateTo("/exp")}
-              className="sm:hidden mt-6 flex items-center gap-2 text-xs uppercase tracking-widest"
-            >
-              View all experience
-
-              <i
-                data-lucide="arrow-right"
-                className="w-4 h-4"
-              ></i>
-
-            </button>
-
           </section>
 
-
-          {/* PROJECT PREVIEW */}
-
-          <section className="py-20 border-t border-brand-line">
-
-            <div className="flex justify-between items-end mb-8">
-
-              <div>
-
-                <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                  03 / Projects
-                </span>
-
-                <h2 className="font-serif text-4xl sm:text-5xl mt-2">
-                  Selected work
-                </h2>
-
-              </div>
-
-
-              <button
-                onClick={() => navigateTo("/project")}
-                className="hidden sm:flex items-center gap-2 text-xs uppercase tracking-widest"
-              >
-                All projects
-
-                <i
-                  data-lucide="arrow-right"
-                  className="w-4 h-4"
-                ></i>
-
-              </button>
-
+          <section className="py-14 border-t border-brand-line">
+            <div className="flex justify-between items-end mb-6">
+              <div><span className="text-xs uppercase tracking-[.25em] text-brand-muted">03 / Projects</span><h2 className="font-serif text-4xl sm:text-5xl mt-2">Selected work</h2></div>
+              <button onClick={() => navigateTo("/project")} className="hidden sm:flex items-center gap-2 text-xs uppercase tracking-widest hover:text-brand-pinkDark">All projects <i data-lucide="arrow-right" className="w-4 h-4"></i></button>
             </div>
-
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
-
-              {PORTFOLIO_DATA.projects
-                .slice(0, 3)
-                .map((project) => (
-
-                  <article
-                    key={project.id}
-                    className="group"
-                  >
-
-                    <div className="image-hover overflow-hidden aspect-[4/3] mb-4">
-
-                      <img
-                        src={project.coverImage}
-                        alt={project.title}
-                        className="w-full h-full object-cover"
-                      />
-
-                    </div>
-
-
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-brand-pinkDark">
-                      {project.category}
-                    </p>
-
-
-                    <h3 className="font-serif text-2xl mt-1 group-hover:text-brand-pinkDark transition">
-                      {project.title}
-                    </h3>
-
-
-                    <p className="text-sm text-brand-muted leading-6 mt-2">
-                      {project.shortDesc}
-                    </p>
-
-
-                    <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1">
-
-                      {project.tools.map(
-                        (tool) => (
-
-                          <span
-                            key={tool}
-                            className="text-[9px] uppercase tracking-widest text-brand-muted"
-                          >
-                            {tool}
-                          </span>
-
-                        )
-                      )}
-
-                    </div>
-
-
-                    <a
-                      href={project.driveDocUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 mt-5 text-[10px] uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark hover:border-brand-pinkDark transition"
-                    >
-                      Details
-
-                      <i
-                        data-lucide="arrow-up-right"
-                        className="w-3.5 h-3.5"
-                      ></i>
-
-                    </a>
-
-                  </article>
-
-                )
-              )}
-
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {PORTFOLIO_DATA.projects.slice(0,3).map(project => <ProjectCard key={project.id} project={project} />)}
             </div>
-
-
-            <button
-              onClick={() => navigateTo("/project")}
-              className="sm:hidden mt-10 flex items-center gap-2 text-xs uppercase tracking-widest"
-            >
-              View all projects
-
-              <i
-                data-lucide="arrow-right"
-                className="w-4 h-4"
-              ></i>
-
-            </button>
-
           </section>
-
         </div>
-
       );
 
+      const AboutMePage = () => (
+        <div className="reveal">
+          <PageIntro number="01 / About Me" title="About me" description="A little more about my background, education, and the way I approach data and technology." />
+          <section className="border-t border-brand-line py-12">
+            <div className="grid lg:grid-cols-[220px_1fr] gap-8 lg:gap-12 items-start max-w-5xl">
+              <div className="image-hover overflow-hidden rounded-[1.5rem] bg-brand-pinkLight w-full max-w-[220px] aspect-[4/5]">
+                <img src={PORTFOLIO_DATA.profileImage} alt={PORTFOLIO_DATA.name} className="w-full h-full object-cover" onError={(e)=>{e.currentTarget.style.display="none"; e.currentTarget.parentElement.innerHTML='<div class="w-full h-full flex items-center justify-center text-sm text-brand-muted px-6 text-center">Add your photo as <b class="mx-1">profile.jpg</b> in the same folder as this HTML.</div>'}} />
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[.25em] text-brand-pinkDark">Hello, I'm Sangwon</p>
+                <h2 className="font-serif text-4xl sm:text-5xl leading-tight mt-3">I enjoy turning information into something people can <span className="italic text-brand-sageDark">understand and use.</span></h2>
+                <p className="text-sm leading-7 text-brand-muted max-w-2xl mt-7">{PORTFOLIO_DATA.fullAbout}</p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  {["Data Analysis","Business Intelligence","Data Visualization","Technology"].map(item => <span key={item} className="px-4 py-2 rounded-full bg-brand-sageLight text-brand-sageDark text-[10px] uppercase tracking-widest">{item}</span>)}
+                </div>
+              </div>
+            </div>
+          </section>
 
-      /* =========================================================
-         EXPERIENCE PAGE
-      ========================================================= */
+          <section className="border-t border-brand-line py-12">
+            <div className="grid md:grid-cols-[.3fr_1fr] gap-8">
+              <span className="text-xs uppercase tracking-[.25em] text-brand-muted">Education</span>
+              <div className="pastel-card rounded-2xl p-7">
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-3">
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[.2em] text-brand-pinkDark">Bachelor's Degree</p>
+                    <h3 className="font-serif text-2xl mt-2">{PORTFOLIO_DATA.education.degree}</h3>
+                    <p className="text-sm text-brand-sageDark mt-1">{PORTFOLIO_DATA.education.university}</p>
+                  </div>
+                  <div className="sm:text-right text-xs text-brand-muted">
+                    <p>{PORTFOLIO_DATA.education.period}</p><p className="mt-1">GPA {PORTFOLIO_DATA.education.gpa}</p>
+                  </div>
+                </div>
+                <div className="mt-7 pt-5 border-t border-brand-line">
+                  <p className="text-[10px] uppercase tracking-[.2em] text-brand-muted">Thesis</p>
+                  <p className="font-serif text-xl mt-2 leading-snug">{PORTFOLIO_DATA.education.thesisTitle}</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      );
 
       const ExperiencePage = () => (
-
         <div className="reveal">
+          <PageIntro number="02 / Career" title="Experience" description="Professional experience and selected organizational involvement." />
 
-          <section className="pb-16">
-
-            <div className="grid lg:grid-cols-[0.3fr_1fr] gap-8">
-
-              <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                01 / Career
-              </span>
-
-
-              <div>
-
-                <h1 className="font-serif text-5xl sm:text-7xl leading-[0.9]">
-                  Experience
-                </h1>
-
-                <p className="text-sm text-brand-muted leading-7 max-w-2xl mt-5">
-                  Professional experience and selected organizational
-                  involvement.
-                </p>
-
-              </div>
-
-            </div>
-
-          </section>
-
-
-          {/* WORK EXPERIENCE */}
-
-          <section className="border-t border-brand-line py-16">
-
-            <div className="grid lg:grid-cols-[0.3fr_1fr] gap-8">
-
-              <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                Work
-              </span>
-
-
-              <div>
-
-                {PORTFOLIO_DATA.workExperience.map(
-                  (exp, index) => (
-
-                    <article
-                      key={exp.id}
-                      className="border-t border-brand-line first:border-t-0 py-7 first:pt-0"
-                    >
-
-                      <div className="grid md:grid-cols-[1fr_auto] gap-4">
-
-                        <div>
-
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-brand-pinkDark mb-2">
-                            0{index + 1}
-                          </p>
-
-                          <h2 className="font-serif text-3xl">
-                            {exp.role}
-                          </h2>
-
-                          <p className="text-sm text-brand-sageDark mt-0.5">
-                            {exp.company}
-                          </p>
-
-                        </div>
-
-
-                        <div className="md:text-right text-xs text-brand-muted">
-                          {exp.period}
-                          <br />
-                          {exp.location}
-                        </div>
-
+          <section className="border-t border-brand-line py-12">
+            <div className="grid lg:grid-cols-[.3fr_1fr] gap-8">
+              <span className="text-xs uppercase tracking-[.25em] text-brand-muted">Work</span>
+              <div className="grid md:grid-cols-2 gap-4">
+                {PORTFOLIO_DATA.workExperience.map((exp,index) => (
+                  <article key={exp.id} className="pastel-card rounded-2xl overflow-hidden">
+                    {exp.photos?.length > 0 && (
+                      <div className={`grid ${exp.photos.length > 1 ? "grid-cols-2" : "grid-cols-1"} gap-1.5 p-1.5 bg-brand-pinkLight`}>
+                        {exp.photos.slice(0,2).map((photo,i) => (
+                          <div key={i} className="experience-photo overflow-hidden rounded-xl">
+                            <img src={photo.url} alt={photo.caption || exp.role} className="w-full h-full object-cover" />
+                          </div>
+                        ))}
                       </div>
-
-
-                      <p className="mt-4 max-w-2xl text-sm leading-6 text-brand-muted">
-                        {exp.summary}
-                      </p>
-
-
-                      <div className="mt-5 max-w-3xl">
-
-                        {exp.highlights.map(
-                          (highlight, i) => (
-
-                            <div
-                              key={i}
-                              className="flex gap-4 border-t border-brand-line py-3"
-                            >
-
-                              <span className="text-[10px] text-brand-pinkDark">
-                                0{i + 1}
-                              </span>
-
-                              <p className="text-sm leading-6">
-                                {highlight}
-                              </p>
-
-                            </div>
-
-                          )
-                        )}
-
+                    )}
+                    <div className="p-5">
+                      <div className="flex justify-between gap-4">
+                        <span className="text-[10px] uppercase tracking-[.2em] text-brand-pinkDark">0{index+1}</span>
+                        <span className="text-[10px] text-brand-muted text-right">{exp.period}</span>
                       </div>
-
-
-                      {exp.photos && (
-
-                        <div className="mt-7 grid sm:grid-cols-2 gap-4">
-
-                          {exp.photos.map(
-                            (photo, i) => (
-
-                              <figure
-                                key={i}
-                                className="image-hover overflow-hidden"
-                              >
-
-                                <div className="aspect-[16/9] overflow-hidden">
-
-                                  <img
-                                    src={photo.url}
-                                    alt={photo.caption}
-                                    className="w-full h-full object-cover"
-                                  />
-
-                                </div>
-
-                                <figcaption className="mt-2 text-[9px] uppercase tracking-widest text-brand-muted">
-                                  {photo.caption}
-                                </figcaption>
-
-                              </figure>
-
-                            )
-                          )}
-
-                        </div>
-
-                      )}
-
-                    </article>
-
-                  )
-                )}
-
-              </div>
-
-            </div>
-
-          </section>
-
-
-          {/* ORGANIZATIONAL EXPERIENCE */}
-
-          <section className="border-t border-brand-line py-16">
-
-            <div className="grid lg:grid-cols-[0.3fr_1fr] gap-8">
-
-              <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                Organization
-              </span>
-
-
-              <div>
-
-                {PORTFOLIO_DATA.orgExperience.map(
-                  (org, index) => (
-
-                    <article
-                      key={org.id}
-                      className="border-t border-brand-line first:border-t-0 py-5 first:pt-0"
-                    >
-
-                      <div className="grid md:grid-cols-[1fr_auto] gap-3">
-
-                        <div>
-
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-brand-pinkDark">
-                            0{index + 1}
-                          </p>
-
-                          <h3 className="text-lg font-semibold mt-1">
-                            {org.organization}
-                          </h3>
-
-                          <p className="text-sm text-brand-sageDark mt-0.5">
-                            {org.role}
-                          </p>
-
-                          <p className="text-sm text-brand-muted leading-6 mt-1 max-w-2xl">
-                            {org.description}
-                          </p>
-
-                        </div>
-
-
-                        <span className="text-xs text-brand-muted">
-                          {org.period}
-                        </span>
-
+                      <h2 className="font-serif text-2xl mt-4">{exp.role}</h2>
+                      <p className="text-sm text-brand-sageDark mt-1">{exp.company}</p>
+                      <p className="text-xs text-brand-muted mt-1">{exp.location}</p>
+                      <p className="mt-3 text-sm leading-6 text-brand-muted">{exp.summary}</p>
+                      <div className="mt-3 space-y-1.5">
+                        {exp.highlights.map((h,i)=><p key={i} className="text-xs leading-5 flex gap-2"><span className="text-brand-pinkDark">·</span>{h}</p>)}
                       </div>
-
-                    </article>
-
-                  )
-                )}
-
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-      );
-
-
-      /* =========================================================
-         PROJECT PAGE
-      ========================================================= */
-
-      const ProjectPage = () => (
-
-        <div className="reveal">
-
-          <section className="pb-16">
-
-            <div className="grid lg:grid-cols-[0.3fr_1fr] gap-8">
-
-              <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                02 / Selected Work
-              </span>
-
-
-              <div>
-
-                <h1 className="font-serif text-5xl sm:text-7xl leading-[0.9]">
-                  Projects
-                </h1>
-
-                <p className="text-sm text-brand-muted leading-7 max-w-2xl mt-5">
-                  Selected work in data analysis, visualization,
-                  business intelligence, and machine learning.
-                </p>
-
-              </div>
-
-            </div>
-
-          </section>
-
-
-          <section className="border-t border-brand-line pt-10 pb-16">
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-14">
-
-              {PORTFOLIO_DATA.projects.map(
-                (project, index) => (
-
-                  <article
-                    key={project.id}
-                    className="group"
-                  >
-
-                    {/* IMAGE */}
-
-                    <a
-                      href={project.driveDocUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block image-hover overflow-hidden aspect-[4/3] mb-5"
-                    >
-
-                      <img
-                        src={project.coverImage}
-                        alt={project.title}
-                        className="w-full h-full object-cover"
-                      />
-
-                    </a>
-
-
-                    {/* CATEGORY */}
-
-                    <div className="flex items-center justify-between">
-
-                      <p className="text-[10px] uppercase tracking-[0.2em] text-brand-pinkDark">
-                        {project.category}
-                      </p>
-
-                      <span className="text-[10px] text-brand-muted">
-                        0{index + 1}
-                      </span>
-
                     </div>
-
-
-                    {/* TITLE */}
-
-                    <h2 className="font-serif text-2xl leading-tight mt-1.5 group-hover:text-brand-pinkDark transition">
-                      {project.title}
-                    </h2>
-
-
-                    {/* DESCRIPTION */}
-
-                    <p className="text-sm leading-6 text-brand-muted mt-2">
-                      {project.shortDesc}
-                    </p>
-
-
-                    {/* TECH */}
-
-                    <div className="flex flex-wrap gap-x-3 gap-y-1 mt-3">
-
-                      {project.tools.map(
-                        (tool) => (
-
-                          <span
-                            key={tool}
-                            className="text-[9px] uppercase tracking-widest text-brand-muted"
-                          >
-                            {tool}
-                          </span>
-
-                        )
-                      )}
-
-                    </div>
-
-
-                    {/* DETAIL → DRIVE */}
-
-                    <a
-                      href={project.driveDocUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 mt-5 text-[10px] uppercase tracking-[0.18em] border-b border-brand-text pb-1 hover:text-brand-pinkDark hover:border-brand-pinkDark transition"
-                    >
-
-                      Details
-
-                      <i
-                        data-lucide="arrow-up-right"
-                        className="w-3.5 h-3.5"
-                      ></i>
-
-                    </a>
-
                   </article>
-
-                )
-              )}
-
+                ))}
+              </div>
             </div>
-
           </section>
 
+          <section className="border-t border-brand-line py-12">
+            <div className="grid lg:grid-cols-[.3fr_1fr] gap-8">
+              <span className="text-xs uppercase tracking-[.25em] text-brand-muted">Organization</span>
+              <div>
+                {PORTFOLIO_DATA.orgExperience.map((org,index) => (
+                  <article key={org.id} className="border-t border-brand-line py-5 first:pt-0">
+                    <div className="grid md:grid-cols-[1fr_150px_auto] gap-5 items-start">
+                      <div>
+                        <p className="text-[10px] uppercase tracking-[.2em] text-brand-pinkDark">0{index+1}</p>
+                        <h3 className="text-lg font-semibold mt-1">{org.organization}</h3>
+                        <p className="text-sm text-brand-sageDark mt-0.5">{org.role}</p>
+                        <p className="text-sm text-brand-muted leading-6 mt-2 max-w-2xl">{org.description}</p>
+                      </div>
+                      {org.photos?.length > 0 && (
+                        <div className="grid grid-cols-2 md:grid-cols-1 gap-1.5">
+                          {org.photos.slice(0,2).map((photo,i) => (
+                            <div key={i} className="org-photo overflow-hidden rounded-xl bg-brand-pinkLight">
+                              <img src={photo.url} alt={photo.caption || org.organization} className="w-full h-full object-cover" />
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      <span className="text-xs text-brand-muted md:text-right">{org.period}</span>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
         </div>
-
       );
 
-
-      /* =========================================================
-         ROUTER
-      ========================================================= */
-
-      let pageContent = null;
-
-
-      if (currentRoute === "/home") {
-
-        pageContent = <HomePage />;
-
-      } else if (currentRoute === "/exp") {
-
-        pageContent = <ExperiencePage />;
-
-      } else if (currentRoute === "/project") {
-
-        pageContent = <ProjectPage />;
-
-      } else {
-
-        pageContent = <HomePage />;
-
+      function ProjectCard({project,index}) {
+        return (
+          <article className="project-card pastel-card rounded-2xl overflow-hidden group">
+            <a href={project.driveDocUrl} target="_blank" rel="noopener noreferrer" className="block image-hover overflow-hidden aspect-[4/3]">
+              <img src={project.coverImage} alt={project.title} className="w-full h-full object-cover"/>
+            </a>
+            <div className="p-5">
+              <div className="flex items-center justify-between gap-3">
+                <p className="text-[10px] uppercase tracking-[.2em] text-brand-pinkDark">{project.category}</p>
+                {index !== undefined && <span className="text-[10px] text-brand-muted">0{index+1}</span>}
+              </div>
+              <h2 className="font-serif text-2xl leading-tight mt-2 group-hover:text-brand-pinkDark transition">{project.title}</h2>
+              <p className="text-sm leading-6 text-brand-muted mt-2">{project.shortDesc}</p>
+              <div className="flex flex-wrap gap-x-3 gap-y-1 mt-3">
+                {project.tools.map(tool=><span key={tool} className="text-[9px] uppercase tracking-widest text-brand-sageDark">{tool}</span>)}
+              </div>
+              <a href={project.driveDocUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-5 text-[10px] uppercase tracking-[.18em] border-b border-brand-text pb-1 hover:text-brand-pinkDark hover:border-brand-pinkDark">
+                Details <i data-lucide="arrow-up-right" className="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </article>
+        );
       }
 
-
-      return (
-
-        <div className="min-h-screen bg-brand-bg text-brand-text">
-
-          <Navbar />
-
-
-          <main className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 pt-12 md:pt-16">
-
-            {pageContent}
-
-          </main>
-
-
-          <Footer />
-
+      const ProjectPage = () => (
+        <div className="reveal">
+          <PageIntro number="03 / Selected Work" title="Projects" description="Selected work in data analysis, visualization, business intelligence, and machine learning." />
+          <section className="border-t border-brand-line pt-10 pb-12">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {PORTFOLIO_DATA.projects.map((project,index)=><ProjectCard key={project.id} project={project} index={index} />)}
+            </div>
+          </section>
         </div>
-
       );
 
+      let pageContent;
+      if (currentRoute === "/home") pageContent=<HomePage />;
+      else if (currentRoute === "/aboutme") pageContent=<AboutMePage />;
+      else if (currentRoute === "/exp") pageContent=<ExperiencePage />;
+      else if (currentRoute === "/project") pageContent=<ProjectPage />;
+      else pageContent=<HomePage />;
+
+      return (
+        <div className="min-h-screen bg-brand-bg text-brand-text">
+          <Navbar />
+          <main className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 pt-10 md:pt-12">{pageContent}</main>
+          <Footer />
+        </div>
+      );
     }
 
-
-    /* =========================================================
-       RENDER
-    ========================================================= */
-
-    ReactDOM
-      .createRoot(
-        document.getElementById("root")
-      )
-      .render(<App />);
-
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
   </script>
-
 </body>
 </html>
