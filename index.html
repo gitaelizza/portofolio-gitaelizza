@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +7,8 @@
 
   <title>Lee Sangwon — Data Analyst Portfolio</title>
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -18,10 +17,8 @@
     rel="stylesheet"
   >
 
-  <!-- Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- React -->
   <script
     src="https://unpkg.com/react@18/umd/react.production.min.js"
     crossorigin
@@ -32,7 +29,6 @@
     crossorigin
   ></script>
 
-  <!-- Babel -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <script>
@@ -97,13 +93,11 @@
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
     }
 
-    .modal-backdrop {
-      background: rgba(25, 28, 24, 0.72);
-      backdrop-filter: blur(12px);
-    }
-
-    .text-balance {
-      text-wrap: balance;
+    .soft-circle {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(80px);
+      pointer-events: none;
     }
 
     .reveal {
@@ -133,14 +127,6 @@
       filter: saturate(1.05);
     }
 
-    .link-arrow {
-      transition: gap 0.25s ease;
-    }
-
-    .link-arrow:hover {
-      gap: 0.7rem;
-    }
-
     .nav-link {
       position: relative;
     }
@@ -163,15 +149,9 @@
       transform: scaleX(1);
       transform-origin: left;
     }
-
-    .soft-circle {
-      position: absolute;
-      border-radius: 999px;
-      filter: blur(80px);
-      pointer-events: none;
-    }
   </style>
 </head>
+
 
 <body>
 
@@ -179,13 +159,14 @@
 
   <div id="root"></div>
 
+
   <script type="text/babel">
 
     const { useState, useEffect } = React;
 
 
     /* =========================================================
-       PORTFOLIO DATA
+       DATA
     ========================================================= */
 
     const PORTFOLIO_DATA = {
@@ -212,6 +193,7 @@
         university: "State University of Technology",
         period: "2020 — 2024",
         gpa: "3.85 / 4.00",
+
         thesisTitle:
           "Predictive Analytics and Customer Churn Prevention Model in E-Commerce Using Machine Learning Algorithms"
       },
@@ -282,135 +264,104 @@
       ],
 
 
+      /* ORGANIZATIONAL EXPERIENCE
+         Dibuat singkat: hanya nama organisasi,
+         periode, posisi/kegiatan, dan deskripsi singkat.
+      */
+
       orgExperience: [
 
         {
-          id: "exp-o1",
+          id: "org-1",
 
-          organization: "Student Data Science Association (SDSA)",
+          organization:
+            "Student Data Science Association (SDSA)",
 
           period: "2022 — 2023",
 
-          location: "Campus",
+          role:
+            "Project Manager / Head of Data & Workshop Division",
 
-          summary:
-            "Aktif berkontribusi dalam berbagai kepanitiaan dan program kerja utama organisasi mahasiswa tingkat universitas.",
+          description:
+            "Contributed to university-level data science programs, workshops, and national competitions."
+        },
 
-          committees: [
+        {
+          id: "org-2",
 
-            {
-              role: "Project Manager / Ketua Pelaksana",
+          organization:
+            "National Data Hackathon 2023",
 
-              event: "National Data Hackathon 2023",
+          period: "Aug 2023 — Nov 2023",
 
-              period: "Aug 2023 — Nov 2023",
+          role:
+            "Project Manager / Ketua Pelaksana",
 
-              highlights: [
-                "Memimpin 25 anggota panitia lintas divisi dalam menyelenggarakan kompetisi data tingkat nasional.",
-                "Menggaet 300+ peserta dari 15 universitas dan mengelola sponsorship senilai Rp 40 Juta."
-              ],
+          description:
+            "Led the organizing team in delivering a national-level data competition."
+        },
 
-              photos: [
-                {
-                  caption: "Final Hackathon Presentation & Awarding Night",
-                  url: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=85"
-                }
-              ]
-            },
+        {
+          id: "org-3",
 
+          organization:
+            "Data Analytics Bootcamp 2023",
 
-            {
-              role: "Head of Data & Workshop Division",
+          period: "Feb 2023 — May 2023",
 
-              event: "Data Analytics Bootcamp 2023",
+          role:
+            "Head of Data & Workshop Division",
 
-              period: "Feb 2023 — May 2023",
-
-              highlights: [
-                "Merancang kurikulum pembelajaran Python Pandas & SQL untuk 100+ peserta mahasiswa baru.",
-                "Menjadi pemateri utama dalam 4 sesi hands-on workshop analisis data visual."
-              ],
-
-              photos: [
-                {
-                  caption: "Mentorship Session on Python Pandas",
-                  url: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=85"
-                }
-              ]
-            },
-
-
-            {
-              role: "Staff Divisi Acara & Logistik",
-
-              event: "Annual Data Science Seminar 2022",
-
-              period: "Sep 2022 — Nov 2022",
-
-              highlights: [
-                "Mengkoordinasikan kebutuhan teknis pembicara industri dan rundown acara acara harian."
-              ]
-            }
-
-          ]
+          description:
+            "Designed learning materials and supported hands-on data analytics workshops."
         }
 
       ],
 
+
+      /* =========================================================
+         PROJECTS
+         3 CARDS PER ROW
+      ========================================================= */
 
       projects: [
 
         {
           id: "proj-1",
 
-          title: "Customer Segmentation & Churn Analysis",
+          title:
+            "Customer Segmentation & Churn Analysis",
 
-          category: "Machine Learning",
+          category:
+            "Machine Learning",
 
           tools: [
             "Python",
             "Scikit-Learn",
             "RFM",
-            "PowerBI"
+            "Power BI"
           ],
 
           coverImage:
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=85",
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85",
 
           shortDesc:
-            "RFM clustering model predicting e-commerce churn patterns.",
-
-          fullDesc:
-            "Applied RFM (Recency, Frequency, Monetary) segmentation combined with K-Means Clustering to classify customer profiles and trigger targeted retention campaigns.",
-
-          outcomes:
-            "Uncovered key segment generating 62% revenue; created churn alert rule with 88% precision.",
+            "RFM clustering model to identify customer segments and uncover churn patterns.",
 
           driveDocUrl:
-            "https://drive.google.com",
+            "https://drive.google.com"
 
-          githubUrl:
-            "https://github.com",
-
-          proofImages: [
-            {
-              caption: "RFM Clusters & Segment Distribution Chart",
-              url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85"
-            },
-            {
-              caption: "PowerBI Interactive Dashboard Overview",
-              url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85"
-            }
-          ]
         },
 
 
         {
           id: "proj-2",
 
-          title: "Supply Chain Latency Dashboard",
+          title:
+            "Supply Chain Latency Dashboard",
 
-          category: "Data Visualization",
+          category:
+            "Data Visualization",
 
           tools: [
             "SQL",
@@ -419,38 +370,25 @@
           ],
 
           coverImage:
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=85",
+            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
 
           shortDesc:
-            "Real-time BI monitoring warehouse turnover & delivery delay.",
-
-          fullDesc:
-            "Connected BigQuery to Looker Studio to visualize regional delivery latency, inventory stockouts, and supplier performance metrics.",
-
-          outcomes:
-            "Identified North Region bottleneck, enabling routing changes that reduced delays by 18%.",
+            "Interactive BI dashboard monitoring delivery latency, inventory, and supplier performance.",
 
           driveDocUrl:
-            "https://drive.google.com",
+            "https://drive.google.com"
 
-          githubUrl:
-            "https://github.com",
-
-          proofImages: [
-            {
-              caption: "Looker Studio Delivery Delay Heatmap",
-              url: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=1200&q=85"
-            }
-          ]
         },
 
 
         {
           id: "proj-3",
 
-          title: "E-Commerce Sales Performance EDA",
+          title:
+            "E-Commerce Sales Performance EDA",
 
-          category: "Exploratory Data Analysis",
+          category:
+            "Exploratory Data Analysis",
 
           tools: [
             "Python",
@@ -459,29 +397,92 @@
           ],
 
           coverImage:
-            "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=1400&q=85",
+            "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=1200&q=85",
 
           shortDesc:
-            "Statistical EDA analyzing seasonal purchasing patterns.",
-
-          fullDesc:
-            "Analyzed 2-year retail transaction datasets to identify peak purchasing trends, product correlations, and revenue optimization windows.",
-
-          outcomes:
-            "Provided actionable pricing recommendations resulting in 8% uplift during holiday promo season.",
+            "Exploratory analysis of seasonal purchasing patterns and revenue opportunities.",
 
           driveDocUrl:
-            "https://drive.google.com",
+            "https://drive.google.com"
 
-          githubUrl:
-            "https://github.com",
+        },
 
-          proofImages: [
-            {
-              caption: "Correlation Matrix & Seasonal Demand Plot",
-              url: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=1200&q=85"
-            }
-          ]
+        {
+          id: "proj-4",
+
+          title:
+            "Customer Behavior Dashboard",
+
+          category:
+            "Data Visualization",
+
+          tools: [
+            "Power BI",
+            "SQL",
+            "Excel"
+          ],
+
+          coverImage:
+            "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85",
+
+          shortDesc:
+            "Dashboard designed to visualize customer behavior and business performance.",
+
+          driveDocUrl:
+            "https://drive.google.com"
+
+        },
+
+        {
+          id: "proj-5",
+
+          title:
+            "Sales Trend Analysis",
+
+          category:
+            "Data Analysis",
+
+          tools: [
+            "Python",
+            "Pandas",
+            "Matplotlib"
+          ],
+
+          coverImage:
+            "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=85",
+
+          shortDesc:
+            "Statistical analysis exploring sales trends, seasonality, and product performance.",
+
+          driveDocUrl:
+            "https://drive.google.com"
+
+        },
+
+        {
+          id: "proj-6",
+
+          title:
+            "Business Performance Report",
+
+          category:
+            "Business Intelligence",
+
+          tools: [
+            "Excel",
+            "Power BI",
+            "SQL"
+          ],
+
+          coverImage:
+            "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=85",
+
+          shortDesc:
+            "Business intelligence report translating operational data into actionable insights.",
+
+          driveDocUrl:
+            "https://drive.google.com"
+
         }
 
       ]
@@ -497,20 +498,16 @@
 
       const [currentRoute, setCurrentRoute] = useState(() => {
 
-        const hash =
-          window.location.hash.replace("#", "");
-
-        return hash || "/";
+        return (
+          window.location.hash.replace("#", "")
+          || "/"
+        );
 
       });
 
 
       const [copiedEmail, setCopiedEmail] =
         useState(false);
-
-
-      const [activeModalProject, setActiveModalProject] =
-        useState(null);
 
 
       const [mobileMenuOpen, setMobileMenuOpen] =
@@ -522,11 +519,10 @@
         const handleHashChange = () => {
 
           const hash =
-            window.location.hash.replace("#", "") || "/";
+            window.location.hash.replace("#", "")
+            || "/";
 
           setCurrentRoute(hash);
-
-          setActiveModalProject(null);
 
           setMobileMenuOpen(false);
 
@@ -561,8 +557,8 @@
 
       }, [
         currentRoute,
-        activeModalProject,
-        mobileMenuOpen
+        mobileMenuOpen,
+        copiedEmail
       ]);
 
 
@@ -573,24 +569,54 @@
       };
 
 
-      const handleCopyEmail = () => {
+      /* =========================================================
+         COPY EMAIL
+      ========================================================= */
 
-        navigator.clipboard.writeText(
-          PORTFOLIO_DATA.email
-        );
+      const handleCopyEmail = async () => {
 
-        setCopiedEmail(true);
+        try {
 
-        setTimeout(
-          () => setCopiedEmail(false),
-          2500
-        );
+          await navigator.clipboard.writeText(
+            PORTFOLIO_DATA.email
+          );
+
+          setCopiedEmail(true);
+
+          setTimeout(() => {
+            setCopiedEmail(false);
+          }, 2200);
+
+        } catch (error) {
+
+          const textarea =
+            document.createElement("textarea");
+
+          textarea.value =
+            PORTFOLIO_DATA.email;
+
+          document.body.appendChild(textarea);
+
+          textarea.select();
+
+          document.execCommand("copy");
+
+          textarea.remove();
+
+          setCopiedEmail(true);
+
+          setTimeout(() => {
+            setCopiedEmail(false);
+          }, 2200);
+
+        }
 
       };
 
 
       /* =========================================================
-         LANDING
+         LANDING PAGE
+         TIDAK DIUBAH
       ========================================================= */
 
       if (
@@ -660,10 +686,12 @@
                     </span>
 
                     <span className="w-11 h-11 rounded-full border border-brand-text flex items-center justify-center group-hover:bg-brand-text group-hover:text-white transition-all">
+
                       <i
                         data-lucide="arrow-up-right"
                         className="w-4 h-4"
                       ></i>
+
                     </span>
 
                   </button>
@@ -712,12 +740,10 @@
               onClick={() => navigateTo("/")}
               className="font-serif text-xl font-bold tracking-tight"
             >
-
               Lee
               <span className="italic text-brand-pinkDark">
                 .
               </span>
-
             </button>
 
 
@@ -826,21 +852,21 @@
 
       const Footer = () => (
 
-        <footer className="mt-32 border-t border-brand-line">
+        <footer className="mt-24 border-t border-brand-line">
 
-          <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 py-12">
+          <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 py-10">
 
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-7">
 
               <div>
 
-                <p className="text-xs uppercase tracking-[0.25em] text-brand-muted mb-3">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-brand-muted mb-2">
                   Let's connect
                 </p>
 
                 <button
                   onClick={handleCopyEmail}
-                  className="font-serif text-2xl sm:text-3xl hover:text-brand-pinkDark transition-colors"
+                  className="font-serif text-2xl hover:text-brand-pinkDark transition"
                 >
                   {copiedEmail
                     ? "Email copied!"
@@ -861,6 +887,7 @@
                   LinkedIn
                 </a>
 
+
                 <a
                   href={PORTFOLIO_DATA.resume}
                   target="_blank"
@@ -875,7 +902,7 @@
             </div>
 
 
-            <div className="mt-12 pt-5 border-t border-brand-line flex justify-between text-[10px] uppercase tracking-[0.2em] text-brand-muted">
+            <div className="mt-9 pt-4 border-t border-brand-line flex justify-between text-[10px] uppercase tracking-[0.2em] text-brand-muted">
 
               <span>
                 Lee Sangwon
@@ -895,8 +922,835 @@
 
 
       /* =========================================================
-         MAIN APP
+         HOME
       ========================================================= */
+
+      const HomePage = () => (
+
+        <div className="reveal">
+
+
+          {/* HERO */}
+
+          <section className="min-h-[60vh] flex flex-col justify-center">
+
+            <div className="grid lg:grid-cols-[1.3fr_.7fr] gap-10 lg:gap-20 items-end">
+
+              <div>
+
+                <p className="text-xs uppercase tracking-[0.28em] text-brand-sageDark mb-5">
+                  {PORTFOLIO_DATA.role}
+                </p>
+
+
+                <h1 className="font-serif text-6xl sm:text-8xl lg:text-[8rem] leading-[0.82] tracking-[-0.06em]">
+
+                  Hi, I'm
+
+                  <br />
+
+                  <span className="italic text-brand-pinkDark">
+                    Sangwon.
+                  </span>
+
+                </h1>
+
+              </div>
+
+
+              <div className="lg:pb-1">
+
+                <p className="text-base leading-7 text-brand-muted max-w-md">
+                  {PORTFOLIO_DATA.shortAbout}
+                </p>
+
+
+                <div className="mt-6 flex flex-wrap items-center gap-5">
+
+                  <a
+                    href={PORTFOLIO_DATA.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark transition"
+                  >
+                    LinkedIn
+                  </a>
+
+
+                  <button
+                    onClick={handleCopyEmail}
+                    className="group text-xs uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark transition flex items-center gap-2"
+                    title="Copy email address"
+                  >
+
+                    {copiedEmail
+                      ? "Email copied"
+                      : "Copy email"}
+
+                    <i
+                      data-lucide={
+                        copiedEmail
+                          ? "check"
+                          : "copy"
+                      }
+                      className="w-3.5 h-3.5"
+                    ></i>
+
+                  </button>
+
+
+                  <a
+                    href={PORTFOLIO_DATA.resume}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark transition"
+                  >
+                    Resume
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div className="mt-14 border-t border-brand-line pt-4 flex justify-between items-center">
+
+              <span className="text-[10px] uppercase tracking-[0.25em] text-brand-muted">
+                Based in Indonesia
+              </span>
+
+              <span className="text-[10px] uppercase tracking-[0.25em] text-brand-muted">
+                Data · Business · Technology
+              </span>
+
+            </div>
+
+          </section>
+
+
+          {/* ABOUT */}
+
+          <section className="py-20 border-t border-brand-line">
+
+            <div className="grid md:grid-cols-[0.3fr_1fr] gap-8">
+
+              <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
+                01 / About
+              </span>
+
+
+              <div>
+
+                <h2 className="font-serif text-4xl sm:text-5xl leading-tight max-w-4xl">
+                  Data is only useful when it
+                  helps people understand
+                  <span className="italic text-brand-pinkDark">
+                    {" "}what to do next.
+                  </span>
+                </h2>
+
+
+                <div className="mt-8 grid md:grid-cols-2 gap-8">
+
+                  <p className="text-sm leading-7 text-brand-muted">
+                    {PORTFOLIO_DATA.fullAbout}
+                  </p>
+
+
+                  <div>
+
+                    <p className="text-[10px] uppercase tracking-[0.25em] text-brand-muted mb-3">
+                      Education
+                    </p>
+
+                    <h3 className="text-base font-semibold">
+                      {PORTFOLIO_DATA.education.degree}
+                    </h3>
+
+                    <p className="text-sm text-brand-sageDark mt-1">
+                      {PORTFOLIO_DATA.education.university}
+                    </p>
+
+                    <div className="mt-2 flex gap-5 text-xs text-brand-muted">
+
+                      <span>
+                        {PORTFOLIO_DATA.education.period}
+                      </span>
+
+                      <span>
+                        GPA {PORTFOLIO_DATA.education.gpa}
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          {/* THESIS */}
+
+          <section className="py-14 border-t border-brand-line">
+
+            <div className="grid md:grid-cols-[0.3fr_1fr] gap-8">
+
+              <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
+                Thesis
+              </span>
+
+
+              <div>
+
+                <p className="text-[10px] uppercase tracking-[0.25em] text-brand-pinkDark mb-3">
+                  Undergraduate Research
+                </p>
+
+                <h3 className="font-serif text-2xl sm:text-3xl leading-snug max-w-4xl">
+                  {PORTFOLIO_DATA.education.thesisTitle}
+                </h3>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          {/* EXPERIENCE PREVIEW */}
+
+          <section className="py-20 border-t border-brand-line">
+
+            <div className="flex justify-between items-end mb-8">
+
+              <div>
+
+                <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
+                  02 / Experience
+                </span>
+
+                <h2 className="font-serif text-4xl sm:text-5xl mt-2">
+                  Selected experience
+                </h2>
+
+              </div>
+
+
+              <button
+                onClick={() => navigateTo("/exp")}
+                className="hidden sm:flex items-center gap-2 text-xs uppercase tracking-widest hover:text-brand-pinkDark transition"
+              >
+                View all
+
+                <i
+                  data-lucide="arrow-right"
+                  className="w-4 h-4"
+                ></i>
+
+              </button>
+
+            </div>
+
+
+            <div>
+
+              {PORTFOLIO_DATA.workExperience.map(
+                (exp, index) => (
+
+                  <div
+                    key={exp.id}
+                    className="group border-t border-brand-line py-6 grid md:grid-cols-[0.12fr_1fr_0.25fr] gap-4"
+                  >
+
+                    <span className="text-xs text-brand-muted">
+                      0{index + 1}
+                    </span>
+
+
+                    <div>
+
+                      <h3 className="text-lg font-semibold group-hover:text-brand-pinkDark transition">
+                        {exp.role}
+                      </h3>
+
+                      <p className="text-sm text-brand-sageDark mt-0.5">
+                        {exp.company}
+                      </p>
+
+                      <p className="text-sm text-brand-muted mt-2 leading-6 max-w-xl">
+                        {exp.summary}
+                      </p>
+
+                    </div>
+
+
+                    <div className="md:text-right text-xs text-brand-muted">
+                      {exp.period}
+                    </div>
+
+                  </div>
+
+                )
+              )}
+
+            </div>
+
+
+            <button
+              onClick={() => navigateTo("/exp")}
+              className="sm:hidden mt-6 flex items-center gap-2 text-xs uppercase tracking-widest"
+            >
+              View all experience
+
+              <i
+                data-lucide="arrow-right"
+                className="w-4 h-4"
+              ></i>
+
+            </button>
+
+          </section>
+
+
+          {/* PROJECT PREVIEW */}
+
+          <section className="py-20 border-t border-brand-line">
+
+            <div className="flex justify-between items-end mb-8">
+
+              <div>
+
+                <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
+                  03 / Projects
+                </span>
+
+                <h2 className="font-serif text-4xl sm:text-5xl mt-2">
+                  Selected work
+                </h2>
+
+              </div>
+
+
+              <button
+                onClick={() => navigateTo("/project")}
+                className="hidden sm:flex items-center gap-2 text-xs uppercase tracking-widest"
+              >
+                All projects
+
+                <i
+                  data-lucide="arrow-right"
+                  className="w-4 h-4"
+                ></i>
+
+              </button>
+
+            </div>
+
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+
+              {PORTFOLIO_DATA.projects
+                .slice(0, 3)
+                .map((project) => (
+
+                  <article
+                    key={project.id}
+                    className="group"
+                  >
+
+                    <div className="image-hover overflow-hidden aspect-[4/3] mb-4">
+
+                      <img
+                        src={project.coverImage}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+
+                    </div>
+
+
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-brand-pinkDark">
+                      {project.category}
+                    </p>
+
+
+                    <h3 className="font-serif text-2xl mt-1 group-hover:text-brand-pinkDark transition">
+                      {project.title}
+                    </h3>
+
+
+                    <p className="text-sm text-brand-muted leading-6 mt-2">
+                      {project.shortDesc}
+                    </p>
+
+
+                    <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1">
+
+                      {project.tools.map(
+                        (tool) => (
+
+                          <span
+                            key={tool}
+                            className="text-[9px] uppercase tracking-widest text-brand-muted"
+                          >
+                            {tool}
+                          </span>
+
+                        )
+                      )}
+
+                    </div>
+
+
+                    <a
+                      href={project.driveDocUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-5 text-[10px] uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark hover:border-brand-pinkDark transition"
+                    >
+                      Details
+
+                      <i
+                        data-lucide="arrow-up-right"
+                        className="w-3.5 h-3.5"
+                      ></i>
+
+                    </a>
+
+                  </article>
+
+                )
+              )}
+
+            </div>
+
+
+            <button
+              onClick={() => navigateTo("/project")}
+              className="sm:hidden mt-10 flex items-center gap-2 text-xs uppercase tracking-widest"
+            >
+              View all projects
+
+              <i
+                data-lucide="arrow-right"
+                className="w-4 h-4"
+              ></i>
+
+            </button>
+
+          </section>
+
+        </div>
+
+      );
+
+
+      /* =========================================================
+         EXPERIENCE PAGE
+      ========================================================= */
+
+      const ExperiencePage = () => (
+
+        <div className="reveal">
+
+          <section className="pb-16">
+
+            <div className="grid lg:grid-cols-[0.3fr_1fr] gap-8">
+
+              <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
+                01 / Career
+              </span>
+
+
+              <div>
+
+                <h1 className="font-serif text-5xl sm:text-7xl leading-[0.9]">
+                  Experience
+                </h1>
+
+                <p className="text-sm text-brand-muted leading-7 max-w-2xl mt-5">
+                  Professional experience and selected organizational
+                  involvement.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          {/* WORK EXPERIENCE */}
+
+          <section className="border-t border-brand-line py-16">
+
+            <div className="grid lg:grid-cols-[0.3fr_1fr] gap-8">
+
+              <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
+                Work
+              </span>
+
+
+              <div>
+
+                {PORTFOLIO_DATA.workExperience.map(
+                  (exp, index) => (
+
+                    <article
+                      key={exp.id}
+                      className="border-t border-brand-line first:border-t-0 py-7 first:pt-0"
+                    >
+
+                      <div className="grid md:grid-cols-[1fr_auto] gap-4">
+
+                        <div>
+
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-brand-pinkDark mb-2">
+                            0{index + 1}
+                          </p>
+
+                          <h2 className="font-serif text-3xl">
+                            {exp.role}
+                          </h2>
+
+                          <p className="text-sm text-brand-sageDark mt-0.5">
+                            {exp.company}
+                          </p>
+
+                        </div>
+
+
+                        <div className="md:text-right text-xs text-brand-muted">
+                          {exp.period}
+                          <br />
+                          {exp.location}
+                        </div>
+
+                      </div>
+
+
+                      <p className="mt-4 max-w-2xl text-sm leading-6 text-brand-muted">
+                        {exp.summary}
+                      </p>
+
+
+                      <div className="mt-5 max-w-3xl">
+
+                        {exp.highlights.map(
+                          (highlight, i) => (
+
+                            <div
+                              key={i}
+                              className="flex gap-4 border-t border-brand-line py-3"
+                            >
+
+                              <span className="text-[10px] text-brand-pinkDark">
+                                0{i + 1}
+                              </span>
+
+                              <p className="text-sm leading-6">
+                                {highlight}
+                              </p>
+
+                            </div>
+
+                          )
+                        )}
+
+                      </div>
+
+
+                      {exp.photos && (
+
+                        <div className="mt-7 grid sm:grid-cols-2 gap-4">
+
+                          {exp.photos.map(
+                            (photo, i) => (
+
+                              <figure
+                                key={i}
+                                className="image-hover overflow-hidden"
+                              >
+
+                                <div className="aspect-[16/9] overflow-hidden">
+
+                                  <img
+                                    src={photo.url}
+                                    alt={photo.caption}
+                                    className="w-full h-full object-cover"
+                                  />
+
+                                </div>
+
+                                <figcaption className="mt-2 text-[9px] uppercase tracking-widest text-brand-muted">
+                                  {photo.caption}
+                                </figcaption>
+
+                              </figure>
+
+                            )
+                          )}
+
+                        </div>
+
+                      )}
+
+                    </article>
+
+                  )
+                )}
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          {/* ORGANIZATIONAL EXPERIENCE */}
+
+          <section className="border-t border-brand-line py-16">
+
+            <div className="grid lg:grid-cols-[0.3fr_1fr] gap-8">
+
+              <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
+                Organization
+              </span>
+
+
+              <div>
+
+                {PORTFOLIO_DATA.orgExperience.map(
+                  (org, index) => (
+
+                    <article
+                      key={org.id}
+                      className="border-t border-brand-line first:border-t-0 py-5 first:pt-0"
+                    >
+
+                      <div className="grid md:grid-cols-[1fr_auto] gap-3">
+
+                        <div>
+
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-brand-pinkDark">
+                            0{index + 1}
+                          </p>
+
+                          <h3 className="text-lg font-semibold mt-1">
+                            {org.organization}
+                          </h3>
+
+                          <p className="text-sm text-brand-sageDark mt-0.5">
+                            {org.role}
+                          </p>
+
+                          <p className="text-sm text-brand-muted leading-6 mt-1 max-w-2xl">
+                            {org.description}
+                          </p>
+
+                        </div>
+
+
+                        <span className="text-xs text-brand-muted">
+                          {org.period}
+                        </span>
+
+                      </div>
+
+                    </article>
+
+                  )
+                )}
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      );
+
+
+      /* =========================================================
+         PROJECT PAGE
+      ========================================================= */
+
+      const ProjectPage = () => (
+
+        <div className="reveal">
+
+          <section className="pb-16">
+
+            <div className="grid lg:grid-cols-[0.3fr_1fr] gap-8">
+
+              <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
+                02 / Selected Work
+              </span>
+
+
+              <div>
+
+                <h1 className="font-serif text-5xl sm:text-7xl leading-[0.9]">
+                  Projects
+                </h1>
+
+                <p className="text-sm text-brand-muted leading-7 max-w-2xl mt-5">
+                  Selected work in data analysis, visualization,
+                  business intelligence, and machine learning.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <section className="border-t border-brand-line pt-10 pb-16">
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-14">
+
+              {PORTFOLIO_DATA.projects.map(
+                (project, index) => (
+
+                  <article
+                    key={project.id}
+                    className="group"
+                  >
+
+                    {/* IMAGE */}
+
+                    <a
+                      href={project.driveDocUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block image-hover overflow-hidden aspect-[4/3] mb-5"
+                    >
+
+                      <img
+                        src={project.coverImage}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+
+                    </a>
+
+
+                    {/* CATEGORY */}
+
+                    <div className="flex items-center justify-between">
+
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-brand-pinkDark">
+                        {project.category}
+                      </p>
+
+                      <span className="text-[10px] text-brand-muted">
+                        0{index + 1}
+                      </span>
+
+                    </div>
+
+
+                    {/* TITLE */}
+
+                    <h2 className="font-serif text-2xl leading-tight mt-1.5 group-hover:text-brand-pinkDark transition">
+                      {project.title}
+                    </h2>
+
+
+                    {/* DESCRIPTION */}
+
+                    <p className="text-sm leading-6 text-brand-muted mt-2">
+                      {project.shortDesc}
+                    </p>
+
+
+                    {/* TECH */}
+
+                    <div className="flex flex-wrap gap-x-3 gap-y-1 mt-3">
+
+                      {project.tools.map(
+                        (tool) => (
+
+                          <span
+                            key={tool}
+                            className="text-[9px] uppercase tracking-widest text-brand-muted"
+                          >
+                            {tool}
+                          </span>
+
+                        )
+                      )}
+
+                    </div>
+
+
+                    {/* DETAIL → DRIVE */}
+
+                    <a
+                      href={project.driveDocUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-5 text-[10px] uppercase tracking-[0.18em] border-b border-brand-text pb-1 hover:text-brand-pinkDark hover:border-brand-pinkDark transition"
+                    >
+
+                      Details
+
+                      <i
+                        data-lucide="arrow-up-right"
+                        className="w-3.5 h-3.5"
+                      ></i>
+
+                    </a>
+
+                  </article>
+
+                )
+              )}
+
+            </div>
+
+          </section>
+
+        </div>
+
+      );
+
+
+      /* =========================================================
+         ROUTER
+      ========================================================= */
+
+      let pageContent = null;
+
+
+      if (currentRoute === "/home") {
+
+        pageContent = <HomePage />;
+
+      } else if (currentRoute === "/exp") {
+
+        pageContent = <ExperiencePage />;
+
+      } else if (currentRoute === "/project") {
+
+        pageContent = <ProjectPage />;
+
+      } else {
+
+        pageContent = <HomePage />;
+
+      }
+
 
       return (
 
@@ -905,1103 +1759,9 @@
           <Navbar />
 
 
-          <main className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 pt-14 md:pt-20">
+          <main className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 pt-12 md:pt-16">
 
-
-            {/* =================================================
-                HOME
-            ================================================= */}
-
-            {currentRoute === "/home" && (
-
-              <div className="reveal">
-
-
-                {/* HERO */}
-
-                <section className="min-h-[65vh] flex flex-col justify-center">
-
-                  <div className="grid lg:grid-cols-[1.3fr_.7fr] gap-12 lg:gap-24 items-end">
-
-                    <div>
-
-                      <p className="text-xs uppercase tracking-[0.28em] text-brand-sageDark mb-7">
-                        {PORTFOLIO_DATA.role}
-                      </p>
-
-
-                      <h1 className="font-serif text-6xl sm:text-8xl lg:text-[8.5rem] leading-[0.8] tracking-[-0.06em]">
-
-                        Hi, I'm
-
-                        <br />
-
-                        <span className="italic text-brand-pinkDark">
-                          Sangwon.
-                        </span>
-
-                      </h1>
-
-                    </div>
-
-
-                    <div className="lg:pb-2">
-
-                      <p className="text-base leading-8 text-brand-muted max-w-md">
-                        {PORTFOLIO_DATA.shortAbout}
-                      </p>
-
-
-                      <div className="mt-8 flex items-center gap-5">
-
-                        <a
-                          href={PORTFOLIO_DATA.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark hover:border-brand-pinkDark transition"
-                        >
-                          LinkedIn
-                        </a>
-
-
-                        <button
-                          onClick={handleCopyEmail}
-                          className="text-xs uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark hover:border-brand-pinkDark transition"
-                        >
-                          {copiedEmail
-                            ? "Copied"
-                            : "Email"}
-                        </button>
-
-
-                        <a
-                          href={PORTFOLIO_DATA.resume}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs uppercase tracking-widest border-b border-brand-text pb-1 hover:text-brand-pinkDark hover:border-brand-pinkDark transition"
-                        >
-                          Resume
-                        </a>
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-
-                  <div className="mt-20 border-t border-brand-line pt-5 flex justify-between items-center">
-
-                    <span className="text-[10px] uppercase tracking-[0.25em] text-brand-muted">
-                      Based in Indonesia
-                    </span>
-
-                    <span className="text-[10px] uppercase tracking-[0.25em] text-brand-muted">
-                      Data · Business · Technology
-                    </span>
-
-                  </div>
-
-                </section>
-
-
-                {/* ABOUT / EDUCATION */}
-
-                <section className="py-28 border-t border-brand-line">
-
-                  <div className="grid md:grid-cols-[0.35fr_1fr] gap-12">
-
-                    <div>
-
-                      <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                        01 / About
-                      </span>
-
-                    </div>
-
-
-                    <div>
-
-                      <h2 className="font-serif text-4xl sm:text-5xl leading-tight max-w-4xl">
-                        Data is only useful when it
-                        helps people understand
-                        <span className="italic text-brand-pinkDark">
-                          what to do next.
-                        </span>
-                      </h2>
-
-
-                      <div className="mt-12 grid md:grid-cols-2 gap-12">
-
-                        <p className="text-sm leading-8 text-brand-muted">
-                          {PORTFOLIO_DATA.fullAbout}
-                        </p>
-
-
-                        <div>
-
-                          <p className="text-[10px] uppercase tracking-[0.25em] text-brand-muted mb-4">
-                            Education
-                          </p>
-
-                          <h3 className="text-lg font-semibold">
-                            {PORTFOLIO_DATA.education.degree}
-                          </h3>
-
-                          <p className="text-sm text-brand-sageDark mt-2">
-                            {PORTFOLIO_DATA.education.university}
-                          </p>
-
-                          <div className="mt-4 flex gap-5 text-xs text-brand-muted">
-                            <span>
-                              {PORTFOLIO_DATA.education.period}
-                            </span>
-
-                            <span>
-                              GPA {PORTFOLIO_DATA.education.gpa}
-                            </span>
-                          </div>
-
-                        </div>
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </section>
-
-
-                {/* THESIS */}
-
-                <section className="py-20 border-t border-brand-line">
-
-                  <div className="grid md:grid-cols-[0.35fr_1fr] gap-12">
-
-                    <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                      Thesis
-                    </span>
-
-
-                    <div>
-
-                      <p className="text-[10px] uppercase tracking-[0.25em] text-brand-pinkDark mb-5">
-                        Undergraduate Research
-                      </p>
-
-                      <h3 className="font-serif text-3xl sm:text-4xl leading-snug max-w-4xl">
-                        {PORTFOLIO_DATA.education.thesisTitle}
-                      </h3>
-
-                    </div>
-
-                  </div>
-
-                </section>
-
-
-                {/* EXPERIENCE PREVIEW */}
-
-                <section className="py-28 border-t border-brand-line">
-
-                  <div className="flex justify-between items-end mb-14">
-
-                    <div>
-
-                      <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                        02 / Experience
-                      </span>
-
-                      <h2 className="font-serif text-4xl sm:text-5xl mt-4">
-                        Selected experience
-                      </h2>
-
-                    </div>
-
-
-                    <button
-                      onClick={() => navigateTo("/exp")}
-                      className="hidden sm:flex link-arrow items-center gap-3 text-xs uppercase tracking-widest"
-                    >
-                      View all
-                      <i
-                        data-lucide="arrow-right"
-                        className="w-4 h-4"
-                      ></i>
-                    </button>
-
-                  </div>
-
-
-                  <div>
-
-                    {PORTFOLIO_DATA.workExperience.map(
-                      (exp, index) => (
-
-                        <div
-                          key={exp.id}
-                          className="group border-t border-brand-line py-8 grid md:grid-cols-[0.2fr_1fr_0.3fr] gap-5"
-                        >
-
-                          <span className="text-xs text-brand-muted">
-                            0{index + 1}
-                          </span>
-
-
-                          <div>
-
-                            <h3 className="text-xl font-semibold group-hover:text-brand-pinkDark transition">
-                              {exp.role}
-                            </h3>
-
-                            <p className="text-sm text-brand-sageDark mt-1">
-                              {exp.company}
-                            </p>
-
-                            <p className="text-sm text-brand-muted mt-4 max-w-xl leading-7">
-                              {exp.summary}
-                            </p>
-
-                          </div>
-
-
-                          <div className="md:text-right text-xs text-brand-muted">
-                            {exp.period}
-                          </div>
-
-                        </div>
-
-                      )
-                    )}
-
-                  </div>
-
-
-                  <button
-                    onClick={() => navigateTo("/exp")}
-                    className="sm:hidden mt-8 link-arrow flex items-center gap-3 text-xs uppercase tracking-widest"
-                  >
-                    View all experience
-                    <i
-                      data-lucide="arrow-right"
-                      className="w-4 h-4"
-                    ></i>
-                  </button>
-
-                </section>
-
-
-                {/* PROJECTS */}
-
-                <section className="py-28 border-t border-brand-line">
-
-                  <div className="flex justify-between items-end mb-14">
-
-                    <div>
-
-                      <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                        03 / Projects
-                      </span>
-
-                      <h2 className="font-serif text-4xl sm:text-5xl mt-4">
-                        Selected work
-                      </h2>
-
-                    </div>
-
-
-                    <button
-                      onClick={() => navigateTo("/project")}
-                      className="hidden sm:flex link-arrow items-center gap-3 text-xs uppercase tracking-widest"
-                    >
-                      All projects
-                      <i
-                        data-lucide="arrow-right"
-                        className="w-4 h-4"
-                      ></i>
-                    </button>
-
-                  </div>
-
-
-                  <div className="space-y-20">
-
-                    {PORTFOLIO_DATA.projects.map(
-                      (project, index) => (
-
-                        <button
-                          key={project.id}
-                          onClick={() =>
-                            setActiveModalProject(project)
-                          }
-                          className="group w-full text-left grid lg:grid-cols-[1.2fr_.8fr] gap-8 lg:gap-14 items-center"
-                        >
-
-                          <div className="image-hover overflow-hidden bg-brand-line aspect-[16/9]">
-
-                            <img
-                              src={project.coverImage}
-                              alt={project.title}
-                              className="w-full h-full object-cover"
-                            />
-
-                          </div>
-
-
-                          <div>
-
-                            <div className="flex items-center justify-between mb-5">
-
-                              <span className="text-xs uppercase tracking-[0.2em] text-brand-pinkDark">
-                                {project.category}
-                              </span>
-
-                              <span className="text-xs text-brand-muted">
-                                0{index + 1}
-                              </span>
-
-                            </div>
-
-
-                            <h3 className="font-serif text-3xl sm:text-4xl leading-tight group-hover:text-brand-pinkDark transition">
-                              {project.title}
-                            </h3>
-
-
-                            <p className="text-sm leading-7 text-brand-muted mt-5 max-w-lg">
-                              {project.shortDesc}
-                            </p>
-
-
-                            <div className="mt-7 flex flex-wrap gap-x-4 gap-y-2">
-
-                              {project.tools.map(
-                                (tool) => (
-
-                                  <span
-                                    key={tool}
-                                    className="text-[10px] uppercase tracking-widest text-brand-muted"
-                                  >
-                                    {tool}
-                                  </span>
-
-                                )
-                              )}
-
-                            </div>
-
-
-                            <div className="mt-8 flex items-center gap-3 text-xs uppercase tracking-widest">
-
-                              View project
-
-                              <i
-                                data-lucide="arrow-up-right"
-                                className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition"
-                              ></i>
-
-                            </div>
-
-                          </div>
-
-                        </button>
-
-                      )
-                    )}
-
-                  </div>
-
-
-                  <button
-                    onClick={() => navigateTo("/project")}
-                    className="sm:hidden mt-14 link-arrow flex items-center gap-3 text-xs uppercase tracking-widest"
-                  >
-                    View all projects
-                    <i
-                      data-lucide="arrow-right"
-                      className="w-4 h-4"
-                    ></i>
-                  </button>
-
-                </section>
-
-              </div>
-
-            )}
-
-
-            {/* =================================================
-                EXPERIENCE
-            ================================================= */}
-
-            {currentRoute === "/exp" && (
-
-              <div className="reveal">
-
-                <section className="pb-24">
-
-                  <div className="grid lg:grid-cols-[0.35fr_1fr] gap-12">
-
-                    <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                      01 / Career
-                    </span>
-
-
-                    <div>
-
-                      <h1 className="font-serif text-5xl sm:text-7xl leading-[0.9] tracking-tight">
-                        Experience
-                      </h1>
-
-                      <p className="text-sm sm:text-base text-brand-muted leading-7 max-w-2xl mt-8">
-                        Rekam jejak pengalaman profesional serta
-                        kontribusi dalam berbagai kegiatan organisasi
-                        dan kepanitiaan.
-                      </p>
-
-                    </div>
-
-                  </div>
-
-                </section>
-
-
-                {/* WORK */}
-
-                <section className="border-t border-brand-line py-24">
-
-                  <div className="grid lg:grid-cols-[0.35fr_1fr] gap-12">
-
-                    <div>
-
-                      <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                        Work
-                      </span>
-
-                    </div>
-
-
-                    <div>
-
-                      {PORTFOLIO_DATA.workExperience.map(
-                        (exp, index) => (
-
-                          <article
-                            key={exp.id}
-                            className="border-t border-brand-line first:border-t-0 first:pt-0 pt-12 mb-16"
-                          >
-
-                            <div className="grid md:grid-cols-[1fr_auto] gap-6">
-
-                              <div>
-
-                                <p className="text-xs uppercase tracking-[0.2em] text-brand-pinkDark mb-4">
-                                  0{index + 1}
-                                </p>
-
-                                <h2 className="font-serif text-3xl sm:text-4xl">
-                                  {exp.role}
-                                </h2>
-
-                                <p className="text-sm text-brand-sageDark mt-2">
-                                  {exp.company}
-                                </p>
-
-                              </div>
-
-
-                              <div className="md:text-right text-xs text-brand-muted">
-                                {exp.period}
-                                <br />
-                                <span className="inline-block mt-1">
-                                  {exp.location}
-                                </span>
-                              </div>
-
-                            </div>
-
-
-                            <p className="mt-8 max-w-2xl text-sm leading-7 text-brand-muted">
-                              {exp.summary}
-                            </p>
-
-
-                            <div className="mt-8">
-
-                              <p className="text-[10px] uppercase tracking-[0.2em] text-brand-muted mb-5">
-                                Key contributions
-                              </p>
-
-
-                              <div className="max-w-3xl">
-
-                                {exp.highlights.map(
-                                  (highlight, i) => (
-
-                                    <div
-                                      key={i}
-                                      className="flex gap-5 border-t border-brand-line py-4"
-                                    >
-
-                                      <span className="text-xs text-brand-pinkDark">
-                                        0{i + 1}
-                                      </span>
-
-                                      <p className="text-sm leading-6">
-                                        {highlight}
-                                      </p>
-
-                                    </div>
-
-                                  )
-                                )}
-
-                              </div>
-
-                            </div>
-
-
-                            {exp.photos && (
-
-                              <div className="mt-12 grid sm:grid-cols-2 gap-5">
-
-                                {exp.photos.map(
-                                  (photo, i) => (
-
-                                    <figure
-                                      key={i}
-                                      className="image-hover overflow-hidden"
-                                    >
-
-                                      <div className="aspect-[16/10] overflow-hidden">
-
-                                        <img
-                                          src={photo.url}
-                                          alt={photo.caption}
-                                          className="w-full h-full object-cover"
-                                        />
-
-                                      </div>
-
-                                      <figcaption className="mt-3 text-[10px] uppercase tracking-widest text-brand-muted">
-                                        {photo.caption}
-                                      </figcaption>
-
-                                    </figure>
-
-                                  )
-                                )}
-
-                              </div>
-
-                            )}
-
-                          </article>
-
-                        )
-                      )}
-
-                    </div>
-
-                  </div>
-
-                </section>
-
-
-                {/* ORGANIZATION */}
-
-                <section className="border-t border-brand-line py-24">
-
-                  <div className="grid lg:grid-cols-[0.35fr_1fr] gap-12">
-
-                    <div>
-
-                      <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                        Organization
-                      </span>
-
-                    </div>
-
-
-                    <div>
-
-                      {PORTFOLIO_DATA.orgExperience.map(
-                        (org) => (
-
-                          <article key={org.id}>
-
-                            <div className="flex flex-col sm:flex-row sm:justify-between gap-5 pb-10">
-
-                              <div>
-
-                                <h2 className="font-serif text-3xl sm:text-4xl">
-                                  {org.organization}
-                                </h2>
-
-                                <p className="text-sm leading-7 text-brand-muted max-w-2xl mt-4">
-                                  {org.summary}
-                                </p>
-
-                              </div>
-
-
-                              <span className="text-xs text-brand-muted whitespace-nowrap">
-                                {org.period}
-                              </span>
-
-                            </div>
-
-
-                            <div className="border-t border-brand-line">
-
-                              {org.committees.map(
-                                (committee, index) => (
-
-                                  <div
-                                    key={index}
-                                    className="grid md:grid-cols-[80px_1fr_auto] gap-5 py-8 border-b border-brand-line"
-                                  >
-
-                                    <span className="text-xs text-brand-pinkDark">
-                                      0{index + 1}
-                                    </span>
-
-
-                                    <div>
-
-                                      <h3 className="text-lg font-semibold">
-                                        {committee.role}
-                                      </h3>
-
-                                      <p className="text-sm text-brand-sageDark mt-1">
-                                        {committee.event}
-                                      </p>
-
-
-                                      {committee.highlights && (
-
-                                        <div className="mt-5 space-y-2">
-
-                                          {committee.highlights.map(
-                                            (item, i) => (
-
-                                              <p
-                                                key={i}
-                                                className="text-sm leading-6 text-brand-muted"
-                                              >
-                                                {item}
-                                              </p>
-
-                                            )
-                                          )}
-
-                                        </div>
-
-                                      )}
-
-
-                                      {committee.photos && (
-
-                                        <div className="mt-7 grid sm:grid-cols-2 gap-5">
-
-                                          {committee.photos.map(
-                                            (photo, i) => (
-
-                                              <figure
-                                                key={i}
-                                                className="image-hover"
-                                              >
-
-                                                <div className="aspect-[16/10] overflow-hidden">
-
-                                                  <img
-                                                    src={photo.url}
-                                                    alt={photo.caption}
-                                                    className="w-full h-full object-cover"
-                                                  />
-
-                                                </div>
-
-                                                <figcaption className="mt-2 text-[10px] uppercase tracking-widest text-brand-muted">
-                                                  {photo.caption}
-                                                </figcaption>
-
-                                              </figure>
-
-                                            )
-                                          )}
-
-                                        </div>
-
-                                      )}
-
-                                    </div>
-
-
-                                    <span className="text-xs text-brand-muted whitespace-nowrap">
-                                      {committee.period}
-                                    </span>
-
-                                  </div>
-
-                                )
-                              )}
-
-                            </div>
-
-                          </article>
-
-                        )
-                      )}
-
-                    </div>
-
-                  </div>
-
-                </section>
-
-              </div>
-
-            )}
-
-
-            {/* =================================================
-                PROJECTS
-            ================================================= */}
-
-            {currentRoute === "/project" && (
-
-              <div className="reveal">
-
-                <section className="pb-24">
-
-                  <div className="grid lg:grid-cols-[0.35fr_1fr] gap-12">
-
-                    <span className="text-xs uppercase tracking-[0.25em] text-brand-muted">
-                      02 / Selected Work
-                    </span>
-
-
-                    <div>
-
-                      <h1 className="font-serif text-5xl sm:text-7xl leading-[0.9] tracking-tight">
-                        Projects
-                      </h1>
-
-                      <p className="text-sm sm:text-base text-brand-muted leading-7 max-w-2xl mt-8">
-                        A selection of data analysis, visualization,
-                        and machine learning work.
-                      </p>
-
-                    </div>
-
-                  </div>
-
-                </section>
-
-
-                <section className="border-t border-brand-line">
-
-                  {PORTFOLIO_DATA.projects.map(
-                    (project, index) => (
-
-                      <article
-                        key={project.id}
-                        className="py-16 sm:py-24 border-b border-brand-line"
-                      >
-
-                        <button
-                          onClick={() =>
-                            setActiveModalProject(project)
-                          }
-                          className="group w-full text-left grid lg:grid-cols-[1.15fr_.85fr] gap-10 lg:gap-20 items-center"
-                        >
-
-                          <div className="image-hover overflow-hidden bg-brand-line aspect-[16/10]">
-
-                            <img
-                              src={project.coverImage}
-                              alt={project.title}
-                              className="w-full h-full object-cover"
-                            />
-
-                          </div>
-
-
-                          <div>
-
-                            <div className="flex justify-between items-center mb-8">
-
-                              <span className="text-xs uppercase tracking-[0.2em] text-brand-pinkDark">
-                                {project.category}
-                              </span>
-
-                              <span className="font-serif italic text-3xl text-brand-line">
-                                0{index + 1}
-                              </span>
-
-                            </div>
-
-
-                            <h2 className="font-serif text-4xl sm:text-5xl leading-[1.05] group-hover:text-brand-pinkDark transition">
-                              {project.title}
-                            </h2>
-
-
-                            <p className="text-sm text-brand-muted leading-7 mt-7 max-w-lg">
-                              {project.shortDesc}
-                            </p>
-
-
-                            <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2">
-
-                              {project.tools.map(
-                                (tool) => (
-
-                                  <span
-                                    key={tool}
-                                    className="text-[10px] uppercase tracking-[0.18em] text-brand-muted"
-                                  >
-                                    {tool}
-                                  </span>
-
-                                )
-                              )}
-
-                            </div>
-
-
-                            <div className="mt-10 inline-flex items-center gap-3 text-xs uppercase tracking-widest">
-
-                              Explore project
-
-                              <span className="w-9 h-9 rounded-full border border-brand-text flex items-center justify-center group-hover:bg-brand-text group-hover:text-white transition">
-
-                                <i
-                                  data-lucide="arrow-up-right"
-                                  className="w-4 h-4"
-                                ></i>
-
-                              </span>
-
-                            </div>
-
-                          </div>
-
-                        </button>
-
-                      </article>
-
-                    )
-                  )}
-
-                </section>
-
-
-                {/* PROJECT MODAL */}
-
-                {activeModalProject && (
-
-                  <div
-                    className="fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-4 sm:p-8"
-                    onClick={() =>
-                      setActiveModalProject(null)
-                    }
-                  >
-
-                    <div
-                      className="bg-brand-bg max-w-5xl w-full max-h-[90vh] overflow-y-auto"
-                      onClick={(e) =>
-                        e.stopPropagation()
-                      }
-                    >
-
-                      <div className="sticky top-0 z-10 bg-brand-bg/95 backdrop-blur-xl border-b border-brand-line px-6 sm:px-10 py-5 flex justify-between items-center">
-
-                        <span className="text-xs uppercase tracking-[0.2em] text-brand-muted">
-                          Project Details
-                        </span>
-
-
-                        <button
-                          onClick={() =>
-                            setActiveModalProject(null)
-                          }
-                          className="w-9 h-9 rounded-full border border-brand-line flex items-center justify-center hover:bg-brand-text hover:text-white transition"
-                        >
-
-                          <i
-                            data-lucide="x"
-                            className="w-4 h-4"
-                          ></i>
-
-                        </button>
-
-                      </div>
-
-
-                      <div className="p-6 sm:p-10 lg:p-14">
-
-                        <div className="grid lg:grid-cols-[1fr_.35fr] gap-10">
-
-                          <div>
-
-                            <span className="text-xs uppercase tracking-[0.2em] text-brand-pinkDark">
-                              {activeModalProject.category}
-                            </span>
-
-                            <h2 className="font-serif text-4xl sm:text-6xl leading-tight mt-5">
-                              {activeModalProject.title}
-                            </h2>
-
-                          </div>
-
-
-                          <div className="lg:text-right">
-
-                            <p className="text-[10px] uppercase tracking-[0.2em] text-brand-muted mb-3">
-                              Tools
-                            </p>
-
-                            <p className="text-sm leading-7">
-                              {activeModalProject.tools.join(" · ")}
-                            </p>
-
-                          </div>
-
-                        </div>
-
-
-                        <div className="mt-16 grid lg:grid-cols-[1fr_.7fr] gap-14">
-
-                          <div>
-
-                            <p className="text-[10px] uppercase tracking-[0.2em] text-brand-muted mb-5">
-                              Project Overview
-                            </p>
-
-                            <p className="text-base leading-8 max-w-2xl">
-                              {activeModalProject.fullDesc}
-                            </p>
-
-
-                            <div className="mt-12 border-t border-brand-line pt-8">
-
-                              <p className="text-[10px] uppercase tracking-[0.2em] text-brand-muted mb-5">
-                                Business Outcome
-                              </p>
-
-                              <p className="font-serif text-2xl leading-relaxed text-brand-sageDark">
-                                {activeModalProject.outcomes}
-                              </p>
-
-                            </div>
-
-                          </div>
-
-
-                          <div>
-
-                            <p className="text-[10px] uppercase tracking-[0.2em] text-brand-muted mb-5">
-                              Documentation
-                            </p>
-
-                            <div className="flex flex-col items-start gap-5">
-
-                              <a
-                                href={activeModalProject.driveDocUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="link-arrow inline-flex items-center gap-3 text-xs uppercase tracking-widest border-b border-brand-text pb-2"
-                              >
-                                Open Drive
-                                <i
-                                  data-lucide="arrow-up-right"
-                                  className="w-4 h-4"
-                                ></i>
-                              </a>
-
-
-                              {activeModalProject.githubUrl && (
-
-                                <a
-                                  href={activeModalProject.githubUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="link-arrow inline-flex items-center gap-3 text-xs uppercase tracking-widest border-b border-brand-text pb-2"
-                                >
-                                  GitHub Repository
-                                  <i
-                                    data-lucide="arrow-up-right"
-                                    className="w-4 h-4"
-                                  ></i>
-                                </a>
-
-                              )}
-
-                            </div>
-
-                          </div>
-
-                        </div>
-
-
-                        {activeModalProject.proofImages && (
-
-                          <div className="mt-16 pt-10 border-t border-brand-line">
-
-                            <p className="text-[10px] uppercase tracking-[0.2em] text-brand-muted mb-8">
-                              Visual Documentation
-                            </p>
-
-
-                            <div className="grid sm:grid-cols-2 gap-8">
-
-                              {activeModalProject.proofImages.map(
-                                (image, index) => (
-
-                                  <figure
-                                    key={index}
-                                    className="image-hover"
-                                  >
-
-                                    <div className="aspect-[16/10] overflow-hidden">
-
-                                      <img
-                                        src={image.url}
-                                        alt={image.caption}
-                                        className="w-full h-full object-cover"
-                                      />
-
-                                    </div>
-
-                                    <figcaption className="mt-3 text-[10px] uppercase tracking-widest text-brand-muted">
-                                      {image.caption}
-                                    </figcaption>
-
-                                  </figure>
-
-                                )
-                              )}
-
-                            </div>
-
-                          </div>
-
-                        )}
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                )}
-
-              </div>
-
-            )}
+            {pageContent}
 
           </main>
 
