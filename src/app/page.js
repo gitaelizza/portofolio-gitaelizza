@@ -227,7 +227,7 @@ const PORTFOLIO_DATA = {
       coverImage:
         "/images/icar.jpg",
       shortDesc:
-        "Developed I-RIT, a campus transportation integration platform that promotes eco-friendly i-Car services through a convenient, personalized experience integrated with myITS accounts.",
+        "Developed I-RIT, a campus transportation platform that promotes eco-friendly i-Car services through a convenient, personalized experience integrated with myITS accounts.",
       driveDocUrl: "https://drive.google.com/drive/folders/1HJ4fW8fc7jr5N_twwRX54-RJYY_D-iRG?usp=drive_link",
     },
   ],
