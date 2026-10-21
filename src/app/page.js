@@ -13,7 +13,7 @@ const PORTFOLIO_DATA = {
     "An Information Systems graduate who enjoys learning how things work and finding ways to make them better. With a mix of technical and business experience, I'm always open to new challenges.",
 
   fullAbout:
-    "That’s my motto — a reminder to stay open to new possibilities, trust the process, and make the most of every opportunity. As an Information Systems graduate from Institut Teknologi Sepuluh Nopember (ITS), I’ve explored different areas, from data and business processes to technology and system development. Through internships, teaching, academic projects, and organizational experiences, I’ve learned to adapt to new challenges, approach problems systematically, and keep growing along the way.",
+    "And that’s my motto — a reminder to stay open to new possibilities, trust the process, and make the most of every opportunity. As an Information Systems graduate from Institut Teknologi Sepuluh Nopember (ITS), I’ve explored different areas, from data and business processes to technology and system development. Through internships, teaching, academic projects, and organizational experiences, I’ve learned to adapt to new challenges, approach problems systematically, and keep growing along the way.",
 
   education: {
     degree: "Bachelor of Information Systems",
