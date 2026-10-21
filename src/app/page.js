@@ -195,7 +195,7 @@ const PORTFOLIO_DATA = {
     {
       id: "proj-4",
       year: "2024",
-      title: "University Student Admission Dashboard with ETL Pipeline",
+      title: "University Admission Dashboard with ETL Pipeline",
       category: "Data Visualization",
       tools: ["Power BI", "Pentaho", "Dbeaver", "ETL"],
       coverImage:
@@ -227,7 +227,7 @@ const PORTFOLIO_DATA = {
       coverImage:
         "/images/icar.jpg",
       shortDesc:
-        "Developed I-RIT, a campus transportation integration platform that encourages the use of eco-friendly i-Car public transport through a convenient, personalized digital experience integrated with myITS accounts.",
+        "Developed I-RIT, a campus transportation integration platform that promotes eco-friendly i-Car services through a convenient, personalized experience integrated with myITS accounts.",
       driveDocUrl: "https://drive.google.com/drive/folders/1HJ4fW8fc7jr5N_twwRX54-RJYY_D-iRG?usp=drive_link",
     },
   ],
