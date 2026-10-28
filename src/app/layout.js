@@ -12,8 +12,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Lee Sangwon — Data Analyst Portfolio",
-  description: "Data Analyst Portfolio",
+  title: "Gita Elizza Larasati Portfolio",
+  description: "Portfolio",
 };
 
 export default function RootLayout({ children }) {
