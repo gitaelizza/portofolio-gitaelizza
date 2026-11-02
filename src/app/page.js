@@ -13,7 +13,7 @@ const PORTFOLIO_DATA = {
     "An Information Systems graduate who enjoys learning how things work and finding ways to make them better. With a mix of technical and business experience, I'm always open to new challenges.",
 
   fullAbout:
-    "And that’s my motto — a reminder to stay open to new possibilities, trust the process, and make the most of every opportunity. As an Information Systems graduate from Institut Teknologi Sepuluh Nopember (ITS), I’ve explored different areas, from data and business processes to technology and system development. Through internships, teaching, academic projects, and organizational experiences, I’ve learned to adapt to new challenges, approach problems systematically, and keep growing along the way.",
+    "That’s my motto: a reminder to give my best, trust the process, and stay open to every opportunity. I’m an Information Systems graduate from Institut Teknologi Sepuluh Nopember (ITS) with a focus on business and system analysis. From mapping business processes during my internship at PT PLN (Persero) UIP2B JAMALI, to documenting software requirements and designing dashboards in academic projects, I enjoy turning business needs into clear, structured solutions. Through my roles as a teaching assistant and in student organizations, I’ve also learned to communicate clearly, collaborate across teams, and keep growing along the way.",
 
   education: {
     degree: "Bachelor of Information Systems",
@@ -24,21 +24,134 @@ const PORTFOLIO_DATA = {
       "Analysis Of The Effect Of Barriers On Loyalty and E-WOM In Online Food Delivery (OFD) Services Using Partial Least Squares-Structural Equation Modeling. Case Study: GoFood",
   },
 
+  trainings: [
+    /*{
+      id: "train-1",
+      title: "TEFL",
+      organizer: "Penyelenggara",
+      period: "2025",
+      description:
+        "X",
+      certificates: [
+        {
+          title: "Certificate — Training Title 1",
+          image: "/images/certs/train-1.jpg",
+        },
+      ],
+    },*/
+    {
+      id: "train-1",
+      title: "Introduction to SAP S/4HANA with GBI 4.2",
+      organizer: "SAP University Alliances",
+      period: "2024",
+      description:
+        "Completed the Introduction to SAP S/4HANA with GBI 4.2 training to learn the fundamentals of Enterprise Resource Planning (ERP) and how it integrates a company’s business processes. Gained hands-on experience with SAP S/4HANA through the Global Bike Inc. (GBI) 4.2 case study, working with the Sales and Distribution (SD), Materials Management (MM), and Production Planning (PP) modules, including business process flows, the relationships between processes and modules, and data management in an integrated system. The training provided an understanding of how ERP systems support operational efficiency, data consistency, and information-based decision-making.",
+      certificates: [
+        {
+          title: "Certificate — Introduction to SAP S/4HANA with GBI 4.2",
+          image: "/images/sertifsap.png",
+        },
+      ],
+    },
+    {
+      id: "train-2",
+      title: "Latihan Keterampilan Manajemen Mahasiswa Pra Tingkat Dasar (LKMM Pra-TD)",
+      organizer: "Fakultas Teknologi Elektro dan Informatika Cerdas ITS",
+      period: "2023",
+      description:
+        "Completed the Student Management Skills Training to build foundational self-management and organizational skills for academic and organizational roles. The program covered critical thinking, effective communication, teamwork, time management, and problem-solving. It also provided an understanding of planning, prioritization, decision-making, and accountability in achieving shared goals.",
+      certificates: [
+        {
+          title: "Certificate — Latihan Keterampilan Manajemen Mahasiswa Pra Tingkat Dasar (LKMM Pra-TD)",
+          image: "/images/sertifpratd.png",
+        },
+      ],
+    },
+    {
+      id: "train-3",
+      title: "Latihan Keterampilan Mahasiswa Wirausaha (LKMW)",
+      organizer: "Institut Teknologi Sepuluh Nopember",
+      period: "2022",
+      description:
+        "Completed the Student Entrepreneurship Skills Training to build foundational knowledge and skills in designing and managing a business. The program focused on entrepreneurial mindset, business opportunity identification, business planning, creativity, and innovation in developing value-adding solutions. It also strengthened critical thinking, problem-solving, decision-making, and teamwork in developing business ideas in a structured way.",
+      certificates: [
+        {
+          title: "Certificate — Latihan Keterampilan Mahasiswa Wirausaha (LKMW)",
+          image: "/images/sertiflkmw.png",
+        },
+      ],
+    },
+  ],
+
+  skills: {
+    hard: [
+      {
+        group: "Business Process & ERP",
+        items: ["SAP S/4HANA Fiori", "Odoo", "ProcessMaker", "BPMN.io", "SAP Signavio"],
+      },
+      {
+        group: "Data & Analytics",
+        items: ["Power BI", "Excel", "MySQL", "SmartPLS", "SPSS", "DBeaver"],
+      },
+      {
+        group: "Programming & Frameworks",
+        items: ["Javascript", "HTML", "R", "Java", "PHP", "Python", "Laravel", "Next.js"],
+      },
+      {
+        group: "System Analysis & Documentation",
+        items: ["Software Requirements Specification (SRS)",  "Business Requirements Document (BRD)", "UML (Use Case, Robustness, Sequence, Class Diagram)", "Business Process Modeling", "Functional Specification Document (FSD)"],
+      },
+    ],
+    languages: [
+      { name: "Indonesian", level: "Native" },
+      { name: "English", level: "Intermediate" },
+    ],
+    soft: [
+      "Analytical Thinking",
+      "Communication",
+      "Attention to Detail",
+      "Leadership",
+      "Problem Solving",
+      "Teaching & Mentoring",
+      "Teamwork",
+      "Adaptability",
+      "Time Management",
+    ],
+  },
+
   workExperience: [
   {
     id: "exp-w1",
-    role: "SCADA & OTM Intern",
+    role: "SCADA & Automation Intern",
     company: "PT. PLN (Persero) UIP2B JAMALI",
     period: "Aug 2025 - Des 2025",
     location: "Depok, Indonesia",
 
-    summary:
-      "Supported operational process analysis and system requirements identification to improve workflows. Monitored real-time grid data across 600+ substations in Java-Madura-Bali, performed data validation and reconciliation across 20+ substations, and supported system migration, inventory management, and technical equipment procurement.",
+    points: [
+      "Analyzed operational business processes and identified system requirements and workflow improvements.",
+      "Modeled and documented the end-to-end procurement process, from planning to goods receipt, and managed technical equipment inventory data.",
+      "Performed point-to-point (P2P) data validation across 20+ substations by reconciling field data with central SCADA records, and supported system migration through data validation and reconciliation.",
+      "Monitored real-time grid data across 600+ substations in Java-Madura-Bali using Grafana and monitoring systems.",
+    ],
 
     skills: [
-      "SCADA",
-      "Grafana",
+      "Business Process Analysis",
       "Data Validation",
+      "Procurement Process",
+      "SCADA",
+    ],
+
+    certificates: [
+      {
+        title: "Internship Certificate — PT PLN (Persero) UIP2B JAMALI",
+        image: "/images/sertifpln.jpg",
+      },
+      
+      {
+        label: "View evaluation",
+        title: "Internship Evaluation — PT PLN (Persero) UIP2B JAMALI",
+        image: "/images/penilaianmagang.jpg",
+      },
     ],
 
     photos: [
@@ -56,19 +169,30 @@ const PORTFOLIO_DATA = {
     period: "Mar 2025 - Jun 2025",
     location: "Surabaya, Indonesia",
 
-    summary:
-      "Delivered hands-on instruction in business process automation and modeling using ProcessMaker, BPMN.io, and SAP Signavio to 40+ students per session. Guided students through case-based projects, troubleshooting implementation issues and evaluating project outcomes based on functionality, efficiency, and process logic.",
-
-    skills: [
-      "ProcessMaker",
-      "BPMN.io",
-      "SAP SIgnavio",
+    
+    points: [
+      "Guided business process modeling and workflow automation implementation using ProcessMaker, BPMN.io, and SAP Signavio across 2 classes, with 40+ students per session.",
+      "Mentored students in designing end-to-end business process models and building automated workflows through case-based projects, resolving configuration and implementation issues.",
+      "Reviewed and graded 65 submissions against functionality, efficiency, and process logic, providing structured feedback to improve design quality.",
     ],
 
-    highlights: [
-      "Monitored JMB substations using Grafana and Spectrum Power 7.",
-      "Supported SP4 to SP7 migration and P2P validation activities.",
-      "Worked with IEC 101, IEC 61850, RTU, and SAS-related documentation.",
+    skills: [
+      "BPMN",
+      "ProcessMaker",
+      "SAP Signavio",
+    ],
+
+    certificates: [
+      {
+        label: "View Certificate 1",
+        title: "Teaching Assistant Certificate — Business Process Management (Modeling)",
+        image: "/images/sertifpemodelan.jpg",
+      },
+      {
+        label: "View Certificate 2",
+        title: "Teaching Assistant Certificate — Business Process Management (Automation)",
+        image: "/images/sertifotomasi.jpg",
+      },
     ],
 
     photos: [
@@ -85,11 +209,22 @@ const PORTFOLIO_DATA = {
     period: "Sep 2024 - Oct 2024",
     location: "Surabaya, Indonesia",
 
-    summary:
-      "Delivered hands-on instruction on Odoo modules to 40+ students during practical sessions. Guided students through business case-based exercises, troubleshooting implementation issues and evaluating project outcomes based on configuration accuracy and relevance to assigned business cases.",
+    
+    points: [
+      "Supported hands-on implementation of Odoo ERP modules through business case studies, with 40+ students per session.",
+      "Served as person in charge (PIC) for 4 project groups, providing technical guidance on Odoo configuration and implementation aligned with case requirements and resolving issues along the way.",
+      "Evaluated Odoo implementation results from 4 groups on configuration accuracy and alignment with business requirements, and provided recommendations for improvement.",
+    ],
 
     skills: [
-      "Odoo",
+      "Odoo", "ERP", "Business Case Analysis",
+    ],
+
+    certificates: [
+      {
+        title: "Teaching Assistant Certificate — Enterprise Systems",
+        image: "/images/sertifodoo.png",
+      },
     ],
 
     photos: [
@@ -104,52 +239,101 @@ const PORTFOLIO_DATA = {
   orgExperience: [
     {
       id: "org-1",
+      
+      documentation: ["/images/wisuda130.jpeg", "/images/komunbadmin.jpeg"],
       organization: "Himpunan Mahasiswa Sistem Informasi",
       period: "Apr 2024 - Mar 2025",
       role: "Staff of Internal Affairs",
       description:
-        "Managed a 140+ member badminton community and organized 10 regular training sessions. Coordinated the Information Systems badminton team for competitions, including member and logistics coordination. Also served as Head of LO for Wisuda 130 and Treasurer for Wisuda 129, supporting event coordination and financial administration.",
-    },
+        "Managed a 140+ member badminton community, achieving 100% of KPI targets for membership, training attendance, and session frequency across 10 training sessions. Led 8 Liaison Officer (LO) staff for Wisuda 130, coordinating 200+ graduates and 400+ guests to ensure smooth event operations. Served as Treasurer for Wisuda 129, managing financial administration including budget planning, transaction records, and accountability reporting.",
+      certificates: [
+        {
+          title: "Certificate — Staff of Internal Affairs, Himpunan Mahasiswa Sistem Informasi",
+          image: "/images/sertifia.png",
+        },
+      ],
+      },
     {
       id: "org-2",
+      
+      documentation: ["/images/damen1.jpeg", "/images/damen2.jpeg"],
       organization: "ISE! ITS 2024",
       period: "Mar 2024 - Nov 2024",
       role: "Director of Data Management",
       description:
-        "Led a 17-member Data Management team in managing registration data for 1,000+ participants, ensuring data quality and availability throughout the event. Delivered real-time reports and insights on registration trends and participant demographics to support decision-making, while coordinating data collection and processing to ensure accurate and timely results.",
+        "Led a 17-member Data Management team in developing and managing registration data for 1,000+ participants, ensuring data availability and quality throughout the event. Delivered real-time registration reports and insights on daily registration trends and participant demographics to support decision-making. Coordinated data collection and processing across the team to ensure data accuracy, consistency, and timely delivery.",
+      
+      certificates: [
+        {
+          title: "Certificate — Director of Data Management, ISE! ITS 2024",
+          image: "/images/sertif ise.png",
+        },
+      ],
     },
     {
       id: "org-3",
+      
+      documentation: ["/images/pasjung1.jpeg", "/images/pasjung2.jpeg"],
       organization: "Pasar Juang",
       period: "Sep 2023 - Nov 2023",
       role: "Expert Staff of Data Management",
       description:
-        "Collected and organized data from vendors and event visitors to support operational needs. Consolidated the collected data into structured reports, presenting information clearly to support event evaluation.",
-    },
+        "Managed and ensured the accuracy of participant data and administrative processes for 1,500+ visitors throughout the event. Maintained 50 vendors data, prepared and monitored registration sheets, and distributed attendance and feedback forms to participants. Supervised technical data input to maintain data consistency and quality, and assisted in post-event reporting and certificate distribution.",
+      certificates: [
+        {
+          title: "Certificate — Expert Staff of Data Management, Pasar Juang",
+          image: "/images/sertif pasjung.png",
+        },
+      ],
+      },
     {
       id: "org-4",
+      
+      documentation: ["/images/ise2.jpeg", "/images/ise3.jpeg"],
       organization: "ISE! ITS 2023",
       period: "Mar 2023 - Nov 2023",
       role: "Staff of Admin&LO",
       description:
-        "Awarded “Staff of the Month” in June 2023 for strong performance and dedication. Managed administrative procedures throughout the event series and prepared the necessary documents and materials to support event administration.",
-    },
+        "Named Staff of the Month (June 2023) in recognition of outstanding performance and contribution. Verified participants for the Grand Talkshow and managed the official WhatsApp channel for participant communication. Documented weekly meeting minutes and handled internal administrative processes to support committee operations.",
+      certificates: [
+        {
+          title: "Certificate — Staff of Admin&LO, ISE! ITS 2023",
+          image: "/images/sertifise.png",
+        },
+      ],
+      },
     {
       id: "org-5",
+      
+      documentation: ["/images/gerigi1.jpeg", "/images/gerigi2.jpeg"],
       organization: "GERIGI 2023",
       period: "Jul 2023 - Aug 2023",
       role: "Staff of Scretarial",
       description:
-        "Guided and provided event information to 20 participants, reviewed their submitted tasks and activities, and supported them in resolving issues and answering questions throughout the event.",
-    },
+        "Provided clear information and guidance to participants throughout the event. Received, reviewed, and evaluated participant assignments in line with program requirements. Resolved technical and non-technical participant issues promptly, ensuring timely assistance and direction.",
+      certificates: [
+        {
+          title: "Certificate — Staff of Scretarial, GERIGI 2023",
+          image: "/images/sertifgerigi.png",
+        },
+      ],
+      },
     {
       id: "org-6",
+      
+      documentation: ["/images/ilits1.jpeg", "/images/ilits2.jpeg"],
       organization: "Ini Lho ITS",
       period: "Oct 2022 - Feb 2023",
       role: "Staff of Data Management",
       description:
-        "Collected, managed, and summarized administrative data for 1,000+ participants. Served as a Liaison Officer (LO), assisting and guiding open campus participants, while preparing administrative documents and materials to support the event.",
-    },
+        "Prepared registration sheets, managed attendance and feedback forms, and approved ticketing for 1,000+ participants at the main event of a campus introduction program. Served as department representative for 20+ high school students, introducing and explaining ITS academic departments. Supervised 40+ participants during the try-out session, produced post-event reports, and coordinated participant certificate distribution.",
+      certificates: [
+        {
+          title: "Certificate — Staff of Data Management, Ini Lho ITS",
+          image: "/images/sertif ilits.png",
+        },
+      ],
+      },
   ],
 
   projects: [
@@ -184,7 +368,7 @@ const PORTFOLIO_DATA = {
       year: "2025",
       title: "IT BSC Performance Dashboard",
       category: "Data Visualization",
-      tools: ["Power BI", "IT-BSC"],
+      tools: ["Power BI", "IT-BSC", "Excel"],
       coverImage:
         "/images/itbsc.jpg",
       shortDesc:
@@ -223,7 +407,7 @@ const PORTFOLIO_DATA = {
       year: "2023",
       title: "I-RIT: Smart Campus Transportation Platform",
       category: "UI/UX Design",
-      tools: ["Figma"],
+      tools: ["Figma", "Software Requirements Specification (SRS)"],
       coverImage:
         "/images/icar.jpg",
       shortDesc:
@@ -237,7 +421,7 @@ const navItems = [
   ["/home", "Home"],
   ["/aboutme", "About"],
   ["/exp", "Experience"],
-  ["/project", "Projects"],
+  ["/project", "Project"],
 ];
 
 function ArrowUpRight({ className = "w-4 h-4" }) {
@@ -334,11 +518,33 @@ export default function Page() {
   const [currentRoute, setCurrentRoute] = useState("/");
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openOrgId, setOpenOrgId] = useState(null);
+  const [activeCert, setActiveCert] = useState(null);
+
+  
+  useEffect(() => {
+    if (!activeCert) return;
+
+    const onKey = (e) => {
+      if (e.key === "Escape") setActiveCert(null);
+    };
+
+    window.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [activeCert]);
 
   useEffect(() => {
     const updateRoute = () => {
       setCurrentRoute(window.location.hash.replace("#", "") || "/");
       setMobileMenuOpen(false);
+      setOpenOrgId(null);
+      setActiveCert(null);
 
       window.scrollTo({
         top: 0,
@@ -400,7 +606,7 @@ export default function Page() {
               onClick={() => navigateTo("/")}
               className="font-serif text-xl tracking-tight"
             >
-              Portofolio
+              Portfolio
             </button>
 
             <button
@@ -417,7 +623,7 @@ export default function Page() {
               ["Home", "/home"],
               ["About", "/aboutme"],
               ["Experience", "/exp"],
-              ["Projects", "/project"],
+              ["Project", "/project"],
             ].map(([label, path], index) => (
               <button
                 key={label}
@@ -537,7 +743,7 @@ export default function Page() {
   ============================================================
   PAGE INTRO
   ============================================================
-  */
+  
 
   const PageIntro = ({ number, title, description }) => (
     <section className="mb-4">
@@ -555,7 +761,7 @@ export default function Page() {
         </p>
       </div>
     </section>
-  );
+  ); */
 
   /*
   ============================================================
@@ -570,7 +776,6 @@ export default function Page() {
       className="
         group
         h-full
-        min-h-[460px]
         flex
         flex-col
         rounded-2xl
@@ -633,21 +838,21 @@ export default function Page() {
       <div className="flex flex-1 flex-col mt-5">
 
         {/* Fixed Title Area */}
-        <div className="h-[58px]">
-          <h3 className="font-serif text-2xl leading-tight">
+        <div>
+          <h3 className="font-serif text-xl sm:text-2xl leading-tight break-words">
             {project.title}
           </h3>
         </div>
 
         {/* Fixed Description Area */}
-        <div className="h-[96px] mt-3">
+        <div className="mt-3">
           <p className="text-sm leading-6 text-[#2D2D2D]">
             {project.shortDesc}
           </p>
         </div>
 
         {/* Tools */}
-        <div className="h-[34px] mt-4 flex flex-wrap content-start gap-2">
+        <div className="mt-4 flex flex-wrap content-start gap-2">
           {project.tools?.map((tool) => (
             <span
               key={tool}
@@ -713,40 +918,17 @@ export default function Page() {
       {/* HERO */}
 
 <section className="relative pt-10 pb-16 lg:pt-14 lg:pb-20 overflow-hidden">
-  {/* TYPOGRAPHY ACCENT */}
-  <div
-    aria-hidden="true"
-    className="
-      pointer-events-none
-      absolute
-      right-[5rem]
-      top-[-2rem]
-      lg:right-[8rem]
-      lg:top-[-1rem]
-      font-serif
-      italic
-      text-[20rem]
-      sm:text-[25rem]
-      lg:text-[26rem]
-      leading-none
-      tracking-[-0.08em]
-      text-brand-pinkDark
-      opacity-[0.12]
-      select-none
-      z-0
-    "
-  >
-    L
-  </div>
+  
+  <div className="relative z-10 grid lg:grid-cols-[minmax(0,1fr)_300px] xl:grid-cols-[minmax(0,1fr)_340px] gap-x-12 gap-y-6 items-start">
 
-  {/* CONTENT */}
-  <div className="relative z-10 max-w-5xl">
+  
+  <div className="min-w-0 max-w-5xl lg:col-start-1">
     
     <p className="text-[12px] sm:text-xs uppercase tracking-[.28em] text-brand-sageDark mb-7">
       Information Systems Graduate From Institut Teknologi Sepuluh Nopember
     </p>
 
-    <h1 className="font-serif text-[4.5rem] sm:text-[6.5rem] lg:text-[8rem] leading-[.82] tracking-[-.065em]">
+    <h1 className="font-serif whitespace-nowrap text-[3.25rem] sm:text-[5rem] lg:text-[5.25rem] xl:text-[7rem] leading-[.9] tracking-[-.06em]">
       Hi, I'm{" "}
       <span className="italic text-brand-pinkDark">
         Laras.
@@ -754,9 +936,7 @@ export default function Page() {
     </h1>
 
     <p className="mt-9 max-w-2xl text-sm sm:text-[15px] leading-7 text-brand-muted">
-      An Information Systems graduate who enjoys learning how things
-      work and finding ways to make them better. With a mix of technical
-      and business experience, I'm always open to new challenges.
+      An Information Systems graduate who enjoys understanding how business processes work and turning them into clear system solutions. With experience in process modeling, requirements documentation, and data dashboards, I’m always open to new challenges.
     </p>
 
     {/* QUICK LINKS */}
@@ -811,216 +991,113 @@ export default function Page() {
       </button>
     </div>
 
-    {/* QUOTE */}
-    <div className="mt-18 lg:mt-20 max-w-4xl">
-      <h2
-        className="
-          font-serif
-          text-3xl
-          sm:text-4xl
-          lg:text-[3.25rem]
-          leading-[1.08]
-          tracking-[-.035em]
-          pl-[0.55em]
-          -indent-[0.55em]
-        "
-      >
-        “Learning how things work, <br />
-        <span className="italic text-brand-pinkDark">
-          discovering how they could be better.
-        </span>
-        ”
-      </h2>
-
-      {/* CTA */}
-      <button
-        onClick={() => navigateTo("/aboutme")}
-        className="
-          mt-8
-          inline-flex
-          items-center
-          gap-3
-          rounded-full
-          border
-          border-brand-text
-          px-5
-          py-2.5
-          text-[10px]
-          uppercase
-          tracking-[.16em]
-          font-medium
-          hover:bg-brand-text
-          hover:text-white
-          transition-all
-          duration-300
-        "
-      >
-        <span>Read more about me</span>
-        <ArrowRight />
-      </button>
-    </div>
-
   </div>
-</section>
 
-      {/* EXPERIENCE */}
-
-      <section className="py-14 border-t border-brand-line">
-  {/* Section Header */}
-  <div className="flex justify-between items-end mb-6">
-    <div>
-      <span className="text-xs uppercase tracking-[.25em] text-brand-muted">
-        02 / Experience
-      </span>
-
-      <h2 className="font-serif text-4xl sm:text-5xl mt-2">
-        Selected Experience
-      </h2>
-    </div>
-
-    <button
-      onClick={() => navigateTo("/exp")}
-      className="hidden sm:flex items-center gap-2 text-xs uppercase tracking-widest hover:text-brand-pinkDark"
+  
+  <div className="min-w-0 lg:col-start-1">
+    <h2
+      className="
+        font-serif
+        text-[length:clamp(1.05rem,4.4vw,2.25rem)]
+        lg:text-[length:clamp(1.25rem,2.8vw,2.5rem)]
+        leading-[1.15]
+        tracking-[-.03em]
+        pl-[0.55em]
+        -indent-[0.55em]
+      "
     >
-      All Experience
+      <span className="block whitespace-nowrap">
+        “Learning how things work,
+      </span>
+      <span className="block whitespace-nowrap italic text-brand-pinkDark">
+        discovering how they could be better.
+        <span className="not-italic text-brand-text">”</span>
+      </span>
+    </h2>
+
+    {/* CTA */}
+    <button
+      onClick={() => navigateTo("/aboutme")}
+      className="
+        mt-6
+        inline-flex
+        items-center
+        gap-3
+        rounded-full
+        border
+        border-brand-text
+        px-5
+        py-2.5
+        text-[10px]
+        uppercase
+        tracking-[.16em]
+        font-medium
+        hover:bg-brand-text
+        hover:text-white
+        transition-all
+        duration-300
+      "
+    >
+      <span>Read more about me</span>
       <ArrowRight />
     </button>
   </div>
 
-  {/* Experience Cards */}
-  <div className="grid md:grid-cols-1 gap-5">
-    {PORTFOLIO_DATA.workExperience.slice(0, 1).map((exp) => (
-      <article
-        key={exp.id}
-        className="
-          group
-          rounded-2xl
-          border
-          border-brand-line
-          bg-white/40
-          overflow-hidden
-          transition-all
-          duration-300
-          hover:bg-brand-pinkLight
-          hover:border-brand-pinkSoft
-        "
-      >
-        <div className="grid grid-cols-[120px_1fr] sm:grid-cols-[145px_1fr] min-h-[220px]">
-
-          {/* Thumbnail */}
-          <div className="relative bg-brand-pinkSoft overflow-hidden">
-  {exp.photos?.[0]?.url ? (
-    <img
-      src={exp.photos[0].url}
-      alt={exp.photos[0].caption || exp.role}
-      className="
-        absolute
-        inset-0
-        w-full
-        h-full
-        object-cover
-        transition-transform
-        duration-500
-        group-hover:scale-105
-      "
-      onError={(e) => {
-        e.currentTarget.style.display = "none";
-      }}
-    />
-  ) : (
-    <div className="w-full h-full flex items-center justify-center">
-      <span className="text-[9px] uppercase tracking-[.15em] text-brand-pinkDark/60 text-center px-3">
-        Experience
-      </span>
+  
+  <div className="hidden lg:block lg:col-start-2 lg:row-start-1 lg:row-span-2 self-start mt-2">
+    <div className="aspect-[4/5] overflow-hidden rounded-t-full rounded-b-2xl bg-brand-pinkLight">
+      <img
+        src="/images/profilfix.png"
+        alt={PORTFOLIO_DATA.name}
+        className="h-full w-full object-cover"
+        onError={(e) => {
+          e.currentTarget.parentElement.parentElement.style.display = "none";
+        }}
+      />
     </div>
-  )}
-</div>
-
-          {/* Content */}
-          <div className="p-5 sm:p-6 flex flex-col">
-
-            {/* Role + Year + Location */}
-<div className="grid grid-cols-[1fr_auto] gap-x-4">
-
-  {/* Role */}
-  <h3 className="font-serif text-2xl leading-none">
-    {exp.role}
-  </h3>
-
-  {/* Year */}
-  <p className="text-[12px] leading-none text-brand-muted text-right self-center whitespace-nowrap">
-    {exp.period}
-  </p>
-
-  {/* Company */}
-  <p className="text-sm text-brand-pinkDark leading-tight mt-1.5">
-    {exp.company}
-  </p>
-
-  {/* Location */}
-  <p className="text-[12px] leading-none text-brand-muted text-right whitespace-nowrap">
-    {exp.location}
-  </p>
-
-</div>
-
-            {/* Summary */}
-            <p className="text-base sm:text-sm leading-6 text-[#2D2D2D] mt-4 line-clamp-2">
-              {exp.summary}
-            </p>
-
-            {/* Skills */}
-            <div className="flex flex-wrap gap-2 mt-auto pt-5">
-              {exp.skills?.map((skill) => (
-                <span
-                  key={skill}
-                  className="
-                    inline-flex
-                    items-center
-                    rounded-full
-                    border
-                    border-brand-line
-                    bg-brand-bg
-                    px-2.5
-                    py-1
-                    text-[12px]
-                    tracking-[.04em]
-                    text-brand-text
-                  "
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-
-          </div>
-        </div>
-      </article>
-    ))}
   </div>
 
-  {/* Mobile CTA */}
-  <div className="mt-6 sm:hidden">
-    <button
-      onClick={() => navigateTo("/exp")}
-      className="
-        inline-flex
-        items-center
-        gap-2
-        text-xs
-        uppercase
-        tracking-widest
-        underline
-        underline-offset-4
-        hover:text-brand-pinkDark
-        transition-colors
-      "
-    >
-      View full experience
-      <span>↗</span>
-    </button>
   </div>
 </section>
+
+      
+
+      <section className="pt-14 border-t border-brand-line">
+        {/* Section Header */}
+        <div className="flex justify-between items-end mb-2">
+          <div>
+            <span className="text-xs uppercase tracking-[.25em] text-brand-muted">
+              02 / Experience
+            </span>
+
+            <h2 className="font-serif text-4xl sm:text-5xl mt-2">
+              Selected Experience
+            </h2>
+          </div>
+
+          <button
+            onClick={() => navigateTo("/exp")}
+            className="hidden sm:flex items-center gap-2 text-xs uppercase tracking-widest hover:text-brand-pinkDark"
+          >
+            View full experience
+            <ArrowRight />
+          </button>
+        </div>
+      </section>
+
+      
+      {renderWorkExperience({ bare: true })}
+      
+      {/* Mobile CTA */}
+      <div className="pb-14 sm:hidden">
+        <button
+          onClick={() => navigateTo("/exp")}
+          className="inline-flex items-center gap-2 text-xs uppercase tracking-widest underline underline-offset-4 hover:text-brand-pinkDark transition-colors"
+        >
+          View full experience
+          <span>↗</span>
+        </button>
+      </div>
 
       {/* PROJECTS */}
 
@@ -1028,11 +1105,11 @@ export default function Page() {
   <div className="flex justify-between items-end mb-6">
     <div>
       <span className="text-xs uppercase tracking-[.25em] text-brand-muted">
-        03 / Projects
+        03 / Project
       </span>
 
       <h2 className="font-serif text-4xl sm:text-5xl mt-2">
-        Selected Projects
+        Selected Project
       </h2>
     </div>
 
@@ -1040,7 +1117,7 @@ export default function Page() {
       onClick={() => navigateTo("/project")}
       className="hidden sm:flex items-center gap-2 text-xs uppercase tracking-widest hover:text-brand-pinkDark"
     >
-      All projects
+      View full project
       <ArrowRight />
     </button>
   </div>
@@ -1100,7 +1177,7 @@ export default function Page() {
 
     <div className="image-hover overflow-hidden rounded-[1.5rem] bg-brand-pinkLight w-full max-w-[220px] aspect-[4/5]">
       <img
-        src="/images/profile.png"
+        src="/images/profilaboutme.png"
         alt={PORTFOLIO_DATA.name}
         className="w-full h-full object-cover"
         onError={(e) => {
@@ -1203,67 +1280,501 @@ export default function Page() {
         {PORTFOLIO_DATA.education.thesisTitle}
       </p>
 
-      {/* Thesis Tools */}
-      <div className="flex flex-wrap gap-2 mt-4">
-        <span
-          className="
-            inline-flex
-            items-center
-            rounded-full
-            border
-            border-brand-line
-            bg-brand-bg
-            px-3
-            py-1.5
-            text-[11px]
-            tracking-[.04em]
-            text-brand-text
-          "
-        >
-          PLS-SEM
-        </span>
-
-        <span
-          className="
-            inline-flex
-            items-center
-            rounded-full
-            border
-            border-brand-line
-            bg-brand-bg
-            px-3
-            py-1.5
-            text-[11px]
-            tracking-[.04em]
-            text-brand-text
-          "
-        >
-          SmartPLS
-        </span>
-
-        <span
-          className="
-            inline-flex
-            items-center
-            rounded-full
-            border
-            border-brand-line
-            bg-brand-bg
-            px-3
-            py-1.5
-            text-[11px]
-            tracking-[.04em]
-            text-brand-text
-          "
-        >
-          Data Analysis
-        </span>
-      </div>
-
     </div>
   </div>
 </section>
+
+      {/* TRAININGS */}
+      <section className="border-t border-brand-line py-12">
+        {/* Section Header */}
+        <div className="flex items-end justify-between gap-6 mb-7">
+          <span className="text-[14px] uppercase tracking-[.25em] text-brand-muted">
+            Training
+          </span>
+
+          <span className="hidden sm:block text-[12px] uppercase tracking-[.15em] text-brand-muted">
+            Courses & Certifications
+          </span>
+        </div>
+
+        <div className="border-t border-brand-line">
+          {PORTFOLIO_DATA.trainings.map((train) => (
+            <div
+              key={train.id}
+              className="
+                group
+                border-b border-brand-line
+                py-6 sm:py-7
+                transition-colors
+                hover:bg-brand-pinkLight/40
+              "
+            >
+              <div className="grid grid-cols-[100px_minmax(0,1fr)] sm:grid-cols-[160px_minmax(0,1fr)_300px] gap-x-4 sm:gap-x-5">
+                {/* Period */}
+                <span className="text-[11px] sm:text-[12px] uppercase tracking-[.12em] text-brand-pinkDark pt-1">
+                  {train.period}
+                </span>
+
+                {/* Title + Organizer */}
+                <div className="min-w-0">
+                  <h3 className="font-serif text-xl sm:text-2xl leading-tight group-hover:text-brand-pinkDark transition-colors">
+                    {train.title}
+                  </h3>
+
+                  <p className="mt-1.5 text-sm text-brand-pinkDark">
+                    {train.organizer}
+                  </p>
+
+                  {train.description && (
+                    <p className="mt-3 text-[14px] leading-6 text-[#2D2D2D]">
+                      {train.description}
+                    </p>
+                  )}
+
+                  {/* Certificate (mobile) */}
+                  <div className="sm:hidden">
+                    {renderCertButtons(train.certificates, "pt-3")}
+                  </div>
+                </div>
+
+                {/* Certificate (desktop) */}
+                <div className="hidden sm:flex sm:justify-end sm:items-start pt-1">
+                  {renderCertButtons(train.certificates, "pt-0")}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section className="border-t border-brand-line py-12">
+        {/* Section Header */}
+        <div className="flex items-end justify-between gap-6 mb-7">
+          <span className="text-[14px] uppercase tracking-[.25em] text-brand-muted">
+            Skills
+          </span>
+
+          <span className="hidden sm:block text-[12px] uppercase tracking-[.15em] text-brand-muted">
+            Hard & Soft Skills
+          </span>
+        </div>
+
+        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-5">
+          {/* Hard Skills */}
+          <div className="pastel-card rounded-2xl p-6 sm:p-7">
+            <p className="text-[12px] uppercase tracking-[.2em] text-brand-pinkDark">
+              Hard Skills
+            </p>
+
+            <div className="mt-5 flex flex-col gap-6">
+              {PORTFOLIO_DATA.skills.hard.map((cat) => (
+                <div key={cat.group}>
+                  <h3 className="font-serif text-xl leading-tight">
+                    {cat.group}
+                  </h3>
+
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {cat.items.map((item) => (
+                      <span
+                        key={item}
+                        className="
+                          inline-flex
+                          items-center
+                          rounded-full
+                          border
+                          border-brand-line
+                          bg-brand-bg
+                          px-3
+                          py-1.5
+                          text-[12px]
+                          tracking-[.04em]
+                          text-brand-text
+                        "
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+
+              {/* Languages */}
+              <div>
+                <h3 className="font-serif text-xl leading-tight">
+                  Languages
+                </h3>
+
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {PORTFOLIO_DATA.skills.languages.map((lang) => (
+                    <span
+                      key={lang.name}
+                      className="
+                        inline-flex
+                        items-center
+                        gap-2
+                        rounded-full
+                        border
+                        border-brand-line
+                        bg-brand-bg
+                        px-3
+                        py-1.5
+                        text-[12px]
+                        tracking-[.04em]
+                        text-brand-text
+                      "
+                    >
+                      {lang.name}
+                      <span className="text-brand-muted">· {lang.level}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Soft Skills */}
+          <div className="pastel-card rounded-2xl p-6 sm:p-7">
+            <p className="text-[12px] uppercase tracking-[.2em] text-brand-sageDark">
+              Soft Skills
+            </p>
+
+            <ul className="mt-5 flex flex-col">
+              {PORTFOLIO_DATA.skills.soft.map((skill, i) => (
+                <li
+                  key={skill}
+                  className="flex items-baseline gap-4 py-3 border-b border-brand-line last:border-b-0"
+                >
+                  <span className="text-[11px] tracking-[.2em] text-brand-muted">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+
+                  <span className="font-serif text-lg leading-tight">
+                    {skill}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
+  );
+
+  /*
+  ============================================================
+  SHARED RENDER HELPERS (dipakai di Home & Experience)
+  ============================================================
+  */
+
+  const renderCertButtons = (certs, wrapperClass = "pt-6", hidden = false) => {
+    if (!certs || certs.length === 0) return null;
+
+    return (
+      <div className={`flex flex-wrap items-start content-start gap-2 sm:flex-nowrap ${wrapperClass}`}>
+        {certs.map((cert) => (
+          <button
+            key={(cert.label || "cert") + (cert.image || cert.images?.[0])}
+            type="button"
+            tabIndex={hidden ? -1 : 0}
+            onClick={() => setActiveCert(cert)}
+            className="
+              inline-flex
+              items-center
+              gap-1.5
+              whitespace-nowrap
+              rounded-full
+              border
+              border-brand-text
+              px-3
+              py-1.5
+              text-[10px]
+              uppercase
+              tracking-[.08em]
+              font-medium
+              text-brand-text
+              hover:bg-brand-text
+              hover:text-white
+              transition-all
+              duration-300
+            "
+          >
+            <span>{cert.label || "View certificate"}</span>
+            <ArrowUpRight className="w-3 h-3" />
+          </button>
+        ))}
+      </div>
+    );
+  };
+
+  const renderWorkCard = (exp) => (
+    <article
+      key={exp.id}
+      className="
+        group
+        flex
+        flex-col
+        overflow-hidden
+        rounded-2xl
+        border
+        border-brand-line
+        bg-white/40
+        transition-all
+        duration-300
+        hover:bg-brand-pinkLight
+        hover:border-brand-pinkSoft
+      "
+    >
+      {/* Photo */}
+      <div className="relative aspect-[16/10] shrink-0 overflow-hidden bg-brand-pinkSoft">
+        {exp.photos?.[0]?.url ? (
+          <img
+            src={exp.photos[0].url}
+            alt={exp.photos[0].caption || exp.role}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            onError={(e) => {
+              e.currentTarget.style.display = "none";
+            }}
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center">
+            <span className="px-3 text-center text-[9px] uppercase tracking-[.15em] text-brand-pinkDark/60">
+              Experience
+            </span>
+          </div>
+        )}
+      </div>
+
+      {/* Body */}
+      <div className="flex min-w-0 flex-1 flex-col p-5">
+        {/* Period + Location */}
+        <div className="flex flex-wrap items-center gap-2 sm:flex-nowrap">
+          <span className="inline-flex items-center whitespace-nowrap rounded-full bg-brand-pinkSoft/60 px-2.5 py-1 text-[10px] uppercase tracking-[.05em] text-brand-pinkDark">
+            {exp.period}
+          </span>
+
+          <span className="inline-flex items-center whitespace-nowrap rounded-full bg-brand-sageSoft/60 px-2.5 py-1 text-[10px] uppercase tracking-[.05em] text-brand-sageDark">
+            {exp.location}
+          </span>
+        </div>
+
+        {/* Role + Company */}
+        <h3
+          title={exp.role}
+          className="mt-4 line-clamp-2 min-h-[2.5em] font-serif text-lg leading-tight"
+        >
+          {exp.role}
+        </h3>
+
+        <p
+          title={exp.company}
+          className="mt-1.5 text-[12px] leading-tight text-brand-pinkDark sm:truncate"
+        >
+          {exp.company}
+        </p>
+
+        {/* Points */}
+        <ul className="mt-4 flex flex-col gap-2">
+          {exp.points?.map((point, i) => (
+            <li key={i} className="flex gap-3 text-sm leading-6 text-[#2D2D2D]">
+              <span
+                aria-hidden="true"
+                className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-brand-pinkDark"
+              />
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+
+        {/* Bottom block: skills + buttons */}
+        <div className="mt-auto pt-5">
+          <div className="flex flex-wrap gap-2">
+            {exp.skills?.map((skill) => (
+              <span
+                key={skill}
+                className="inline-flex items-center rounded-full border border-brand-line bg-brand-bg px-2.5 py-1 text-[11px] tracking-[.04em] text-brand-text"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+
+          {renderCertButtons(exp.certificates, "pt-4")}
+        </div>
+      </div>
+    </article>
+  );
+
+  
+  const renderWorkExperience = ({ bare = false, limit = null } = {}) => {
+    const items = limit
+      ? PORTFOLIO_DATA.workExperience.slice(0, limit)
+      : PORTFOLIO_DATA.workExperience;
+
+    return (
+      <section
+        className={
+          bare ? "pt-2 pb-10" : "border-t border-brand-line pt-8 pb-12"
+        }
+      >
+        <div className="mb-6">
+          <span className="text-base uppercase tracking-[.25em] text-brand-muted">
+            Work Experience
+          </span>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {items.map((exp) => renderWorkCard(exp))}
+        </div>
+      </section>
+    );
+  };
+
+  const renderOrgExperience = () => (
+    <section className="border-t border-brand-line py-12">
+      <div className="mb-7">
+        <span className="text-base uppercase tracking-[.25em] text-brand-muted">
+          Organizational Experience
+        </span>
+      </div>
+
+      <div className="border-t border-brand-line">
+        {PORTFOLIO_DATA.orgExperience.map((org) => {
+          const isOpen = openOrgId === org.id;
+
+          // sertifikat + dokumentasi kegiatan
+          const docItems = [
+            ...(org.certificates || []),
+            ...(org.documentation?.length
+              ? [
+                  {
+                    label: "View documentation",
+                    title: `Documentation — ${org.organization}`,
+                    images: org.documentation,
+                  },
+                ]
+              : []),
+          ];
+
+          return (
+            <div
+              key={org.id}
+              className={`
+                group
+                border-b border-brand-line
+                py-6 sm:py-7
+                transition-colors
+                hover:bg-brand-pinkLight/40
+                ${isOpen ? "bg-brand-pinkLight/40" : ""}
+              `}
+            >
+              <div className="grid grid-cols-[100px_minmax(0,1fr)_32px] sm:grid-cols-[160px_minmax(0,1fr)_300px_40px] gap-x-4 sm:gap-x-5">
+
+                {/* Period */}
+                <span className="pt-1 text-[11px] sm:text-[12px] uppercase tracking-[.12em] text-brand-pinkDark">
+                  {org.period}
+                </span>
+
+                {/* Role */}
+                <div className="min-w-0">
+                  <h3
+                    className={`font-serif text-xl sm:text-2xl leading-tight transition-colors group-hover:text-brand-pinkDark ${
+                      isOpen ? "text-brand-pinkDark" : ""
+                    }`}
+                  >
+                    {org.role}
+                  </h3>
+
+                  {/* Organization (mobile) */}
+                  <p className="sm:hidden mt-1.5 text-xs text-brand-pinkDark">
+                    {org.organization}
+                  </p>
+                </div>
+
+                {/* Organization (desktop) */}
+                <div className="hidden sm:block pt-1 text-right">
+                  <span className="text-base text-brand-pinkDark">
+                    {org.organization}
+                  </span>
+                </div>
+
+                {/* Toggle +/× — paling kanan */}
+                <button
+                  type="button"
+                  onClick={() => setOpenOrgId(isOpen ? null : org.id)}
+                  aria-expanded={isOpen}
+                  aria-label={
+                    isOpen
+                      ? `Hide description for ${org.role}`
+                      : `Show description for ${org.role}`
+                  }
+                  className="
+                    justify-self-end
+                    shrink-0
+                    w-8
+                    h-8
+                    sm:w-9
+                    sm:h-9
+                    flex
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-brand-line
+                    text-brand-text
+                    hover:border-brand-pinkDark
+                    hover:text-brand-pinkDark
+                    transition-colors
+                  "
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    className={`w-4 h-4 transition-transform duration-300 ${
+                      isOpen ? "rotate-45" : ""
+                    }`}
+                  >
+                    <path d="M12 5v14" />
+                    <path d="M5 12h14" />
+                  </svg>
+                </button>
+
+                {/* Description row — melebar di bawah role + organisasi */}
+                <div
+                  className={`
+                    col-span-full
+                    sm:col-start-2
+                    sm:col-span-2
+                    grid
+                    transition-all
+                    duration-300
+                    ${
+                      isOpen
+                        ? "grid-rows-[1fr] opacity-100"
+                        : "grid-rows-[0fr] opacity-0 [@media(hover:hover)]:group-hover:grid-rows-[1fr] [@media(hover:hover)]:group-hover:opacity-100"
+                    }
+                  `}
+                >
+                  <div className="overflow-hidden">
+                    {/* mulai sejajar dengan role, berakhir sejajar ujung kanan nama organisasi */}
+                    <div className="mt-4 border-t border-brand-line pt-4">
+                      <p className="text-[14px] leading-7 text-[#2D2D2D] sm:text-justify">
+                        {org.description}
+                      </p>
+
+                      {renderCertButtons(docItems, "pt-4", !isOpen)}
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 
   /*
@@ -1307,191 +1818,9 @@ export default function Page() {
         WORK EXPERIENCE
     ====================================================== */}
 
-    {/* Work Experience */}
-{/* Work Experience */}
-<section className="border-t border-brand-line pt-8 pb-12">
-  <div className="mb-6">
-    <span className="text-base uppercase tracking-[.25em] text-brand-muted">
-      Work Experience
-    </span>
-  </div>
+    {renderWorkExperience()}
 
-  <div className="flex flex-col gap-5">
-  {PORTFOLIO_DATA.workExperience.map((exp) => (
-    <article
-      key={exp.id}
-      className="
-        group
-        rounded-2xl
-        border
-        border-brand-line
-        bg-white/40
-        overflow-hidden
-        transition-all
-        duration-300
-        hover:bg-brand-pinkLight
-        hover:border-brand-pinkSoft
-      "
-    >
-      <div className="grid grid-cols-[150px_minmax(0,1fr)] sm:grid-cols-[190px_minmax(0,1fr)] min-h-[220px]">
-
-        {/* Photo */}
-        <div className="relative bg-brand-pinkSoft overflow-hidden">
-          {exp.photos?.[0]?.url ? (
-            <img
-              src={exp.photos[0].url}
-              alt={exp.photos[0].caption || exp.role}
-              className="
-                absolute
-                inset-0
-                w-full
-                h-full
-                object-cover
-                transition-transform
-                duration-500
-                group-hover:scale-105
-              "
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center">
-              <span className="text-[9px] uppercase tracking-[.15em] text-brand-pinkDark/60 text-center px-3">
-                Experience
-              </span>
-            </div>
-          )}
-        </div>
-
-        {/* Content */}
-        <div className="min-w-0 p-5 sm:p-6 flex flex-col">
-
-          <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-x-4">
-            <h3 className="font-serif text-2xl leading-none min-w-0">
-              {exp.role}
-            </h3>
-
-            <p className="text-[12px] leading-none text-brand-muted text-right self-center whitespace-nowrap">
-              {exp.period}
-            </p>
-
-            <p className="text-sm text-brand-pinkDark leading-tight mt-1.5">
-              {exp.company}
-            </p>
-
-            <p className="text-[12px] leading-none text-brand-muted text-right whitespace-nowrap">
-              {exp.location}
-            </p>
-          </div>
-
-          <p className="text-sm leading-6 text-[#2D2D2D] mt-5">
-            {exp.summary}
-          </p>
-
-          <div className="flex flex-wrap gap-2 mt-5">
-            {exp.skills?.map((skill) => (
-              <span
-                key={skill}
-                className="
-                  inline-flex
-                  items-center
-                  rounded-full
-                  border
-                  border-brand-line
-                  bg-brand-bg
-                  px-2.5
-                  py-1
-                  text-[11px]
-                  tracking-[.04em]
-                  text-brand-text
-                "
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-
-        </div>
-      </div>
-    </article>
-  ))}
-</div>
-</section>
-
-
-    {/* ======================================================
-        ORGANIZATIONAL EXPERIENCE
-    ====================================================== */}
-
-    <section className="border-t border-brand-line py-12">
-  <div className="mb-7">
-    <span className="text-base uppercase tracking-[.25em] text-brand-muted">
-      Organizational Experience
-    </span>
-  </div>
-
-  <div className="border-t border-brand-line">
-    {PORTFOLIO_DATA.orgExperience.map((org) => (
-      <div
-        key={org.id}
-        className="
-          group
-          border-b border-brand-line
-          py-6 sm:py-7
-          transition-colors
-          hover:bg-brand-pinkLight/40
-        "
-      >
-        <div className="grid grid-cols-[125px_minmax(0,1fr)] sm:grid-cols-[160px_minmax(0,1fr)_340px] gap-x-4 sm:gap-x-5">
-          
-          {/* Period */}
-          <span className="text-[11px] sm:text-[12px] uppercase tracking-[.12em] text-brand-pinkDark pt-1">
-            {org.period}
-          </span>
-
-          {/* Role + Description */}
-          <div className="min-w-0">
-            <h3 className="font-serif text-xl sm:text-2xl leading-tight group-hover:text-brand-pinkDark transition-colors">
-              {org.role}
-            </h3>
-
-            {/* Description — appears on hover */}
-            <div
-              className="
-                grid
-                grid-rows-[0fr]
-                opacity-0
-                transition-all
-                duration-300
-                group-hover:grid-rows-[1fr]
-                group-hover:opacity-100
-              "
-            >
-              <div className="overflow-hidden">
-                <p className="w-full pt-3 text-[14px] leading-6 text-[#2D2D2D]">
-                  {org.description}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Organization */}
-          <div className="hidden sm:block pt-1">
-            <span className="text-base text-brand-pinkDark">
-              {org.organization}
-            </span>
-          </div>
-
-          {/* Mobile organization */}
-          <div className="sm:hidden col-start-2 mt-1.5">
-            <span className="text-xs text-brand-pinkDark">
-              {org.organization}
-            </span>
-          </div>
-
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
+    {renderOrgExperience()}
   </div>
 );
 
@@ -1527,7 +1856,7 @@ export default function Page() {
         whitespace-nowrap
       "
     >
-      Projects
+      Project
     </h1>
   </div>
 </section>
@@ -1555,15 +1884,15 @@ export default function Page() {
   let pageContent;
 
   if (currentRoute === "/home") {
-    pageContent = <HomePage />;
+    pageContent = HomePage();
   } else if (currentRoute === "/aboutme") {
-    pageContent = <AboutMePage />;
+    pageContent = AboutMePage();
   } else if (currentRoute === "/exp") {
-    pageContent = <ExperiencePage />;
+    pageContent = ExperiencePage();
   } else if (currentRoute === "/project") {
-    pageContent = <ProjectPage />;
+    pageContent = ProjectPage();
   } else {
-    pageContent = <HomePage />;
+    pageContent = HomePage();
   }
 
   return (
@@ -1573,6 +1902,67 @@ export default function Page() {
       <main className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16">
         {pageContent}
       </main>
+
+      {/* CERTIFICATE MODAL */}
+      {activeCert && (
+        <div
+          className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/60 p-4 sm:p-8"
+          onClick={() => setActiveCert(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={activeCert.title}
+        >
+          <div
+            className="relative w-full max-w-4xl max-h-full flex flex-col rounded-2xl bg-brand-bg overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between gap-4 px-5 sm:px-6 py-4 border-b border-brand-line">
+              <p className="font-serif text-lg sm:text-xl leading-tight">
+                {activeCert.title}
+              </p>
+
+              <button
+                type="button"
+                onClick={() => setActiveCert(null)}
+                className="shrink-0 w-9 h-9 flex items-center justify-center hover:text-brand-pinkDark transition-colors"
+                aria-label="Close certificate"
+              >
+                <XIcon />
+              </button>
+            </div>
+
+            <div className="overflow-auto p-4 sm:p-6 bg-white/40">
+              {(() => {
+                const imgs = activeCert.images || [activeCert.image];
+
+                return (
+                  <div
+                    className={`grid gap-4 ${
+                      imgs.length > 1 ? "sm:grid-cols-2" : ""
+                    }`}
+                  >
+                    {imgs.map((src) => (
+                      <img
+                        key={src}
+                        src={src}
+                        alt={activeCert.title}
+                        className="mx-auto max-h-[70vh] w-auto max-w-full rounded-lg object-contain"
+                        onError={(e) => {
+                          e.currentTarget.style.display = "none";
+                          e.currentTarget.insertAdjacentHTML(
+                            "afterend",
+                            '<p class="text-sm text-center text-brand-muted py-10">Gambar belum ditemukan. Cek path-nya di PORTFOLIO_DATA.</p>'
+                          );
+                        }}
+                      />
+                    ))}
+                  </div>
+                );
+              })()}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
