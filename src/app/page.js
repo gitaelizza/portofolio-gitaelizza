@@ -13,7 +13,7 @@ const PORTFOLIO_DATA = {
     "An Information Systems graduate who enjoys learning how things work and finding ways to make them better. With a mix of technical and business experience, I'm always open to new challenges.",
 
   fullAbout:
-    "That’s my motto: a reminder to give my best, trust the process, and stay open to every opportunity. I’m an Information Systems graduate from Institut Teknologi Sepuluh Nopember (ITS) with a focus on business and system analysis. From mapping business processes during my internship at PT PLN (Persero) UIP2B JAMALI, to documenting software requirements and designing dashboards in academic projects, I enjoy turning business needs into clear, structured solutions. Through my roles as a teaching assistant and in student organizations, I’ve also learned to communicate clearly, collaborate across teams, and keep growing along the way.",
+    "That’s my motto: a reminder to give my best, trust the process, and stay open to every opportunity. I’m an Information Systems graduate from Institut Teknologi Sepuluh Nopember (ITS) with a focus on business analysis, system analysis, and data analytics. From mapping business processes during my internship at PT PLN (Persero) UIP2B JAMALI, to documenting software requirements and turning data into dashboards in academic projects, I enjoy connecting business needs, system design, and data-driven insights into clear, structured solutions. Through my roles as a teaching assistant and in student organizations, I’ve also learned to communicate clearly, collaborate across teams, and keep growing along the way.",
 
   education: {
     degree: "Bachelor of Information Systems",
