@@ -91,11 +91,11 @@ const PORTFOLIO_DATA = {
       },
       {
         group: "Data & Analytics",
-        items: ["Power BI", "Excel", "MySQL", "SmartPLS", "SPSS", "DBeaver"],
+        items: ["Power BI", "Excel", "MySQL", "SmartPLS", "SPSS", "DBeaver", "RStudio"],
       },
       {
         group: "Programming & Frameworks",
-        items: ["Javascript", "HTML", "R", "Java", "PHP", "Python", "Laravel", "Next.js"],
+        items: ["Javascript", "R", "Python", "Laravel", "Next.js"],
       },
       {
         group: "System Analysis & Documentation",
