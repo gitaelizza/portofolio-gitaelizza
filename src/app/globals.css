@@ -1,20 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-bg: #FFF9F8;
-  --color-brand-text: #292827;
-  --color-brand-muted: #77716F;
-  --color-brand-line: #E8D8DC;
-  --color-brand-pinkLight: #FFF0F3;
-  --color-brand-pinkSoft: #F7D5DE;
-  --color-brand-pinkMain: #E5A0B2;
-  --color-brand-pinkDark: #B85F78;
-  --color-brand-sageLight: #EEF5EC;
-  --color-brand-sageSoft: #D7E7D1;
-  --color-brand-sageMain: #A8C29F;
-  --color-brand-sageDark: #5F795A;
-  --font-sans: var(--font-dm-sans), sans-serif;
-  --font-serif: var(--font-playfair), serif;
+  /* Neutrals (cool, clean) */
+  --color-brand-bg: #F8F9FC;
+  --color-brand-text: #0F172A;
+  --color-brand-muted: #5B6478;
+  --color-brand-line: #E2E6F0;
+
+  /* Primary: indigo — profesional, tech, tetap hangat */
+  --color-brand-primaryLight: #EEF0FF;
+  --color-brand-primarySoft: #DCE0FF;
+  --color-brand-primaryMain: #818CF8;
+  --color-brand-primary: #4338CA;
+
+  /* Accent: teal — segar, kontras bagus dengan indigo */
+  --color-brand-accentLight: #E6F7F4;
+  --color-brand-accentSoft: #C5EEE6;
+  --color-brand-accentMain: #2DD4BF;
+  --color-brand-accent: #0F766E;
+
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-jakarta), sans-serif;
   --container-8xl: 1440px;
 }
 
@@ -24,22 +30,43 @@ html {
 
 body {
   margin: 0;
-  background: #FFF9F8;
-  color: #292827;
-  font-family: var(--font-dm-sans), sans-serif;
+  background: #F8F9FC;
+  color: #0F172A;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.font-display {
+  font-weight: 700;
 }
 
 ::selection {
-  background: #E5A0B2;
+  background: #4338CA;
   color: white;
+}
+
+/* Aksesibilitas: focus ring jelas untuk keyboard */
+:focus-visible {
+  outline: 2px solid #4338CA;
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
 .soft-circle {
   position: absolute;
   border-radius: 999px;
-  filter: blur(80px);
+  filter: blur(90px);
   pointer-events: none;
+}
+
+/* Gradient teks untuk aksen heading */
+.text-gradient {
+  background: linear-gradient(100deg, #4338CA 0%, #7C3AED 55%, #0F766E 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .grain {
@@ -66,6 +93,15 @@ body {
   }
 }
 
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(15, 118, 110, 0.45); }
+  50% { box-shadow: 0 0 0 6px rgba(15, 118, 110, 0); }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
 .image-hover img {
   transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.7s ease;
 }
@@ -80,23 +116,24 @@ body {
 }
 
 .nav-pill:not(.active) {
-  background: #FFF0F3;
+  background: #EEF0FF;
 }
 
 .nav-pill:not(.active):hover {
-  background: #D7E7D1;
-  color: #5F795A;
+  background: #C5EEE6;
+  color: #0F766E;
 }
 
 .nav-pill.active {
-  background: #E5A0B2;
+  background: #4338CA;
   color: white;
-  box-shadow: 0 5px 16px rgba(184, 95, 120, 0.16);
+  box-shadow: 0 5px 16px rgba(67, 56, 202, 0.22);
 }
 
 .pastel-card {
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid #E8D8DC;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #E2E6F0;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .experience-photo {
@@ -105,7 +142,7 @@ body {
 
 .experience-card {
   background: #FFF;
-  border: 1px solid #E8D8DC;
+  border: 1px solid #E2E6F0;
   transition:
     background 0.25s ease,
     border-color 0.25s ease,
@@ -114,15 +151,15 @@ body {
 }
 
 .experience-card:hover {
-  background: #FCECEF;
-  border-color: #E5A0B2;
+  background: #EEF0FF;
+  border-color: #818CF8;
   transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(184, 95, 120, 0.1);
+  box-shadow: 0 14px 30px rgba(67, 56, 202, 0.12);
 }
 
 .org-card {
   background: #FFF;
-  border: 1px solid #E8D8DC;
+  border: 1px solid #E2E6F0;
   transition:
     background 0.25s ease,
     border-color 0.25s ease,
@@ -131,10 +168,10 @@ body {
 }
 
 .org-card:hover {
-  background: #F3F8F1;
-  border-color: #D4E4D0;
+  background: #E6F7F4;
+  border-color: #C5EEE6;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(100, 123, 96, 0.08);
+  box-shadow: 0 10px 25px rgba(15, 118, 110, 0.1);
 }
 
 .project-card {
@@ -143,6 +180,13 @@ body {
 
 .project-card:hover {
   transform: translateY(-3px);
-  border-color: #DFA0AF;
-  box-shadow: 0 12px 35px rgba(184, 111, 130, 0.08);
+  border-color: #818CF8;
+  box-shadow: 0 12px 35px rgba(67, 56, 202, 0.12);
+}
+
+/* Hormati pengguna yang mengurangi animasi */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .pulse-dot { animation: none; }
+  * { transition-duration: 0.01ms !important; }
 }

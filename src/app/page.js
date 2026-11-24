@@ -7,7 +7,7 @@ const PORTFOLIO_DATA = {
   role: "Information Systems Graduate",
   email: "gitaelizza@gmail.com",
   linkedin: "https://www.linkedin.com/in/gitaelizza/",
-  resume: "https://drive.google.com/drive/folders/1FLV09pWH8WAaCCDFATDc6e8qXz2NG9Zb?usp=drive_link",
+  resume: "https://drive.google.com/file/d/198MSe9o-xWoBP91ylKMw5RfcbdHNm20C/view?usp=sharing",
 
   shortAbout:
     "An Information Systems graduate who enjoys learning how things work and finding ways to make them better. With a mix of technical and business experience, I'm always open to new challenges.",
@@ -20,8 +20,9 @@ const PORTFOLIO_DATA = {
     university: "Institut Teknologi Sepuluh Nopember",
     period: "2022 — 2026",
     gpa: "3.67 / 4.00",
+    honors: "Cum Laude",
     thesisTitle:
-      "Analysis Of The Effect Of Barriers On Loyalty and E-WOM In Online Food Delivery (OFD) Services Using Partial Least Squares-Structural Equation Modeling. Case Study: GoFood",
+      "Analysis Of The Effect Of Barriers On Loyalty and E-WOM In Online Food Delivery (OFD) Services Using Partial Least Squares-Structural Equation Modeling.",
   },
 
   trainings: [
@@ -41,6 +42,21 @@ const PORTFOLIO_DATA = {
     },*/
     {
       id: "train-1",
+      title: "#JuaraGCP: 16 Badges",
+      organizer: "Google Cloud",
+      period: "2025",
+      description:
+        "Earned 16 badges through hands-on labs on Google Cloud, covering artificial intelligence, data processing, and cloud security. The learning included exploring AI tools, analyzing and extracting information from documents and data, and applying responsible and secure practices when working with data in the cloud. These labs strengthened the ability to learn new technologies quickly and apply them to practical, real-world problems, complementing data analysis skills with modern cloud and AI tools.",
+      certificates: [
+        {
+          label: "View certificate",  
+          title: "Certificate — Nama Training",
+          url: "https://www.skills.google/public_profiles/93835bfd-b522-4d72-a8fb-bf1183938756",
+        },
+      ],
+    },
+    {
+      id: "train-2",
       title: "Introduction to SAP S/4HANA with GBI 4.2",
       organizer: "SAP University Alliances",
       period: "2024",
@@ -54,7 +70,7 @@ const PORTFOLIO_DATA = {
       ],
     },
     {
-      id: "train-2",
+      id: "train-3",
       title: "Latihan Keterampilan Manajemen Mahasiswa Pra Tingkat Dasar (LKMM Pra-TD)",
       organizer: "Fakultas Teknologi Elektro dan Informatika Cerdas ITS",
       period: "2023",
@@ -68,7 +84,7 @@ const PORTFOLIO_DATA = {
       ],
     },
     {
-      id: "train-3",
+      id: "train-4",
       title: "Latihan Keterampilan Mahasiswa Wirausaha (LKMW)",
       organizer: "Institut Teknologi Sepuluh Nopember",
       period: "2022",
@@ -91,7 +107,7 @@ const PORTFOLIO_DATA = {
       },
       {
         group: "Data & Analytics",
-        items: ["Power BI", "Excel", "SQL", "SmartPLS", "SPSS", "DBeaver", "R", "Python"],
+        items: ["Power BI", "Excel", "SQL", "MySQL", "SmartPLS", "SPSS", "DBeaver", "R", "Python"],
       },
       {
         group: "Programming & Frameworks",
@@ -99,7 +115,7 @@ const PORTFOLIO_DATA = {
       },
       {
         group: "System Analysis & Documentation",
-        items: ["Software Requirements Specification (SRS)",  "Business Requirements Document (BRD)", "UML (Use Case, Robustness, Sequence, Class Diagram)", "Business Process Modeling", "Functional Specification Document (FSD)"],
+        items: ["Software Requirements Specification (SRS)",  "Business Requirements Document (BRD)", "UML (Use Case, Robustness, Sequence, Class Diagram)", "Business Process Modeling", "Functional Specification Document (FSD)", "Software Critical Design Review Document"],
       },
     ],
     languages: [
@@ -128,10 +144,9 @@ const PORTFOLIO_DATA = {
     location: "Depok, Indonesia",
 
     points: [
-      "Analyzed operational business processes and identified system requirements and workflow improvements.",
-      "Modeled and documented the end-to-end procurement process, from planning to goods receipt, and managed technical equipment inventory data.",
-      "Performed point-to-point (P2P) data validation across 20+ substations by reconciling field data with central SCADA records, and supported system migration through data validation and reconciliation.",
-      "Monitored real-time grid data across 600+ substations in Java-Madura-Bali using Grafana and monitoring systems.",
+      "Mapped the end-to-end procurement process and identified recurring PR errors that caused procurement delays; supported SAP procurement orders, including TUG 3, TUG 4, and Goods Receipt Slips.",
+      "Validated data across 20+ substations in Java-Madura-Bali by reconciling field data with central SCADA records, and supported the migration and validation of 600+ substation records into a new system.",
+      "Monitored real-time data from 600+ substations using Grafana and reported operational anomalies to field personnel.",
     ],
 
     skills: [
@@ -171,9 +186,9 @@ const PORTFOLIO_DATA = {
 
     
     points: [
-      "Guided business process modeling and workflow automation implementation using ProcessMaker, BPMN.io, and SAP Signavio across 2 classes, with 40+ students per session.",
-      "Mentored students in designing end-to-end business process models and building automated workflows through case-based projects, resolving configuration and implementation issues.",
-      "Reviewed and graded 65 submissions against functionality, efficiency, and process logic, providing structured feedback to improve design quality.",
+      "Guided 40+ students per session in business process modeling with BPMN.io and SAP Signavio, teaching BPMN notation and the design of end-to-end business workflows.",
+      "Taught workflow automation with ProcessMaker and acted as the main point of contact for 3 student groups, resolving implementation issues.",
+      "Reviewed and graded 65 student submissions across the modeling and automation classes, giving individual feedback on functionality, efficiency, and process logic.",
     ],
 
     skills: [
@@ -211,9 +226,9 @@ const PORTFOLIO_DATA = {
 
     
     points: [
-      "Supported hands-on implementation of Odoo ERP modules through business case studies, with 40+ students per session.",
-      "Served as person in charge (PIC) for 4 project groups, providing technical guidance on Odoo configuration and implementation aligned with case requirements and resolving issues along the way.",
-      "Evaluated Odoo implementation results from 4 groups on configuration accuracy and alignment with business requirements, and provided recommendations for improvement.",
+      "Explained six Odoo ERP modules (Sales, Point of Sale, Purchasing, Inventory, Manufacturing, and Finance & Accounting) to 40+ students per session through practical demonstrations and module walkthroughs.",
+      "Guided 12 students through Odoo module configuration and implementation, providing technical assistance and troubleshooting issues encountered during practical sessions.",
+      "Evaluated 12 students' technical understanding and practical implementation skills, providing individual feedback for improvement.",
     ],
 
     skills: [
@@ -308,7 +323,7 @@ const PORTFOLIO_DATA = {
       documentation: ["/images/gerigi1.jpeg", "/images/gerigi2.jpeg"],
       organization: "GERIGI 2023",
       period: "Jul 2023 - Aug 2023",
-      role: "Staff of Scretarial",
+      role: "Staff of Secretarial",
       description:
         "Provided clear information and guidance to participants throughout the event. Received, reviewed, and evaluated participant assignments in line with program requirements. Resolved technical and non-technical participant issues promptly, ensuring timely assistance and direction.",
       certificates: [
@@ -344,10 +359,15 @@ const PORTFOLIO_DATA = {
       category: "Data Analysis",
       tools: ["SmartPLS", "SPSS", "Excel"],
       coverImage:
-        "/images/pls.jpg",
+        "/images/plssem.png",
       shortDesc:
         "Examined consumer behavior and loyalty in the online food delivery users in Indonesia aged 18–39 who had used the service within the previous six months.",
       driveDocUrl: "https://drive.google.com/drive/folders/13BV3HYPbBpA3Tyhp-BENestii1sYlDnT?usp=drive_link",
+      contributions: [
+        "Analyzed 248 valid responses from 323 respondents using Partial Least Squares Structural Equation Modeling (PLS-SEM) to examine the factors influencing electronic word-of-mouth (e-WOM) and customer loyalty.",
+        "Tested 17 hypotheses covering barriers, trust, post-usage usefulness, and other behavioral factors, of which 13 were supported by the results.",
+        "Interpreted the structural model to identify significant relationships and moderating effects, and developed data-driven recommendations for OFD service providers to strengthen customer loyalty and encourage positive e-WOM.",
+      ],
     },
 
     {
@@ -355,12 +375,18 @@ const PORTFOLIO_DATA = {
       year: "2025",
       title: "PaduPadan: Digital Wardrobe Platform",
       category: "Software Development",
-      tools: ["MySQL", "Laravel", "Figma"],
+      tools: ["MySQL", "Laravel", "Figma", "Software Critical Design Review Document"],
       coverImage:
-        "/images/padupadan.jpg",
+        "/images/padupadan (1).png",
       shortDesc:
         "A fashion management website that helps users organize their clothing collections, discover outfit combinations, and get personalized styling recommendations.",
       driveDocUrl: "https://drive.google.com/drive/folders/1T5A0aefuUsDRQd6iaI4cO1BrSprfC6ow?usp=sharing",
+      contributions: [
+        "Analyzed and documented the functional requirements for the Digital Wardrobe feature, including create, read, update, and delete (CRUD) operations and clothing item filtering.",
+        "Authored a Software Critical Design Review Document defining the system requirements and feature specifications.",
+        "Modeled system interactions and workflows using Use Case, Robustness, and Sequence Diagrams.",
+        "Designed user interfaces and storyboards for the Digital Wardrobe feature, and developed Class Diagrams and Domain Models to represent the system structure and relationships.",
+      ],
     },
 
     {
@@ -370,23 +396,51 @@ const PORTFOLIO_DATA = {
       category: "Data Visualization",
       tools: ["Power BI", "IT-BSC", "Excel"],
       coverImage:
-        "/images/itbsc.jpg",
+        "/images/itsbsc.png",
       shortDesc:
         "Developed an interactive Power BI dashboard using the IT BSC framework to monitor IT performance and KPI achievement across central and branch-level operations.",
       driveDocUrl: "https://drive.google.com/drive/folders/1zlsYftN6YQTzWtMFZUXMK_05jky6XQCf?usp=drive_link",
+      contributions: [
+        "Reviewed public annual reports and user needs to define four measurable KPIs for the Future Orientation (FO) perspective, and prepared mock datasets in Excel to support dashboard development.",
+        "Designed and built the branch-level FO dashboard in Power BI, choosing suitable chart types to visualize achievements, annual trends, and comparisons against targets.",
+        "Created initial wireframes and refined the dashboard layout and data structure based on internal testing.",
+      ],
     },
 
     {
       id: "proj-4",
       year: "2024",
+      title: "WellBe: A Lifestyle Health Application",
+      category: "UI/UX Design",
+      tools: ["Figma", "User Research"],
+      coverImage:
+        "/images/wellbe.png",
+      shortDesc:
+        "Designed a lifestyle health application prototype to help young adults build healthy habits, monitor their health, and access nutrition and mental health consultation.",
+      driveDocUrl: "https://drive.google.com/drive/folders/1L6kAzCj2fGBNRfHnYtMJnb0GS3UODOGy?usp=drive_link",
+      contributions: [
+        "Interviewed users to understand their perspectives, needs, and pain points, and translated the findings into empathy maps, user insights, Point of View (POV), and How Might We (HMW) statements.",
+        "Defined the target market using TAM/SAM/SOM analysis and determined six core features based on user needs.",
+        "Created low-fidelity and high-fidelity designs, and built an interactive prototype in Figma.",
+        "Ran usability testing with 5 users to evaluate the prototype and identify areas for improvement.",
+      ],
+    },
+    {
+      id: "proj-5",
+      year: "2024",
       title: "University Admission Dashboard with ETL Pipeline",
       category: "Data Visualization",
-      tools: ["Power BI", "Pentaho", "Dbeaver", "ETL"],
+      tools: ["Power BI", "Pentaho", "Dbeaver", "ETL", "MySQL"],
       coverImage:
-        "/images/etl.jpg",
+        "/images/etl.png",
       shortDesc:
         "Developed an interactive dashboard to support stakeholders in analyzing university admission and selection results and facilitate data-driven decision-making.",
       driveDocUrl: "https://drive.google.com/drive/folders/1YBKSXbLlYVSp6pww44_hrCGYnSnfyyVB?usp=drive_link",
+      contributions: [
+        "Developed an ETL process in Pentaho to extract admission data of 1,000 applicants and load it into the database.",
+        "Structured the database in MySQL using DBeaver to prepare the data for dashboard development.",
+        "Created an interactive Power BI dashboard presenting applicant volume, acceptance results, academic performance, and demographic distributions.",
+      ],
     },
 /*
     {
@@ -403,16 +457,21 @@ const PORTFOLIO_DATA = {
     }, */
 
     {
-      id: "proj-5",
+      id: "proj-6",
       year: "2023",
       title: "I-RIT: Smart Campus Transportation Platform",
       category: "UI/UX Design",
       tools: ["Figma", "Software Requirements Specification (SRS)"],
       coverImage:
-        "/images/icar.jpg",
+        "/images/icar_indigo.png",
       shortDesc:
         "Developed I-RIT, a campus transportation platform that promotes eco-friendly i-Car services through a convenient, personalized experience integrated with myITS accounts.",
       driveDocUrl: "https://drive.google.com/drive/folders/1HJ4fW8fc7jr5N_twwRX54-RJYY_D-iRG?usp=drive_link",
+      contributions: [
+        "Conducted a stakeholder interview to gather requirements and constraints for the i-Car service and the application.",
+        "Documented functional requirements and use case scenarios for the Login, Route, and Logout features, and defined performance requirements for the system.",
+        "Designed the application's user interface in Figma and documented the interface and hardware requirements in the Software Requirements Specification (SRS).",
+      ],
     },
   ],
 };
@@ -604,14 +663,14 @@ export default function Page() {
           <div className="h-20 flex items-center justify-between border-b border-brand-line">
             <button
               onClick={() => navigateTo("/")}
-              className="font-serif text-xl tracking-tight"
+              className="font-display text-xl tracking-tight"
             >
               Portfolio
             </button>
 
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="w-10 h-10 flex items-center justify-center hover:text-brand-pinkDark transition-colors"
+              className="w-10 h-10 flex items-center justify-center hover:text-brand-primary transition-colors"
               aria-label="Close menu"
             >
               <XIcon />
@@ -634,14 +693,14 @@ export default function Page() {
                   0{index + 1}
                 </span>
 
-                <span className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-[-.035em] group-hover:text-brand-pinkDark transition-colors">
+                <span className="font-display text-4xl sm:text-5xl lg:text-6xl tracking-[-.035em] group-hover:text-brand-primary transition-colors">
                   {label}
                 </span>
               </button>
             ))}
           </nav>
 
-          <div className="absolute bottom-8 left-6 sm:left-10 lg:left-16 right-6 sm:right-10 lg:right-16 flex flex-col sm:flex-row justify-between gap-3 text-[10px] uppercase tracking-[.18em] text-brand-muted">
+          <div className="absolute bottom-8 left-6 sm:left-10 lg:left-16 right-6 sm:right-10 lg:right-16 flex flex-col sm:flex-row justify-between gap-3 text-[11px] uppercase tracking-[.18em] text-brand-muted">
             <span>{PORTFOLIO_DATA.email}</span>
 
             <span>Information Systems Graduate</span>
@@ -660,15 +719,15 @@ export default function Page() {
   if (currentRoute === "/" || currentRoute === "") {
     return (
       <div className="min-h-screen bg-brand-bg text-brand-text flex flex-col relative overflow-hidden">
-        <div className="soft-circle w-[500px] h-[500px] bg-brand-pinkSoft/25 -top-40 -right-40" />
+        <div className="soft-circle w-[500px] h-[500px] bg-brand-primarySoft/25 -top-40 -right-40" />
 
-        <div className="soft-circle w-[500px] h-[500px] bg-brand-sageSoft/30 -bottom-60 -left-60" />
+        <div className="soft-circle w-[500px] h-[500px] bg-brand-accentSoft/30 -bottom-60 -left-60" />
 
         <header className="px-6 sm:px-10 lg:px-16 pt-8 flex justify-between items-center relative z-10">
           <span className="font-semibold text-sm tracking-[.15em]">
-            G.E.L<span className="text-brand-pinkDark">.</span>
+            G.E.L<span className="text-brand-primary">.</span>
           </span>
-          <span className="text-[15px] uppercase tracking-[.25em] text-brand-muted">
+          <span className="text-[15px] uppercase tracking-[.16em] text-brand-muted">
             2026
           </span>
         </header>
@@ -678,13 +737,13 @@ export default function Page() {
 
         <main className="relative z-10 px-6 sm:px-10 lg:px-16 py-45">
           <div className="max-w-8xl mx-auto">
-            <p className="text-s uppercase tracking-[.5em] text-brand-muted mb-8">
+            <p className="text-s uppercase tracking-[.3em] text-brand-muted mb-8">
               Portfolio
             </p>
-            <h1 className="font-serif text-[15vw] md:text-[11vw] leading-[.78] tracking-[-.06em]">
+            <h1 className="font-display font-extrabold text-[15vw] md:text-[11vw] leading-[.9] tracking-[-.045em]">
               Gita Elizza
               <br />
-              <span className="italic text-brand-pinkDark">Larasati</span>
+              <span className="text-gradient">Larasati</span>
             </h1>
 
             <div className="mt-12 flex flex-col sm:flex-row sm:items-end justify-between gap-8">
@@ -716,18 +775,49 @@ export default function Page() {
 
   const Navbar = () => (
     <>
-      <header className="sticky top-0 z-40 bg-brand-bg/95 backdrop-blur-xl border-b border-brand-line">
-        <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 h-20 flex items-center justify-between">
+      <header className="sticky top-0 z-40 bg-brand-bg/85 backdrop-blur-xl border-b border-brand-line">
+        <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 h-[72px] flex items-center justify-between">
           <button
             onClick={() => navigateTo("/")}
-            className="font-serif text-xl tracking-tight"
+            className="font-display text-2xl tracking-tight"
           >
-            Portfolio<span className="italic text-brand-pinkDark">.</span>
+            Portfolio<span className="text-brand-primary">.</span>
           </button>
+
+          <nav className="hidden md:flex items-center gap-1" aria-label="Main">
+            {navItems.map(([path, label]) => {
+              const active =
+                currentRoute === path ||
+                (path === "/home" && !["/aboutme", "/exp", "/project"].includes(currentRoute));
+              return (
+                <button
+                  key={path}
+                  onClick={() => navigateTo(path)}
+                  aria-current={active ? "page" : undefined}
+                  className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                    active
+                      ? "bg-brand-primaryLight text-brand-primary"
+                      : "text-brand-muted hover:text-brand-text hover:bg-brand-primaryLight/60"
+                  }`}
+                >
+                  {label}
+                </button>
+              );
+            })}
+            <a
+              href={PORTFOLIO_DATA.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-3 inline-flex items-center gap-2 rounded-full bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-text transition-colors"
+            >
+              Resume
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+          </nav>
 
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="w-10 h-10 flex items-center justify-center hover:text-brand-pinkDark transition-colors"
+            className="md:hidden w-10 h-10 flex items-center justify-center hover:text-brand-primary transition-colors"
             aria-label="Open menu"
           >
             <MenuIcon />
@@ -748,11 +838,11 @@ export default function Page() {
   const PageIntro = ({ number, title, description }) => (
     <section className="mb-4">
       <div className="pt-12 md:pt-16 pb-2">
-        <span className="text-xs uppercase tracking-[.25em] text-brand-muted">
+        <span className="text-xs uppercase tracking-[.16em] text-brand-muted">
           {number}
         </span>
 
-        <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl leading-[.9] tracking-[-.04em] mt-4">
+        <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl leading-[.9] tracking-[-.04em] mt-4">
           {title}
         </h1>
 
@@ -769,143 +859,106 @@ export default function Page() {
   ============================================================
   */
 
-  const ProjectCard = ({ project, index }) => {
-
-  return (
+  const ProjectCard = ({ project }) => (
     <article
       className="
         group
-        h-full
-        flex
-        flex-col
+        row-span-7
+        mb-5
+        grid
+        grid-rows-subgrid
+        gap-y-0
         rounded-2xl
         border
         border-brand-line
-        bg-white/40
+        bg-white/60
         p-5
         sm:p-6
         transition-all
         duration-300
-        hover:bg-brand-pinkLight
-        hover:border-brand-pinkSoft
+        hover:bg-brand-primaryLight
+        hover:border-brand-primarySoft
+        hover:shadow-[0_12px_35px_rgba(67,56,202,0.10)]
       "
     >
-      {/* Category + Number */}
+      {/* Row 1: category + year */}
       <div className="flex items-start justify-between gap-4">
-        <span
-          className="
-            inline-flex
-            items-center
-            rounded-full
-            bg-brand-pinkSoft/60
-            px-3
-            py-1.5
-            text-[11px]
-            uppercase
-            tracking-[.08em]
-            text-brand-pinkDark
-          "
-        >
+        <span className="inline-flex items-center self-start rounded-full bg-brand-primarySoft/60 px-3 py-1.5 text-[11px] uppercase tracking-[.08em] text-brand-primary">
           {project.category}
         </span>
 
-        <span
-        className="
-            inline-flex
-            items-center
-            rounded-full
-            bg-brand-sageSoft/60
-            px-3
-            py-1.5
-            text-[11px]
-            uppercase
-            tracking-[.08em]
-            text-brand-sageDark
-          "
-        >{project.year}</span>
+        <span className="inline-flex items-center self-start rounded-full bg-brand-accentSoft/60 px-3 py-1.5 text-[11px] uppercase tracking-[.08em] text-brand-accent">
+          {project.year}
+        </span>
       </div>
 
-      {/* Dummy Image */}
-      <div className="mt-5 aspect-[16/9] overflow-hidden rounded-xl bg-brand-pinkLight">
-  <img
-    src={project.coverImage}
-    alt={project.title}
-    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-  />
-</div>
+      {/* Row 2: cover image */}
+      <div className="mt-5 aspect-[16/9] overflow-hidden rounded-xl bg-brand-primaryLight">
+        <img
+          src={project.coverImage}
+          alt={project.title}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+        />
+      </div>
 
-      {/* Content */}
-      <div className="flex flex-1 flex-col mt-5">
+      {/* Row 3: title */}
+      <h3 className="mt-5 font-display text-xl sm:text-2xl leading-tight break-words">
+        {project.title}
+      </h3>
 
-        {/* Fixed Title Area */}
-        <div>
-          <h3 className="font-serif text-xl sm:text-2xl leading-tight break-words">
-            {project.title}
-          </h3>
-        </div>
+      {/* Row 4: description */}
+      <p className="mt-3 text-sm leading-6 text-[#334155]">
+        {project.shortDesc}
+      </p>
 
-        {/* Fixed Description Area */}
-        <div className="mt-3">
-          <p className="text-sm leading-6 text-[#2D2D2D]">
-            {project.shortDesc}
-          </p>
-        </div>
+      {/* Row 5: what I did */}
+      <div>
+        {project.contributions?.length > 0 && (
+          <div className="mt-5">
+            <p className="text-[11px] font-semibold uppercase tracking-[.16em] text-brand-muted">
+              What I did
+            </p>
+            <ul className="mt-3 flex flex-col gap-2">
+              {project.contributions.map((item, i) => (
+                <li key={i} className="flex gap-3 text-sm leading-6 text-[#334155]">
+                  <span
+                    aria-hidden="true"
+                    className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-brand-primary"
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
 
-        {/* Tools */}
-        <div className="mt-4 flex flex-wrap content-start gap-2">
-          {project.tools?.map((tool) => (
-            <span
-              key={tool}
-              className="
-                inline-flex
-                items-center
-                rounded-full
-                border
-                border-brand-line
-                bg-brand-bg
-                px-3
-                py-1.5
-                text-[12px]
-                tracking-[.04em]
-                text-brand-text
-              "
-            >
-              {tool}
-            </span>
-          ))}
-        </div>
+      {/* Row 6: tools */}
+      <div className="mt-4 flex flex-wrap content-start gap-2">
+        {project.tools?.map((tool) => (
+          <span
+            key={tool}
+            className="inline-flex items-center rounded-full border border-brand-line bg-brand-bg px-3 py-1.5 text-[12px] tracking-[.04em] text-brand-text"
+          >
+            {tool}
+          </span>
+        ))}
+      </div>
 
-        {/* Details */}
-<div className="mt-auto pt-8">
-  <a
-    href={project.driveDocUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
-      inline-flex
-      items-center
-      text-[11px]
-      uppercase
-      tracking-[.16em]
-      text-brand-text
-      transition-colors
-      duration-300
-      hover:text-brand-pinkDark
-    "
-  >
-    <span className="inline-flex items-center gap-2 border-b border-current pb-1">
-      <span>Details</span>
-      <span className="inline-block transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]">
-        ↗
-      </span>
-    </span>
-  </a>
-</div>
-
+      {/* Row 7: details button */}
+      <div className="self-end pt-6">
+        <a
+          href={project.driveDocUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full bg-brand-primary px-5 py-2.5 text-xs font-semibold tracking-[.04em] text-white transition-colors duration-300 hover:bg-brand-text"
+        >
+          View Details
+          <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
+        </a>
       </div>
     </article>
   );
-};
 
   /*
   ============================================================
@@ -924,69 +977,53 @@ export default function Page() {
   
   <div className="min-w-0 max-w-5xl lg:col-start-1">
     
-    <p className="text-[12px] sm:text-xs uppercase tracking-[.28em] text-brand-sageDark mb-7">
+    <p className="text-xs sm:text-[13px] font-semibold uppercase tracking-[.16em] text-brand-accent mb-7">
       Information Systems Graduate From Institut Teknologi Sepuluh Nopember
     </p>
 
-    <h1 className="font-serif whitespace-nowrap text-[3.25rem] sm:text-[5rem] lg:text-[5.25rem] xl:text-[7rem] leading-[.9] tracking-[-.06em]">
+    <h1 className="font-display font-extrabold whitespace-nowrap text-[3.25rem] sm:text-[5rem] lg:text-[5.25rem] xl:text-[7rem] leading-[.95] tracking-[-.045em]">
       Hi, I'm{" "}
-      <span className="italic text-brand-pinkDark">
+      <span className="text-gradient">
         Laras.
       </span>
     </h1>
 
-    <p className="mt-9 max-w-2xl text-sm sm:text-[15px] leading-7 text-brand-muted">
+    <p className="mt-8 max-w-2xl text-sm sm:text-[15px] leading-7 text-brand-muted">
       An Information Systems graduate who enjoys understanding how business processes work and turning them into clear system solutions. With experience in process modeling, requirements documentation, and data dashboards, I’m always open to new challenges.
     </p>
 
     {/* QUICK LINKS */}
-    <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+    <div className="mt-8 flex flex-wrap items-center gap-3">
 
       <a
         href={PORTFOLIO_DATA.resume}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[12px] uppercase tracking-[.16em]
-                   underline underline-offset-4
-                   hover:text-brand-pinkDark
-                   hover:border-brand-pinkDark
-                   transition-colors"
+        className="inline-flex items-center gap-2 rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(67,56,202,0.28)] hover:bg-brand-text hover:shadow-none transition-all"
       >
-        Resume
+        View Resume
+        <ArrowUpRight className="w-4 h-4" />
       </a>
 
       <a
         href={PORTFOLIO_DATA.linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[12px] uppercase tracking-[.16em]
-                   underline underline-offset-4
-                   hover:text-brand-pinkDark
-                   hover:border-brand-pinkDark
-                   transition-colors"
+        className="inline-flex items-center gap-2 rounded-full border border-brand-text/20 bg-white px-6 py-3 text-sm font-semibold hover:border-brand-primary hover:text-brand-primary transition-colors"
       >
         LinkedIn
       </a>
 
       <button
         onClick={handleCopyEmail}
-        className="flex items-center gap-2
-                   text-[12px] uppercase tracking-[.16em]
-                   underline underline-offset-4
-                   hover:text-brand-pinkDark
-                   hover:border-brand-pinkDark
-                   transition-colors"
+        className="inline-flex items-center gap-2 rounded-full border border-brand-line bg-white px-5 py-3 text-sm font-medium text-brand-muted hover:border-brand-primary hover:text-brand-primary transition-colors"
+        aria-live="polite"
       >
-        <span>
-          {copiedEmail
-            ? "Email copied"
-            : PORTFOLIO_DATA.email}
-        </span>
-
+        <span>{copiedEmail ? "Email copied" : PORTFOLIO_DATA.email}</span>
         {copiedEmail ? (
-          <CheckIcon className="w-3 h-3 shrink-0" />
+          <CheckIcon className="w-3.5 h-3.5 shrink-0" />
         ) : (
-          <CopyIcon className="w-3 h-3 shrink-0" />
+          <CopyIcon className="w-3.5 h-3.5 shrink-0" />
         )}
       </button>
     </div>
@@ -997,7 +1034,7 @@ export default function Page() {
   <div className="min-w-0 lg:col-start-1">
     <h2
       className="
-        font-serif
+        font-display
         text-[length:clamp(1.05rem,4.4vw,2.25rem)]
         lg:text-[length:clamp(1.25rem,2.8vw,2.5rem)]
         leading-[1.15]
@@ -1009,9 +1046,9 @@ export default function Page() {
       <span className="block whitespace-nowrap">
         “Learning how things work,
       </span>
-      <span className="block whitespace-nowrap italic text-brand-pinkDark">
-        discovering how they could be better.
-        <span className="not-italic text-brand-text">”</span>
+      <span className="block whitespace-nowrap">
+        <span className="text-gradient">discovering how they could be better.</span>
+        <span className="text-brand-text">”</span>
       </span>
     </h2>
 
@@ -1028,7 +1065,7 @@ export default function Page() {
         border-brand-text
         px-5
         py-2.5
-        text-[10px]
+        text-[11px]
         uppercase
         tracking-[.16em]
         font-medium
@@ -1045,7 +1082,7 @@ export default function Page() {
 
   
   <div className="hidden lg:block lg:col-start-2 lg:row-start-1 lg:row-span-2 self-start mt-2">
-    <div className="aspect-[4/5] overflow-hidden rounded-t-full rounded-b-2xl bg-brand-pinkLight">
+    <div className="aspect-[4/5] overflow-hidden rounded-t-full rounded-b-2xl bg-brand-primaryLight">
       <img
         src="/images/profilfix.png"
         alt={PORTFOLIO_DATA.name}
@@ -1066,20 +1103,20 @@ export default function Page() {
         {/* Section Header */}
         <div className="flex justify-between items-end mb-2">
           <div>
-            <span className="text-xs uppercase tracking-[.25em] text-brand-muted">
+            <span className="text-xs uppercase tracking-[.16em] text-brand-muted">
               02 / Experience
             </span>
 
-            <h2 className="font-serif text-4xl sm:text-5xl mt-2">
+            <h2 className="font-display text-4xl sm:text-5xl mt-2">
               Selected Experience
             </h2>
           </div>
 
           <button
             onClick={() => navigateTo("/exp")}
-            className="hidden sm:flex items-center gap-2 text-xs uppercase tracking-widest hover:text-brand-pinkDark"
+            className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-brand-primary bg-white px-5 py-2.5 text-xs font-semibold tracking-[.04em] text-brand-primary transition-colors duration-300 hover:bg-brand-primary hover:text-white"
           >
-            View full experience
+            View Full Experience
             <ArrowRight />
           </button>
         </div>
@@ -1092,9 +1129,9 @@ export default function Page() {
       <div className="pb-14 sm:hidden">
         <button
           onClick={() => navigateTo("/exp")}
-          className="inline-flex items-center gap-2 text-xs uppercase tracking-widest underline underline-offset-4 hover:text-brand-pinkDark transition-colors"
+          className="inline-flex shrink-0 items-center gap-2 rounded-full border border-brand-primary bg-white px-5 py-2.5 text-xs font-semibold tracking-[.04em] text-brand-primary transition-colors duration-300 hover:bg-brand-primary hover:text-white"
         >
-          View full experience
+          View Full Experience
           <span>↗</span>
         </button>
       </div>
@@ -1104,32 +1141,43 @@ export default function Page() {
       <section className="py-14 border-t border-brand-line">
   <div className="flex justify-between items-end mb-6">
     <div>
-      <span className="text-xs uppercase tracking-[.25em] text-brand-muted">
+      <span className="text-xs uppercase tracking-[.16em] text-brand-muted">
         03 / Project
       </span>
 
-      <h2 className="font-serif text-4xl sm:text-5xl mt-2">
+      <h2 className="font-display text-4xl sm:text-5xl mt-2">
         Selected Project
       </h2>
     </div>
 
     <button
       onClick={() => navigateTo("/project")}
-      className="hidden sm:flex items-center gap-2 text-xs uppercase tracking-widest hover:text-brand-pinkDark"
+      className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-brand-primary bg-white px-5 py-2.5 text-xs font-semibold tracking-[.04em] text-brand-primary transition-colors duration-300 hover:bg-brand-primary hover:text-white"
     >
-      View full project
+      View Full Project
       <ArrowRight />
     </button>
   </div>
 
-  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-    {PORTFOLIO_DATA.projects.slice(0, 3).map((project, index) => (
+  <div className="grid md:grid-cols-2 gap-x-5">
+    {PORTFOLIO_DATA.projects.slice(0, 2).map((project, index) => (
       <ProjectCard
         key={project.id}
         project={project}
         index={index}
       />
     ))}
+  </div>
+
+  {/* Mobile CTA */}
+  <div className="pt-2 sm:hidden">
+    <button
+      onClick={() => navigateTo("/project")}
+      className="inline-flex shrink-0 items-center gap-2 rounded-full border border-brand-primary bg-white px-5 py-2.5 text-xs font-semibold tracking-[.04em] text-brand-primary transition-colors duration-300 hover:bg-brand-primary hover:text-white"
+    >
+      View Full Project
+      <span>↗</span>
+    </button>
   </div>
 </section>
     </div>
@@ -1143,43 +1191,28 @@ export default function Page() {
 
   const AboutMePage = () => (
     <div className="reveal">
-      <section className="relative pt-12 md:pt-16 pb-10 overflow-hidden">
-  <div className="relative text-center">
+      <section className="relative pt-12 md:pt-16 pb-10">
+  <div className="relative max-w-3xl">
     {/* Eyebrow */}
-    <p className="text-xs sm:text-sm uppercase tracking-[.22em] text-brand-pinkDark">
-      SO, WHO AM I?
+    <p className="text-xs sm:text-sm font-semibold uppercase tracking-[.16em] text-brand-accent">
+      So, who am I?
     </p>
 
     {/* Main title */}
-    <h1
-      className="
-        font-serif
-        uppercase
-        text-[4rem]
-        sm:text-[6rem]
-        md:text-[8rem]
-        lg:text-[10rem]
-        leading-[0.8]
-        tracking-[0.12em]
-        text-brand-pinkDark
-        opacity-[0.18]
-        mt-6
-        whitespace-nowrap
-      "
-    >
-      ABOUT ME
+    <h1 className="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl leading-[.95] tracking-[-.04em] mt-4">
+      About me<span className="text-brand-primary">.</span>
     </h1>
   </div>
 </section>
 
       <section className="border-t border-brand-line py-12">
-  <div className="grid md:grid-cols-[.3fr_1fr] gap-8 items-start">
+  <div className="grid md:grid-cols-[.3fr_1fr] gap-8 md:items-stretch">
 
-    <div className="image-hover overflow-hidden rounded-[1.5rem] bg-brand-pinkLight w-full max-w-[220px] aspect-[4/5]">
+    <div className="image-hover relative overflow-hidden rounded-[1.5rem] bg-brand-primaryLight w-full max-w-[220px] aspect-[4/5] md:max-w-none md:aspect-auto md:min-h-[300px]">
       <img
         src="/images/profilaboutme.png"
         alt={PORTFOLIO_DATA.name}
-        className="w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
         onError={(e) => {
           e.currentTarget.style.display = "none";
 
@@ -1190,13 +1223,13 @@ export default function Page() {
     </div>
 
     <div className="min-w-0">
-      <p className="text-base uppercase tracking-[.25em] text-brand-pinkDark">
+      <p className="text-base uppercase tracking-[.16em] text-brand-primary">
         Hello, I'm Laras!
       </p>
 
-      <h2 className="font-serif text-4xl sm:text-5xl leading-tight mt-3">
+      <h2 className="font-display text-4xl sm:text-5xl leading-tight mt-3">
         if it's meant to be,{" "}
-        <span className="italic text-brand-sageDark">
+        <span className="text-brand-accent">
           then it will be.
         </span>
       </h2>
@@ -1212,11 +1245,12 @@ export default function Page() {
       <section className="border-t border-brand-line py-12">
   {/* Section Header */}
   <div className="flex items-end justify-between gap-6 mb-7">
-    <span className="text-[14px] uppercase tracking-[.25em] text-brand-muted">
+    <h2 className="flex items-center gap-3 font-display text-3xl sm:text-4xl font-bold tracking-[-.03em]">
+      <span aria-hidden="true" className="h-7 sm:h-8 w-1.5 rounded-full bg-gradient-to-b from-brand-primary to-brand-accent" />
       Education
-    </span>
+    </h2>
 
-    <span className="hidden sm:block text-[12px] uppercase tracking-[.15em] text-brand-muted">
+    <span className="hidden sm:block text-sm text-brand-muted">
       Academic Background
     </span>
   </div>
@@ -1228,43 +1262,37 @@ export default function Page() {
     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-5">
       
       <div className="min-w-0">
-        <p className="text-[12px] uppercase tracking-[.2em] text-brand-pinkDark">
+        <p className="text-[12px] uppercase tracking-[.2em] text-brand-primary">
           Bachelor's Degree
         </p>
 
-        <h3 className="font-serif text-2xl sm:text-3xl mt-2 leading-tight">
+        <h3 className="font-display text-2xl sm:text-3xl mt-2 leading-tight">
           {PORTFOLIO_DATA.education.degree}
         </h3>
 
-        <p className="text-base text-brand-sageDark mt-1.5">
+        <p className="text-base text-brand-accent mt-1.5">
           {PORTFOLIO_DATA.education.university}
         </p>
       </div>
 
       {/* Period + GPA */}
       <div className="shrink-0 sm:text-right">
-        <p className="text-[12px] text-brand-muted">
-          2022 — 2026
+        <p className="text-[13px] font-semibold tracking-[.04em] text-brand-primary">
+          {PORTFOLIO_DATA.education.period}
         </p>
 
-        <span
-          className="
-            inline-flex
-            items-center
-            mt-2
-            rounded-full
-            bg-white
-            border
-            border-brand-line
-            px-3
-            py-1.5
-            text-[12px]
-            tracking-[.04em]
-            text-brand-text
-          "
-        >
-          GPA {PORTFOLIO_DATA.education.gpa}
-        </span>
+        <div className="mt-2 flex flex-wrap items-center gap-2 sm:justify-end">
+          <span className="inline-flex items-center rounded-full border border-brand-primarySoft bg-brand-primaryLight px-3 py-1.5 text-[12px] text-brand-text">
+            GPA&nbsp;
+            <strong className="font-semibold text-brand-primary">
+              {PORTFOLIO_DATA.education.gpa}
+            </strong>
+          </span>
+
+          <span className="inline-flex items-center rounded-full bg-brand-accent px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[.08em] text-white">
+            {PORTFOLIO_DATA.education.honors}
+          </span>
+        </div>
       </div>
 
     </div>
@@ -1276,7 +1304,7 @@ export default function Page() {
         Undergraduate Thesis
       </p>
 
-      <p className="mt-2 text-[17px] leading-6 text-[#2D2D2D]">
+      <p className="mt-2 text-[17px] leading-6 text-[#334155]">
         {PORTFOLIO_DATA.education.thesisTitle}
       </p>
 
@@ -1288,13 +1316,10 @@ export default function Page() {
       <section className="border-t border-brand-line py-12">
         {/* Section Header */}
         <div className="flex items-end justify-between gap-6 mb-7">
-          <span className="text-[14px] uppercase tracking-[.25em] text-brand-muted">
-            Training
-          </span>
-
-          <span className="hidden sm:block text-[12px] uppercase tracking-[.15em] text-brand-muted">
-            Courses & Certifications
-          </span>
+          <h2 className="flex items-center gap-3 font-display text-3xl sm:text-4xl font-bold tracking-[-.03em]">
+      <span aria-hidden="true" className="h-7 sm:h-8 w-1.5 rounded-full bg-gradient-to-b from-brand-primary to-brand-accent" />
+      Courses & Certifications
+    </h2>
         </div>
 
         <div className="border-t border-brand-line">
@@ -1306,40 +1331,41 @@ export default function Page() {
                 border-b border-brand-line
                 py-6 sm:py-7
                 transition-colors
-                hover:bg-brand-pinkLight/40
+                hover:bg-brand-primaryLight/40
               "
             >
               <div className="grid grid-cols-[100px_minmax(0,1fr)] sm:grid-cols-[160px_minmax(0,1fr)_300px] gap-x-4 sm:gap-x-5">
                 {/* Period */}
-                <span className="text-[11px] sm:text-[12px] uppercase tracking-[.12em] text-brand-pinkDark pt-1">
+                <span className="text-[11px] sm:text-[12px] uppercase tracking-[.12em] text-brand-primary pt-1">
                   {train.period}
                 </span>
 
                 {/* Title + Organizer */}
                 <div className="min-w-0">
-                  <h3 className="font-serif text-xl sm:text-2xl leading-tight group-hover:text-brand-pinkDark transition-colors">
+                  <h3 className="font-display text-xl sm:text-2xl leading-tight group-hover:text-brand-primary transition-colors">
                     {train.title}
                   </h3>
 
-                  <p className="mt-1.5 text-sm text-brand-pinkDark">
+                  <p className="mt-1.5 text-sm text-brand-primary">
                     {train.organizer}
                   </p>
-
-                  {train.description && (
-                    <p className="mt-3 text-[14px] leading-6 text-[#2D2D2D]">
-                      {train.description}
-                    </p>
-                  )}
-
-                  {/* Certificate (mobile) */}
-                  <div className="sm:hidden">
-                    {renderCertButtons(train.certificates, "pt-3")}
-                  </div>
                 </div>
 
                 {/* Certificate (desktop) */}
                 <div className="hidden sm:flex sm:justify-end sm:items-start pt-1">
                   {renderCertButtons(train.certificates, "pt-0")}
+                </div>
+
+                {/* Description — mulai dari kolom judul, berakhir di ujung kanan tombol certificate (kolom 2 → 4) */}
+                {train.description && (
+                  <p className="col-start-2 sm:col-end-4 mt-3 text-[14px] leading-7 text-[#334155] text-justify">
+                    {train.description}
+                  </p>
+                )}
+
+                {/* Certificate (mobile) */}
+                <div className="col-start-2 sm:hidden">
+                  {renderCertButtons(train.certificates, "pt-3")}
                 </div>
               </div>
             </div>
@@ -1351,26 +1377,23 @@ export default function Page() {
       <section className="border-t border-brand-line py-12">
         {/* Section Header */}
         <div className="flex items-end justify-between gap-6 mb-7">
-          <span className="text-[14px] uppercase tracking-[.25em] text-brand-muted">
-            Skills
-          </span>
-
-          <span className="hidden sm:block text-[12px] uppercase tracking-[.15em] text-brand-muted">
-            Hard & Soft Skills
-          </span>
+          <h2 className="flex items-center gap-3 font-display text-3xl sm:text-4xl font-bold tracking-[-.03em]">
+      <span aria-hidden="true" className="h-7 sm:h-8 w-1.5 rounded-full bg-gradient-to-b from-brand-primary to-brand-accent" />
+      Skills
+    </h2>
         </div>
 
         <div className="grid lg:grid-cols-[1.4fr_1fr] gap-5">
           {/* Hard Skills */}
           <div className="pastel-card rounded-2xl p-6 sm:p-7">
-            <p className="text-[12px] uppercase tracking-[.2em] text-brand-pinkDark">
+            <p className="text-[12px] uppercase tracking-[.2em] text-brand-primary">
               Hard Skills
             </p>
 
             <div className="mt-5 flex flex-col gap-6">
               {PORTFOLIO_DATA.skills.hard.map((cat) => (
                 <div key={cat.group}>
-                  <h3 className="font-serif text-xl leading-tight">
+                  <h3 className="font-display text-xl leading-tight">
                     {cat.group}
                   </h3>
 
@@ -1401,7 +1424,7 @@ export default function Page() {
 
               {/* Languages */}
               <div>
-                <h3 className="font-serif text-xl leading-tight">
+                <h3 className="font-display text-xl leading-tight">
                   Languages
                 </h3>
 
@@ -1435,7 +1458,7 @@ export default function Page() {
 
           {/* Soft Skills */}
           <div className="pastel-card rounded-2xl p-6 sm:p-7">
-            <p className="text-[12px] uppercase tracking-[.2em] text-brand-sageDark">
+            <p className="text-[12px] uppercase tracking-[.2em] text-brand-accent">
               Soft Skills
             </p>
 
@@ -1449,7 +1472,7 @@ export default function Page() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
 
-                  <span className="font-serif text-lg leading-tight">
+                  <span className="font-display text-lg leading-tight">
                     {skill}
                   </span>
                 </li>
@@ -1470,39 +1493,48 @@ export default function Page() {
   const renderCertButtons = (certs, wrapperClass = "pt-6", hidden = false) => {
     if (!certs || certs.length === 0) return null;
 
+    // class tombol yang sama persis untuk link & popup
+    const btnClass = `
+      inline-flex items-center gap-1.5 whitespace-nowrap rounded-full
+      border border-brand-text px-3 py-1.5 text-[11px] uppercase
+      tracking-[.08em] font-medium text-brand-text
+      hover:bg-brand-text hover:text-white transition-all duration-300
+    `;
+
     return (
       <div className={`flex flex-wrap items-start content-start gap-2 sm:flex-nowrap ${wrapperClass}`}>
-        {certs.map((cert) => (
-          <button
-            key={(cert.label || "cert") + (cert.image || cert.images?.[0])}
-            type="button"
-            tabIndex={hidden ? -1 : 0}
-            onClick={() => setActiveCert(cert)}
-            className="
-              inline-flex
-              items-center
-              gap-1.5
-              whitespace-nowrap
-              rounded-full
-              border
-              border-brand-text
-              px-3
-              py-1.5
-              text-[10px]
-              uppercase
-              tracking-[.08em]
-              font-medium
-              text-brand-text
-              hover:bg-brand-text
-              hover:text-white
-              transition-all
-              duration-300
-            "
-          >
-            <span>{cert.label || "View certificate"}</span>
-            <ArrowUpRight className="w-3 h-3" />
-          </button>
-        ))}
+        {certs.map((cert) => {
+          const label = (
+            <>
+              <span>{cert.label || "View certificate"}</span>
+              <ArrowUpRight className="w-3 h-3" />
+            </>
+          );
+          const key = (cert.label || "cert") + (cert.url || cert.image || cert.images?.[0]);
+
+          return cert.url ? (
+            <a
+              key={key}
+              href={cert.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={hidden ? -1 : 0}
+              className={btnClass}
+            >
+              {label}
+            </a>
+          ) : (
+            <button
+              key={key}
+              type="button"
+              tabIndex={hidden ? -1 : 0}
+              onClick={() => setActiveCert(cert)}
+              className={btnClass}
+            >
+              {label}
+            </button>
+          );
+        })}
       </div>
     );
   };
@@ -1521,12 +1553,12 @@ export default function Page() {
         bg-white/40
         transition-all
         duration-300
-        hover:bg-brand-pinkLight
-        hover:border-brand-pinkSoft
+        hover:bg-brand-primaryLight
+        hover:border-brand-primarySoft
       "
     >
       {/* Photo */}
-      <div className="relative aspect-[16/10] shrink-0 overflow-hidden bg-brand-pinkSoft">
+      <div className="relative aspect-[16/10] shrink-0 overflow-hidden bg-brand-primarySoft">
         {exp.photos?.[0]?.url ? (
           <img
             src={exp.photos[0].url}
@@ -1538,7 +1570,7 @@ export default function Page() {
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center">
-            <span className="px-3 text-center text-[9px] uppercase tracking-[.15em] text-brand-pinkDark/60">
+            <span className="px-3 text-center text-[10px] uppercase tracking-[.15em] text-brand-primary/60">
               Experience
             </span>
           </div>
@@ -1549,11 +1581,11 @@ export default function Page() {
       <div className="flex min-w-0 flex-1 flex-col p-5">
         {/* Period + Location */}
         <div className="flex flex-wrap items-center gap-2 sm:flex-nowrap">
-          <span className="inline-flex items-center whitespace-nowrap rounded-full bg-brand-pinkSoft/60 px-2.5 py-1 text-[10px] uppercase tracking-[.05em] text-brand-pinkDark">
+          <span className="inline-flex items-center whitespace-nowrap rounded-full bg-brand-primarySoft/60 px-2.5 py-1 text-[11px] uppercase tracking-[.05em] text-brand-primary">
             {exp.period}
           </span>
 
-          <span className="inline-flex items-center whitespace-nowrap rounded-full bg-brand-sageSoft/60 px-2.5 py-1 text-[10px] uppercase tracking-[.05em] text-brand-sageDark">
+          <span className="inline-flex items-center whitespace-nowrap rounded-full bg-brand-accentSoft/60 px-2.5 py-1 text-[11px] uppercase tracking-[.05em] text-brand-accent">
             {exp.location}
           </span>
         </div>
@@ -1561,14 +1593,14 @@ export default function Page() {
         {/* Role + Company */}
         <h3
           title={exp.role}
-          className="mt-4 line-clamp-2 min-h-[2.5em] font-serif text-lg leading-tight"
+          className="mt-4 line-clamp-2 min-h-[2.5em] font-display text-lg leading-tight"
         >
           {exp.role}
         </h3>
 
         <p
           title={exp.company}
-          className="mt-1.5 text-[12px] leading-tight text-brand-pinkDark sm:truncate"
+          className="mt-1.5 text-[12px] leading-tight text-brand-primary sm:truncate"
         >
           {exp.company}
         </p>
@@ -1576,10 +1608,10 @@ export default function Page() {
         {/* Points */}
         <ul className="mt-4 flex flex-col gap-2">
           {exp.points?.map((point, i) => (
-            <li key={i} className="flex gap-3 text-sm leading-6 text-[#2D2D2D]">
+            <li key={i} className="flex gap-3 text-sm leading-6 text-[#334155]">
               <span
                 aria-hidden="true"
-                className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-brand-pinkDark"
+                className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-brand-primary"
               />
               <span>{point}</span>
             </li>
@@ -1618,9 +1650,10 @@ export default function Page() {
         }
       >
         <div className="mb-6">
-          <span className="text-base uppercase tracking-[.25em] text-brand-muted">
+          <h2 className={`flex items-center gap-3 font-display font-bold tracking-[-.03em] ${bare ? "text-2xl sm:text-3xl" : "text-3xl sm:text-4xl"}`}>
+            <span aria-hidden="true" className="h-7 sm:h-8 w-1.5 rounded-full bg-gradient-to-b from-brand-primary to-brand-accent" />
             Work Experience
-          </span>
+          </h2>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -1633,9 +1666,10 @@ export default function Page() {
   const renderOrgExperience = () => (
     <section className="border-t border-brand-line py-12">
       <div className="mb-7">
-        <span className="text-base uppercase tracking-[.25em] text-brand-muted">
-          Organizational Experience
-        </span>
+        <h2 className="flex items-center gap-3 font-display text-3xl sm:text-4xl font-bold tracking-[-.03em]">
+      <span aria-hidden="true" className="h-7 sm:h-8 w-1.5 rounded-full bg-gradient-to-b from-brand-primary to-brand-accent" />
+      Organizational Experience
+    </h2>
       </div>
 
       <div className="border-t border-brand-line">
@@ -1664,36 +1698,36 @@ export default function Page() {
                 border-b border-brand-line
                 py-6 sm:py-7
                 transition-colors
-                hover:bg-brand-pinkLight/40
-                ${isOpen ? "bg-brand-pinkLight/40" : ""}
+                hover:bg-brand-primaryLight/40
+                ${isOpen ? "bg-brand-primaryLight/40" : ""}
               `}
             >
               <div className="grid grid-cols-[100px_minmax(0,1fr)_32px] sm:grid-cols-[160px_minmax(0,1fr)_300px_40px] gap-x-4 sm:gap-x-5">
 
                 {/* Period */}
-                <span className="pt-1 text-[11px] sm:text-[12px] uppercase tracking-[.12em] text-brand-pinkDark">
+                <span className="pt-1 text-[11px] sm:text-[12px] uppercase tracking-[.12em] text-brand-primary">
                   {org.period}
                 </span>
 
                 {/* Role */}
                 <div className="min-w-0">
                   <h3
-                    className={`font-serif text-xl sm:text-2xl leading-tight transition-colors group-hover:text-brand-pinkDark ${
-                      isOpen ? "text-brand-pinkDark" : ""
+                    className={`font-display text-xl sm:text-2xl leading-tight transition-colors group-hover:text-brand-primary ${
+                      isOpen ? "text-brand-primary" : ""
                     }`}
                   >
                     {org.role}
                   </h3>
 
                   {/* Organization (mobile) */}
-                  <p className="sm:hidden mt-1.5 text-xs text-brand-pinkDark">
+                  <p className="sm:hidden mt-1.5 text-xs text-brand-primary">
                     {org.organization}
                   </p>
                 </div>
 
                 {/* Organization (desktop) */}
                 <div className="hidden sm:block pt-1 text-right">
-                  <span className="text-base text-brand-pinkDark">
+                  <span className="text-base text-brand-primary">
                     {org.organization}
                   </span>
                 </div>
@@ -1722,8 +1756,8 @@ export default function Page() {
                     border
                     border-brand-line
                     text-brand-text
-                    hover:border-brand-pinkDark
-                    hover:text-brand-pinkDark
+                    hover:border-brand-primary
+                    hover:text-brand-primary
                     transition-colors
                   "
                 >
@@ -1760,7 +1794,7 @@ export default function Page() {
                   <div className="overflow-hidden">
                     {/* mulai sejajar dengan role, berakhir sejajar ujung kanan nama organisasi */}
                     <div className="mt-4 border-t border-brand-line pt-4">
-                      <p className="text-[14px] leading-7 text-[#2D2D2D] sm:text-justify">
+                      <p className="text-[14px] leading-7 text-[#334155] sm:text-justify">
                         {org.description}
                       </p>
 
@@ -1785,31 +1819,16 @@ export default function Page() {
 
   const ExperiencePage = () => (
   <div className="reveal">
-    <section className="relative pt-12 md:pt-16 pb-10 overflow-hidden">
-  <div className="relative text-center">
+    <section className="relative pt-12 md:pt-16 pb-10">
+  <div className="relative max-w-3xl">
     {/* Eyebrow */}
-    <p className="text-xs sm:text-sm uppercase tracking-[.22em] text-brand-pinkDark">
-      Work & Organizational
+    <p className="text-xs sm:text-sm font-semibold uppercase tracking-[.16em] text-brand-accent">
+      Where I’ve learned & led
     </p>
 
     {/* Main title */}
-    <h1
-      className="
-        font-serif
-        uppercase
-        text-[4rem]
-        sm:text-[6rem]
-        md:text-[8rem]
-        lg:text-[10rem]
-        leading-[0.8]
-        tracking-[0.12em]
-        text-brand-pinkDark
-        opacity-[0.18]
-        mt-6
-        whitespace-nowrap
-      "
-    >
-      Experience
+    <h1 className="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl leading-[.95] tracking-[-.04em] mt-4">
+      Experience<span className="text-brand-primary">.</span>
     </h1>
   </div>
 </section>
@@ -1832,37 +1851,22 @@ export default function Page() {
 
   const ProjectPage = () => (
     <div className="reveal">
-      <section className="relative pt-12 md:pt-16 pb-10 overflow-hidden">
-  <div className="relative text-center">
+      <section className="relative pt-12 md:pt-16 pb-10">
+  <div className="relative max-w-3xl">
     {/* Eyebrow */}
-    <p className="text-xs sm:text-sm uppercase tracking-[.22em] text-brand-pinkDark">
-      Selected
+    <p className="text-xs sm:text-sm font-semibold uppercase tracking-[.16em] text-brand-accent">
+      Things I’ve built & analyzed
     </p>
 
     {/* Main title */}
-    <h1
-      className="
-        font-serif
-        uppercase
-        text-[4rem]
-        sm:text-[6rem]
-        md:text-[8rem]
-        lg:text-[10rem]
-        leading-[0.8]
-        tracking-[0.12em]
-        text-brand-pinkDark
-        opacity-[0.18]
-        mt-6
-        whitespace-nowrap
-      "
-    >
-      Project
+    <h1 className="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl leading-[.95] tracking-[-.04em] mt-4">
+      Projects<span className="text-brand-primary">.</span>
     </h1>
   </div>
 </section>
 
       <section className="border-t border-brand-line pt-10 pb-12">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 gap-x-5">
           {PORTFOLIO_DATA.projects.map((project, index) => (
             <ProjectCard
               key={project.id}
@@ -1917,14 +1921,14 @@ export default function Page() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between gap-4 px-5 sm:px-6 py-4 border-b border-brand-line">
-              <p className="font-serif text-lg sm:text-xl leading-tight">
+              <p className="font-display text-lg sm:text-xl leading-tight">
                 {activeCert.title}
               </p>
 
               <button
                 type="button"
                 onClick={() => setActiveCert(null)}
-                className="shrink-0 w-9 h-9 flex items-center justify-center hover:text-brand-pinkDark transition-colors"
+                className="shrink-0 w-9 h-9 flex items-center justify-center hover:text-brand-primary transition-colors"
                 aria-label="Close certificate"
               >
                 <XIcon />
