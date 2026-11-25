@@ -1356,7 +1356,7 @@ export default function Page() {
                   {renderCertButtons(train.certificates, "pt-0")}
                 </div>
 
-                {/* Description — mulai dari kolom judul, berakhir di ujung kanan tombol certificate (kolom 2 → 4) */}
+                {/* Description */}
                 {train.description && (
                   <p className="col-start-2 sm:col-end-4 mt-3 text-[14px] leading-7 text-[#334155] text-justify">
                     {train.description}
@@ -1493,7 +1493,7 @@ export default function Page() {
   const renderCertButtons = (certs, wrapperClass = "pt-6", hidden = false) => {
     if (!certs || certs.length === 0) return null;
 
-    // class tombol yang sama persis untuk link & popup
+    
     const btnClass = `
       inline-flex items-center gap-1.5 whitespace-nowrap rounded-full
       border border-brand-text px-3 py-1.5 text-[11px] uppercase
@@ -1775,7 +1775,7 @@ export default function Page() {
                   </svg>
                 </button>
 
-                {/* Description row — melebar di bawah role + organisasi */}
+                {/* Description row */}
                 <div
                   className={`
                     col-span-full
@@ -1792,7 +1792,7 @@ export default function Page() {
                   `}
                 >
                   <div className="overflow-hidden">
-                    {/* mulai sejajar dengan role, berakhir sejajar ujung kanan nama organisasi */}
+                    
                     <div className="mt-4 border-t border-brand-line pt-4">
                       <p className="text-[14px] leading-7 text-[#334155] sm:text-justify">
                         {org.description}

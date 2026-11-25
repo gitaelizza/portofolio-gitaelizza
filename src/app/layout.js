@@ -1,14 +1,14 @@
 import { Plus_Jakarta_Sans, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 
-// Body: bersih, mudah dibaca, populer di produk modern
+
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-jakarta",
   display: "swap",
 });
 
-// Heading: karakter kuat tapi tetap profesional
+
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-bricolage",
